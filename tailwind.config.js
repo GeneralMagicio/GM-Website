@@ -7,7 +7,12 @@ module.exports = {
   theme: {
     fontFamily: {},
     extend: {
-      colors: {},
+      colors: {
+        neutral: {
+          800: '#3E4557',
+          900: '#161718',
+        },
+      },
       backgroundImage: (theme) => ({}),
     },
   },
