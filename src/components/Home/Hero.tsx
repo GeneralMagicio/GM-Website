@@ -15,7 +15,7 @@ export function HomeHero() {
         <div className="self-end flex items-end">
           <Image src={plantL} alt="plant" />
         </div>
-        <div className="self-center z-50">
+        <div className="self-center z-40">
           <h1 className="text-white font-akira flex flex-col 2xl:text-8xl xl:text-7xl text-6xl 2xl:leading-[96px]">
             <span>Solution</span>
             <span>services</span>
@@ -32,8 +32,8 @@ export function HomeHero() {
             <Image src={down} alt="Down" />
           </button>
         </div>
-        <div className="self-end flex items-end">
-          <Image src={plantR} alt="plant" />
+        <div className="self-end flex items-end justify-end">
+          <Image src={plantR} alt="plant" height={641} width={240} />
         </div>
       </div>
     </div>
