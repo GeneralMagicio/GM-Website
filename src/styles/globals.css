@@ -4,6 +4,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  body {
+    background-color: #161718;
+  }
+  a {
+    @apply cursor-pointer;
+  }
+  span {
+    @apply cursor-default;
+  }
+}
+
 @font-face {
   font-family: 'Akira';
   src: url('../../public/fonts/Akira.otf');

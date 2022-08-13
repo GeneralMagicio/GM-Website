@@ -22,7 +22,7 @@ export function HomeHero() {
             <span>for Impact</span>
             <span>DAO&apos;S</span>
           </h1>
-          <p className="text-white flex flex-col text-2xl leading-8 pt-3 pb-8">
+          <p className=" text-white flex flex-col text-2xl leading-8 pt-3 pb-8">
             <span>We are a group of Web3 professionals with deep roots/</span>
             <span>embedded in the Ethereum ecosystem devoted to</span>
             <span>supporting commons-based organizations and public good</span>

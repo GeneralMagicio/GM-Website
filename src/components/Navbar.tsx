@@ -29,7 +29,7 @@ export function Navbar() {
     },
   ]
   return (
-    <div className="flex items-center h-[108px] justify-between bg-neutral-900">
+    <div className="flex items-center h-[108px] justify-between">
       <div className="flex divide-x divide-neutral-800 h-full">
         <button className="xl:mx-24 md:mx-10">
           <div className="hover:drop-shadow-[0_0_35px_rgba(165,105,255,1)]">
