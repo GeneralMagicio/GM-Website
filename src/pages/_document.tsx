@@ -22,6 +22,7 @@ class MyDocument extends Document {
             href="/fonts/Akira.otf"
             as="font"
             type="font/otf"
+            crossOrigin=""
           />
         </Head>
         <body>
