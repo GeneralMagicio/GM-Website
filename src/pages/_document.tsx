@@ -17,10 +17,6 @@ class MyDocument extends Document {
       <Html>
         <Head>
           <meta name="title" content="General Magic" />
-          <link
-            href="http://fonts.cdnfonts.com/css/akira-expanded"
-            rel="stylesheet"
-          />
         </Head>
         <body>
           <Main />

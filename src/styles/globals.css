@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap');
-@import url('http://fonts.cdnfonts.com/css/akira-expanded');
+@import url(//db.onlinewebfonts.com/c/6a6c946c81961ceab1711da6da2b26af?family=Akira+Expanded);
 
 @tailwind base;
 @tailwind components;
@@ -15,4 +15,19 @@
   span {
     @apply cursor-default;
   }
+}
+
+@font-face {
+  font-family: 'Akira Expanded';
+  src: url('//db.onlinewebfonts.com/t/6a6c946c81961ceab1711da6da2b26af.eot');
+  src: url('//db.onlinewebfonts.com/t/6a6c946c81961ceab1711da6da2b26af.eot?#iefix')
+      format('embedded-opentype'),
+    url('//db.onlinewebfonts.com/t/6a6c946c81961ceab1711da6da2b26af.woff2')
+      format('woff2'),
+    url('//db.onlinewebfonts.com/t/6a6c946c81961ceab1711da6da2b26af.woff')
+      format('woff'),
+    url('//db.onlinewebfonts.com/t/6a6c946c81961ceab1711da6da2b26af.ttf')
+      format('truetype'),
+    url('//db.onlinewebfonts.com/t/6a6c946c81961ceab1711da6da2b26af.svg#Akira Expanded')
+      format('svg');
 }
