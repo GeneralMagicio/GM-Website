@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     fontFamily: {
       sans: ['Space Grotesk', 'sans-serif'],
-      akira: ['Akira', 'sans-serif'],
+      akira: ['Akira Expanded', 'sans-serif'],
     },
     extend: {
       colors: {

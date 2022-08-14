@@ -27,7 +27,7 @@ export function HomeHero() {
             <Image src={plantL} alt="plant" />
           </div>
           <div className="self-center z-40">
-            <h1 className="text-white font-akira flex flex-col 2xl:text-8xl xl:text-7xl text-6xl 2xl:leading-[96px]">
+            <h1 className="uppercase text-white font-akira flex flex-col 2xl:text-8xl xl:text-7xl text-6xl 2xl:leading-[96px]">
               <span>Solution</span>
               <span>services</span>
               <span>for Impact</span>
