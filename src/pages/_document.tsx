@@ -18,11 +18,8 @@ class MyDocument extends Document {
         <Head>
           <meta name="title" content="General Magic" />
           <link
-            rel="preload"
-            href="/fonts/Akira.otf"
-            as="font"
-            type="font/otf"
-            crossOrigin=""
+            href="http://fonts.cdnfonts.com/css/akira-expanded"
+            rel="stylesheet"
           />
         </Head>
         <body>
