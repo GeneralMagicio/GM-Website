@@ -10,11 +10,8 @@ export function HomeHero() {
     <>
       <Head>
         <link
-          rel="preload"
-          href="/fonts/Akira.otf"
-          as="font"
-          type="font/otf"
-          crossOrigin=""
+          href="http://fonts.cdnfonts.com/css/akira-expanded"
+          rel="stylesheet"
         />
       </Head>
       <div className="relative h-[calc(100vh_-_108px)]">
