@@ -16,6 +16,13 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
+          <link
+            rel="preload"
+            href="/fonts/AkiraExpanded.woff2"
+            as="font"
+            type="font/woff2"
+            crossOrigin=""
+          />
           <meta name="title" content="General Magic" />
           <meta name="viewport" content="width=device-width" />
           <meta name="title" content="Solution services for Impact DAOs" />
