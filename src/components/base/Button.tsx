@@ -30,7 +30,7 @@ export function Button({ arrowColor, bgColor, text, border }: ButtonProps) {
           <p>{firstWord}</p>
           <div className="flex items-center justify-between">
             <p>{rest}</p>
-            <span className="text-red-500">
+            <span>
               <svg
                 width="25"
                 height="16"
