@@ -50,7 +50,7 @@ export function Navbar() {
           )
         })}
       </div>
-      <button className="uppercase bg-magicPurple-300 h-full flex items-center hover:bg-opacity-50">
+      <button className="uppercase bg-magicPurple-300 h-full flex items-center hover:bg-opacity-70">
         <h1 className="text-white font-akira xl:px-11 lg:px-8 md:px-3 lg:text-base text-[8px]">
           work with us
         </h1>

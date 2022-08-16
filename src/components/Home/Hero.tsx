@@ -1,20 +1,14 @@
+import { Title } from '../base/Title'
+import { Subtitle } from '../base/Subtitle'
 import Image from 'next/image'
 import plantL from '../../../public/images/homePlantL.svg'
 import plantR from '../../../public/images/homePlantR.svg'
 import down from '../../../public/images/down.svg'
 import aguila from '../../../public/images/aguila.png'
-import Head from 'next/head'
 
 export function HomeHero() {
   return (
     <>
-      <Head>
-        <link
-          href="//db.onlinewebfonts.com/c/6a6c946c81961ceab1711da6da2b26af?family=Akira+Expanded"
-          rel="stylesheet"
-          type="text/css"
-        />
-      </Head>
       <div className="relative h-[calc(100vh_-_108px)]">
         <div className="flex justify-between h-full">
           <div className="absolute inset-0 bg-home bg-cover bg-center bg-no-repeat bg-neutral-900 bg-blend-multiply" />
@@ -25,20 +19,20 @@ export function HomeHero() {
             <Image src={plantL} alt="plant" />
           </div>
           <div className="self-center z-40">
-            <h1 className="uppercase text-white font-akira flex flex-col 2xl:text-8xl xl:text-7xl text-6xl 2xl:leading-[96px]">
+            <Title>
               <span>Solution</span>
               <span>services</span>
               <span>for Impact</span>
               <span>DAO&apos;S</span>
-            </h1>
-            <p className=" text-white flex flex-col text-2xl leading-8 pt-3 pb-8">
+            </Title>
+            <Subtitle>
               <span>We are a group of Web3 professionals with deep roots/</span>
               <span>embedded in the Ethereum ecosystem devoted to</span>
               <span>
                 supporting commons-based organizations and public good
               </span>
               <span>projects.</span>
-            </p>
+            </Subtitle>
             <button className="hover:opacity-70">
               <Image src={down} alt="Down" />
             </button>

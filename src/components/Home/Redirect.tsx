@@ -10,7 +10,7 @@ export function HomeRedirect() {
         return (
           <button
             key={button.title}
-            className="px-[52px] py-7 uppercase bg-magicPurple-300 mr-[65px] w-[367px] font-bold text-xl text-white hover:bg-opacity-50"
+            className="px-[52px] py-7 uppercase bg-magicPurple-300 mr-[65px] w-[367px] font-bold text-xl text-white hover:bg-opacity-70"
           >
             {button.title}
           </button>
