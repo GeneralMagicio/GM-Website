@@ -1,4 +1,5 @@
 import { HomeHero } from '../components/Home/Hero'
+import { History } from '../components/Home/History'
 import { HomeRedirect } from '../components/Home/Redirect'
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
     <div className="divide-y divide-neutral-800">
       <HomeHero />
       <HomeRedirect />
+      <History />
     </div>
   )
 }
