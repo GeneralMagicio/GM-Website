@@ -14,7 +14,24 @@
   }
 }
 
+@import url(//db.onlinewebfonts.com/c/6a6c946c81961ceab1711da6da2b26af?family=Akira+Expanded);
+
 @font-face {
+  font-family: 'Akira Expanded';
+  src: url('//db.onlinewebfonts.com/t/6a6c946c81961ceab1711da6da2b26af.eot');
+  src: url('//db.onlinewebfonts.com/t/6a6c946c81961ceab1711da6da2b26af.eot?#iefix')
+      format('embedded-opentype'),
+    url('//db.onlinewebfonts.com/t/6a6c946c81961ceab1711da6da2b26af.woff2')
+      format('woff2'),
+    url('//db.onlinewebfonts.com/t/6a6c946c81961ceab1711da6da2b26af.woff')
+      format('woff'),
+    url('//db.onlinewebfonts.com/t/6a6c946c81961ceab1711da6da2b26af.ttf')
+      format('truetype'),
+    url('//db.onlinewebfonts.com/t/6a6c946c81961ceab1711da6da2b26af.svg#Akira Expanded')
+      format('svg');
+}
+
+/* @font-face {
   font-family: 'Akira Expanded';
   src: url('../../public/fonts/AkiraExpanded.woff2') format('woff2'),
     url('../../public/fonts/AkiraExpanded.woff') format('woff');
@@ -39,7 +56,7 @@
   font-weight: bold;
   font-style: normal;
   font-display: swap;
-}
+} */
 
 .button-border {
   background-image: linear-gradient(
