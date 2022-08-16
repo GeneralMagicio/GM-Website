@@ -23,6 +23,12 @@ module.exports = {
         pinkPotion: {
           300: '#FE61A7',
         },
+        misticOrange: {
+          300: '#FF913E',
+        },
+        magicSky: {
+          300: '#00E4FE',
+        },
       },
       backgroundImage: (theme) => ({
         home: "url('/images/homeHero.png')",

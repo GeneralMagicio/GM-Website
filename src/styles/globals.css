@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap');
-@import url(//db.onlinewebfonts.com/c/6a6c946c81961ceab1711da6da2b26af?family=Akira+Expanded);
 
 @tailwind base;
 @tailwind components;
@@ -8,26 +7,130 @@
 @layer base {
   body {
     background-color: #161718;
+    color: #ffff;
   }
   a {
     @apply cursor-pointer;
-  }
-  span {
-    @apply cursor-default;
   }
 }
 
 @font-face {
   font-family: 'Akira Expanded';
-  src: url('//db.onlinewebfonts.com/t/6a6c946c81961ceab1711da6da2b26af.eot');
-  src: url('//db.onlinewebfonts.com/t/6a6c946c81961ceab1711da6da2b26af.eot?#iefix')
-      format('embedded-opentype'),
-    url('//db.onlinewebfonts.com/t/6a6c946c81961ceab1711da6da2b26af.woff2')
-      format('woff2'),
-    url('//db.onlinewebfonts.com/t/6a6c946c81961ceab1711da6da2b26af.woff')
-      format('woff'),
-    url('//db.onlinewebfonts.com/t/6a6c946c81961ceab1711da6da2b26af.ttf')
-      format('truetype'),
-    url('//db.onlinewebfonts.com/t/6a6c946c81961ceab1711da6da2b26af.svg#Akira Expanded')
-      format('svg');
+  src: url('../../public/fonts/AkiraExpanded.woff2') format('woff2'),
+    url('../../public/fonts/AkiraExpanded.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Akira Expanded';
+  src: url('../../public/fonts/AkiraExpanded-Outline.woff2') format('woff2'),
+    url('../../public/fonts/AkiraExpanded-Outline.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Akira Expanded';
+  src: url('../../public/fonts/AkiraExpanded-Bold.woff2') format('woff2'),
+    url('../../public/fonts/AkiraExpanded-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+.button-border {
+  background-image: linear-gradient(
+    20.02deg,
+    #71dde4 -4.17%,
+    #fa78b9 23.12%,
+    #a569ff 66.92%
+  );
+}
+
+.h-grid-line {
+  background-image: linear-gradient(
+    90deg,
+    #7e52bf 15.17%,
+    #71dde4 35.28%,
+    #fa78b9 71.01%,
+    #a569ff 89.29%
+  );
+}
+
+.v-grid-line {
+  background-image: linear-gradient(
+    0deg,
+    #7e52bf 15.17%,
+    #71dde4 35.28%,
+    #fa78b9 71.01%,
+    #a569ff 89.29%
+  );
+}
+
+.vignette {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  position: relative;
+  margin: 0;
+}
+
+.vignette:before {
+  position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: -webkit-linear-gradient(
+    left,
+    #161718 0%,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(255, 255, 255, 0) 70%,
+    #161718 100%
+  );
+  background-image: linear-gradient(
+    to right,
+    #161718 0%,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(255, 255, 255, 0) 70%,
+    #161718 100%
+  );
+  z-index: 1;
+}
+
+.vignette:after {
+  position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: -webkit-linear-gradient(
+    bottom,
+    #161718 0%,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(255, 255, 255, 0) 70%,
+    #161718 100%
+  );
+  background-image: linear-gradient(
+    to top,
+    #161718 0%,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(255, 255, 255, 0) 70%,
+    #161718 100%
+  );
+  z-index: 1;
+}
+
+.vignette li {
+  width: 33.333%;
+  position: relative;
+  background-color: #161718;
+  height: 150px;
+  padding: 40px 0;
 }
