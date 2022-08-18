@@ -8,6 +8,7 @@ import CSLogo from '../../../public/images/CSlogo.svg'
 import TSLogo from '../../../public/images/TSLogo.svg'
 import Image from 'next/image'
 import { Button } from '../base/Button'
+import aguila from '../../../public/images/aguila.png'
 
 export function DaoGrid() {
   const daos = {
@@ -49,12 +50,15 @@ export function DaoGrid() {
     ],
   }
   return (
-    <div className="h-grid-line">
-      <div className="grid grid-cols-5 gap-[1px] vignette">
-        <div className="bg-neutral-900 h-16 col-span-2"></div>
-        <div className="bg-neutral-900 h-16"></div>
-        <div className="bg-neutral-900 h-16"></div>
-        <div className="bg-neutral-900"></div>
+    <div className="h-grid-line relative">
+      <div className="sm:hidden block z-50 absolute top-5 right-5 w-32">
+        <Image src={aguila} alt="making magic happen" />
+      </div>
+      <div className="grid grid-col-3 md:grid-cols-5 gap-[1px] vignette">
+        <div className="hidden md:block bg-neutral-900 h-16 col-span-2"></div>
+        <div className="hidden md:block bg-neutral-900 h-16"></div>
+        <div className="hidden md:block bg-neutral-900 h-16"></div>
+        <div className="hidden md:block bg-neutral-900"></div>
         <div className=" bg-neutral-900 pt-8 w-full col-span-2 row-span-3 z-10 mr-10">
           <Title>
             <span>We</span>
@@ -62,9 +66,15 @@ export function DaoGrid() {
             <span>DAO&apos;S</span>
           </Title>
           <Subtitle>
-            <span>that create greater value for the society,</span>
-            <span>and anticipate to build a brighter future</span>
-            <span>for the Decentralized Web.</span>
+            <span className="hidden md:flex flex-col">
+              <span>that create greater value for the society,</span>
+              <span>and anticipate to build a brighter future</span>
+              <span>for the Decentralized Web.</span>
+            </span>
+            <span className="md:hidden block ">
+              that create greater value for the society, and anticipate to build
+              a brighter future for the Decentralized Web.
+            </span>
           </Subtitle>
         </div>
         {daos.firstRow.map((dao) => {
@@ -79,7 +89,7 @@ export function DaoGrid() {
             </div>
           )
         })}
-        <div className="bg-neutral-900"></div>
+        <div className="hidden md:block bg-neutral-900"></div>
         {daos.secoundRow.map((dao) => {
           return (
             <div
@@ -92,7 +102,7 @@ export function DaoGrid() {
             </div>
           )
         })}
-        <div className="bg-neutral-900"></div>
+        <div className="hidden md:block bg-neutral-900"></div>
         {daos.thirdRow.map((dao) => {
           return (
             <div
@@ -105,13 +115,13 @@ export function DaoGrid() {
             </div>
           )
         })}
-        <div className="bg-neutral-900"></div>
-        <div className="bg-neutral-900 h-16 col-span-2"></div>
-        <div className="bg-neutral-900 h-16"></div>
-        <div className="bg-neutral-900 h-16"></div>
-        <div className="bg-neutral-900"></div>
+        <div className=" bg-neutral-900"></div>
+        <div className=" bg-neutral-900 h-16 col-span-2"></div>
+        <div className="hidden md:block bg-neutral-900 h-16"></div>
+        <div className="hidden md:block bg-neutral-900 h-16"></div>
+        <div className="hidden md:block bg-neutral-900"></div>
       </div>
-      <div className="pt-8 bg-neutral-900">
+      <div className="md:pt-8 bg-neutral-900 pb-5 col-span-3">
         <Button arrowColor="#ffff" bgColor="orange" text="Work with us" />
       </div>
     </div>

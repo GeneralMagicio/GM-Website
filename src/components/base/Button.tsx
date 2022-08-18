@@ -22,7 +22,7 @@ export function Button({ arrowColor, bgColor, text, border }: ButtonProps) {
     <div className={classnames(border ? 'button-border' : 'bg-transparent')}>
       <button
         className={classnames(
-          'w-[367px] p-5 hover:bg-opacity-70 m-[1px]',
+          'w-full sm:w-[367px] p-5 hover:bg-opacity-70 m-[1px]',
           bgColors[bgColor]
         )}
       >

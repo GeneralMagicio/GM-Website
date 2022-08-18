@@ -1,3 +1,6 @@
+import Link from 'next/link'
+import { Disclosure } from '@headlessui/react'
+import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import Image from 'next/image'
 import gmLogo from '../../public/images/gmLogo.svg'
 
@@ -29,32 +32,76 @@ export function Navbar() {
     },
   ]
   return (
-    <div className="flex items-center h-[108px] justify-between z-50 relative">
-      <div className="flex divide-x divide-neutral-800 h-full">
-        <button className="xl:mx-24 md:mx-10">
-          <div className="hover:drop-shadow-[0_0_35px_rgba(165,105,255,1)]">
-            <Image src={gmLogo} alt="General Magic" />
+    <Disclosure as="nav" className="bg-neutral-900 z-50 relative">
+      {({ open }) => (
+        <>
+          <div className="flex items-center h-[108px] justify-between z-50 relative mx-5 md:mx-0">
+            <div className="absolute inset-y-0 right-0 flex items-center md:hidden">
+              <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-magicPurple-300 focus:outline-none focus:ring-1 focus:ring-inset focus:ring-magicPurple-300">
+                <span className="sr-only">Open main menu</span>
+                {open ? (
+                  <XIcon className="block h-6 w-6" aria-hidden="true" />
+                ) : (
+                  <MenuIcon className="block h-6 w-6" aria-hidden="true" />
+                )}
+              </Disclosure.Button>
+            </div>
+            <div className="h-full flex-1 flex items-center justify-start sm:items-stretch sm:justify-between">
+              <div className="hidden md:flex divide-x divide-neutral-800 h-full">
+                <button className="xl:mx-24 md:mx-10 mx-5">
+                  <div className="hover:drop-shadow-[0_0_35px_rgba(165,105,255,1)]">
+                    <Image src={gmLogo} alt="General Magic" />
+                  </div>
+                </button>
+                <div></div>
+              </div>
+              <div className="flex md:hidden">
+                <button className="xl:mx-24 md:mx-10">
+                  <div className="hover:drop-shadow-[0_0_35px_rgba(165,105,255,1)]">
+                    <Image src={gmLogo} alt="General Magic" />
+                  </div>
+                </button>
+              </div>
+              <div className="hidden md:grid grid-cols-6 h-full items-center md:gap-x-14 sm:px-5">
+                {pages.map((page) => {
+                  return (
+                    <button
+                      key={page.title}
+                      className="text-white hover:text-magicPurple-300 text-center sm:text-xs lg:text-base max-w-fit"
+                    >
+                      {page.title}
+                    </button>
+                  )
+                })}
+              </div>
+              <button className="hidden uppercase bg-magicPurple-300 h-full md:flex items-center hover:bg-opacity-70">
+                <h1 className="text-white font-akira xl:px-11 lg:px-8 md:px-3 lg:text-base text-[8px]">
+                  work with us
+                </h1>
+              </button>
+            </div>
           </div>
-        </button>
-        <div></div>
-      </div>
-      <div className="grid grid-cols-6 h-full items-center gap-x-14 px-5">
-        {pages.map((page) => {
-          return (
-            <button
-              key={page.title}
-              className="text-white hover:text-magicPurple-300 text-center max-w-fit"
-            >
-              {page.title}
-            </button>
-          )
-        })}
-      </div>
-      <button className="uppercase bg-magicPurple-300 h-full flex items-center hover:bg-opacity-70">
-        <h1 className="text-white font-akira xl:px-11 lg:px-8 md:px-3 lg:text-base text-[8px]">
-          work with us
-        </h1>
-      </button>
-    </div>
+
+          <Disclosure.Panel className="md:hidden">
+            <div className="pt-2 pb-4 space-y-1">
+              {pages.map((page) => {
+                return (
+                  <Link href="/" key={page.title}>
+                    <a className="border-transparent text-white hover:bg-gray-50 hover:border-gray-300 hover:text-magicPurple-300 block pl-3 pr-4 py-2 text-base font-medium">
+                      {page.title}
+                    </a>
+                  </Link>
+                )
+              })}
+              <Link href="/">
+                <a className="border-transparent text-white hover:bg-gray-50 hover:border-gray-300 hover:text-magicPurple-300 block pl-3 pr-4 py-2 text-base font-medium bg-magicPurple-300">
+                  Work with us
+                </a>
+              </Link>
+            </div>
+          </Disclosure.Panel>
+        </>
+      )}
+    </Disclosure>
   )
 }
