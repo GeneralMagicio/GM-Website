@@ -19,10 +19,16 @@ export function Button({ arrowColor, bgColor, text, border }: ButtonProps) {
   const rest = text.substring(text.indexOf(' ') + 1)
 
   return (
-    <div className={classnames(border ? 'button-border' : 'bg-transparent')}>
+    <div
+      className={classnames(
+        border
+          ? 'button-border w-[312px] sm:w-[369px] relative z-50'
+          : 'bg-transparent'
+      )}
+    >
       <button
         className={classnames(
-          'w-full sm:w-[367px] p-5 hover:bg-opacity-70 m-[1px]',
+          'w-[310px] sm:w-[367px] p-5 hover:bg-opacity-70 m-[1px]',
           bgColors[bgColor]
         )}
       >
