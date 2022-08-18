@@ -32,6 +32,7 @@ module.exports = {
       },
       backgroundImage: (theme) => ({
         home: "url('/images/homeHero.png')",
+        homeBg: "url('/images/homeBg.png')",
       }),
     },
   },
