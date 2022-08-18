@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import { HomeBg } from '../components/Home/Background'
 import { HomeHero } from '../components/Home/Hero'
 import { History } from '../components/Home/History'
 import { HomeRedirect } from '../components/Home/Redirect'
@@ -13,6 +14,7 @@ export default function Home() {
         <HomeHero />
         <HomeRedirect />
         <History />
+        <HomeBg />
       </div>
     </>
   )
