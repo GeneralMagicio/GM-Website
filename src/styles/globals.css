@@ -77,13 +77,13 @@
   );
 }
 
-.v-grid-line {
+.card {
   background-image: linear-gradient(
-    0deg,
-    #7e52bf 15.17%,
-    #71dde4 35.28%,
-    #fa78b9 71.01%,
-    #a569ff 89.29%
+    85.7deg,
+    #7e52bf 45.02%,
+    #71dde4 76.33%,
+    #fa78b9 108.58%,
+    #a569ff 134.76%
   );
 }
 
