@@ -59,13 +59,13 @@ export function DaoGrid() {
         <div className="hidden md:block bg-neutral-900 h-16"></div>
         <div className="hidden md:block bg-neutral-900 h-16"></div>
         <div className="hidden md:block bg-neutral-900"></div>
-        <div className=" bg-neutral-900 pt-8 w-full col-span-2 row-span-3 z-10 mr-10">
+        <div className="bg-neutral-900 pt-8 w-full col-span-2 row-span-3 z-10 mr-10">
           <Title>
             <span>We</span>
             <span>support</span>
             <span>DAO&apos;S</span>
           </Title>
-          <Subtitle>
+          <Subtitle paddingBottom={true} paddingTop={true}>
             <span className="hidden md:flex flex-col">
               <span>that create greater value for the society,</span>
               <span>and anticipate to build a brighter future</span>
@@ -81,9 +81,14 @@ export function DaoGrid() {
           return (
             <div
               key={dao.name}
-              className="flex items-center justify-center bg-neutral-900 z-10 h-36"
+              className="flex items-center justify-center bg-neutral-900 z-10 h-full"
             >
-              <a href={dao.url} target="_blank" rel="noreferrer">
+              <a
+                href={dao.url}
+                target="_blank"
+                rel="noreferrer"
+                className="py-3"
+              >
                 <Image src={dao.image} alt={dao.name} />
               </a>
             </div>
@@ -94,9 +99,14 @@ export function DaoGrid() {
           return (
             <div
               key={dao.name}
-              className="flex items-center justify-center bg-neutral-900 z-10 h-36"
+              className="flex items-center justify-center bg-neutral-900 z-10 h-full"
             >
-              <a href={dao.url} target="_blank" rel="noreferrer">
+              <a
+                href={dao.url}
+                target="_blank"
+                rel="noreferrer"
+                className="py-3"
+              >
                 <Image src={dao.image} alt={dao.name} />
               </a>
             </div>
@@ -107,21 +117,26 @@ export function DaoGrid() {
           return (
             <div
               key={dao.name}
-              className="flex items-center justify-center bg-neutral-900 z-10 h-36"
+              className="flex items-center justify-center bg-neutral-900 z-10 h-full"
             >
-              <a href={dao.url} target="_blank" rel="noreferrer">
+              <a
+                href={dao.url}
+                target="_blank"
+                rel="noreferrer"
+                className="py-3"
+              >
                 <Image src={dao.image} alt={dao.name} />
               </a>
             </div>
           )
         })}
-        <div className=" bg-neutral-900"></div>
-        <div className=" bg-neutral-900 h-16 col-span-2"></div>
+        <div className="hidden md:block bg-neutral-900"></div>
+        <div className="hidden md:block bg-neutral-900 h-16 col-span-2"></div>
         <div className="hidden md:block bg-neutral-900 h-16"></div>
         <div className="hidden md:block bg-neutral-900 h-16"></div>
         <div className="hidden md:block bg-neutral-900"></div>
       </div>
-      <div className="md:pt-8 bg-neutral-900 pb-5 col-span-3">
+      <div className="pt-8 bg-neutral-900 w-full col-span-2">
         <Button arrowColor="#ffff" bgColor="orange" text="Work with us" />
       </div>
     </div>

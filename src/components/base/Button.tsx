@@ -23,7 +23,7 @@ export function Button({ arrowColor, bgColor, text, border }: ButtonProps) {
       className={classnames(
         border
           ? 'button-border w-[312px] sm:w-[369px] relative z-50'
-          : 'bg-transparent'
+          : 'bg-neutral-900'
       )}
     >
       <button

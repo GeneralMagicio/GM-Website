@@ -25,7 +25,7 @@ export function HomeHero() {
               <span>for Impact</span>
               <span>DAO&apos;S</span>
             </Title>
-            <Subtitle>
+            <Subtitle paddingBottom={true} paddingTop={true}>
               <span className="hidden lg:flex flex-col">
                 <span>
                   We are a group of Web3 professionals with deep roots/

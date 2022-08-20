@@ -17,7 +17,6 @@ class MyDocument extends Document {
       <Html>
         <Head>
           <meta name="title" content="General Magic" />
-          <meta name="viewport" content="width=device-width" />
           <meta name="title" content="Solution services for Impact DAOs" />
           <meta
             name="description"
