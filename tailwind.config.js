@@ -34,6 +34,7 @@ module.exports = {
         home: "url('/images/homeHero.png')",
         homeBg: "url('/images/homeBg.png')",
         pinkHomeBg: "url('/images/pinkHomeBg.png')",
+        footer: "url('/images/footer.png')",
       }),
     },
   },
