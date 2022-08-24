@@ -83,7 +83,12 @@ export function Navbar() {
           </div>
 
           <Disclosure.Panel className="md:hidden">
-            <div className="pt-2 pb-4 space-y-1">
+            <div className="pt-2 pb-8 space-y-1 uppercase flex flex-col items-center">
+              <Link href="/">
+                <a className="border-transparent text-white hover:bg-gray-50 hover:border-gray-300 hover:text-magicPurple-300 block pl-3 pr-4 py-2 text-base font-medium">
+                  Home
+                </a>
+              </Link>
               {pages.map((page) => {
                 return (
                   <Link href="/" key={page.title}>
@@ -94,9 +99,13 @@ export function Navbar() {
                 )
               })}
               <Link href="/">
-                <a className="border-transparent text-white hover:bg-gray-50 hover:border-gray-300 hover:text-magicPurple-300 block pl-3 pr-4 py-2 text-base font-medium bg-magicPurple-300">
-                  Work with us
-                </a>
+                <div className="px-8 w-full">
+                  <div className="text-white hover:bg-gray-50 hover:border-gray-300 hover:text-magicPurple-300 border-transparent bg-magicPurple-300 w-full">
+                    <a className="font-akira  block pl-3 pr-4 py-3 text-base font-medium text-center">
+                      Work with us
+                    </a>
+                  </div>
+                </div>
               </Link>
             </div>
           </Disclosure.Panel>
