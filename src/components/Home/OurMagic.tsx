@@ -49,7 +49,7 @@ export function Magic() {
   ]
   return (
     <>
-      <div className="mt-44 mx-12 lg:ml-32 lg:mr-52 md:mx-16">
+      <div className="mt-20 md:mt-44 mx-12 lg:ml-32 lg:mr-52 md:mx-16">
         <div className="flex flex-col md:flex-row md:items-center">
           <div className="mr-24">
             <Title>

@@ -61,9 +61,9 @@ export function DaoGrid() {
         <div className="hidden md:block bg-neutral-900"></div>
         <div className="bg-neutral-900 pt-8 w-full col-span-2 row-span-3 z-10 mr-10">
           <Title>
-            <span>We</span>
-            <span>support</span>
-            <span>DAO&apos;S</span>
+            <span className="xl:text-7xl">We</span>
+            <span className="xl:text-7xl">support</span>
+            <span className="xl:text-7xl">DAO&apos;S</span>
           </Title>
           <Subtitle paddingBottom={true} paddingTop={true}>
             <span className="hidden md:flex flex-col">
@@ -87,7 +87,7 @@ export function DaoGrid() {
                 href={dao.url}
                 target="_blank"
                 rel="noreferrer"
-                className="py-3"
+                className="p-3"
               >
                 <Image src={dao.image} alt={dao.name} />
               </a>
@@ -105,7 +105,7 @@ export function DaoGrid() {
                 href={dao.url}
                 target="_blank"
                 rel="noreferrer"
-                className="py-3"
+                className="p-3"
               >
                 <Image src={dao.image} alt={dao.name} />
               </a>
@@ -123,7 +123,7 @@ export function DaoGrid() {
                 href={dao.url}
                 target="_blank"
                 rel="noreferrer"
-                className="py-3"
+                className="p-3"
               >
                 <Image src={dao.image} alt={dao.name} />
               </a>
@@ -137,7 +137,12 @@ export function DaoGrid() {
         <div className="hidden md:block bg-neutral-900"></div>
       </div>
       <div className="pt-8 bg-neutral-900 w-full col-span-2">
-        <Button arrowColor="#ffff" bgColor="orange" text="Work with us" />
+        <Button
+          arrowColor="#ffff"
+          bgColor="orange"
+          text="Work with us"
+          breakText={true}
+        />
       </div>
     </div>
   )

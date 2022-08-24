@@ -13,13 +13,14 @@ export function Build() {
         <span className="underline">products, governance,</span> and economic
         systems utilizing the Web3 technology.
       </h1>
-      <div className="grid md:grid-cols-2 gap-x-12 mt-16 justify-center gap-y-4 md:w-fit">
+      <div className="grid lg:grid-cols-2 gap-x-12 mt-16 md:justify-center gap-y-4 md:w-fit">
         <div>
           <Button
             text="explore projects"
             arrowColor="#A569FF"
             bgColor="gray"
             border="linear"
+            breakText={true}
           />
         </div>
         <div>
@@ -28,6 +29,7 @@ export function Build() {
             arrowColor="#A569FF"
             bgColor="gray"
             border="linear"
+            breakText={true}
           />
         </div>
       </div>

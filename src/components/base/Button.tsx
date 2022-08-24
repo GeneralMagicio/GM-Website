@@ -4,10 +4,17 @@ interface ButtonProps {
   arrowColor: string
   bgColor: string
   text: string
+  breakText: boolean
   border?: string
 }
 
-export function Button({ arrowColor, bgColor, text, border }: ButtonProps) {
+export function Button({
+  arrowColor,
+  bgColor,
+  text,
+  border,
+  breakText,
+}: ButtonProps) {
   const bgColors: { [key: string]: string } = {
     white: 'bg-white',
     gray: 'bg-neutral-900',
@@ -22,20 +29,25 @@ export function Button({ arrowColor, bgColor, text, border }: ButtonProps) {
     <div
       className={classnames(
         border
-          ? 'button-border w-[312px] sm:w-[369px] relative z-50'
-          : 'bg-neutral-900'
+          ? 'button-border w-full sm:w-[369px] relative z-50'
+          : 'bg-neutral-900 w-full sm:w-[369px]'
       )}
     >
       <button
         className={classnames(
-          'w-[310px] sm:w-[367px] p-5 hover:bg-opacity-70 m-[1px]',
+          'w-[calc(100%_-_2px)] sm:w-[367px] p-5 hover:bg-opacity-70 m-[1px]',
           bgColors[bgColor]
         )}
       >
         <div className="uppercase font-akira text-2xl text-left">
-          <p>{firstWord}</p>
+          {breakText && <p>{firstWord}</p>}
           <div className="flex items-center justify-between">
-            <p>{rest}</p>
+            {breakText && <p>{rest}</p>}
+            {!breakText && (
+              <p>
+                {firstWord} {rest}
+              </p>
+            )}
             <span>
               <svg
                 width="25"

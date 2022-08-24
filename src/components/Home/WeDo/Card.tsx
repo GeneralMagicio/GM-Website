@@ -10,8 +10,8 @@ export function WeDoCard({ title, description }: WeDoCardProps) {
       <div className="mt-10">
         <h2 className="font-akira text-[26px]">{title}</h2>
         <p className="text-2xl mt-6">{description}</p>
-        <div className="flex my-6 items-center hover:underline">
-          <p className="uppercase text-magicPurple-300 mr-2">Learn more</p>
+        <div className="flex my-6 items-center hover:underline text-magicPurple-300 hover:cursor-pointer">
+          <p className="uppercase mr-2">Learn more</p>
           <div className="">
             <svg
               width="16"
