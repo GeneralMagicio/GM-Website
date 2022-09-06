@@ -136,14 +136,6 @@ export function DaoGrid() {
         <div className="hidden md:block bg-neutral-900 h-16"></div>
         <div className="hidden md:block bg-neutral-900"></div>
       </div>
-      <div className="pt-8 bg-neutral-900 w-full col-span-2">
-        <Button
-          arrowColor="#ffff"
-          bgColor="orange"
-          text="Work with us"
-          breakText={true}
-        />
-      </div>
     </div>
   )
 }

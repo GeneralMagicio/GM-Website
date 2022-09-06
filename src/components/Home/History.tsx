@@ -1,6 +1,7 @@
 import Image from 'next/image'
 
 import stars from '../../../public/images/stars.png'
+import { Button } from '../base/Button'
 import { DaoGrid } from './DaoGrid'
 
 export function History() {
@@ -9,6 +10,14 @@ export function History() {
       <div className="divide-y divide-neutral-800">
         <div className="flex flex-col md:pl-32 px-12 pb-8">
           <DaoGrid />
+          <div className="py-8">
+            <Button
+              arrowColor="#ffff"
+              bgColor="orange"
+              text="Work with us"
+              breakText={true}
+            />
+          </div>
         </div>
         <div className="relative flex justify-center px-12 lg:px-32">
           <p className="pt-16 text-xl md:text-3xl xl:text-[40px]">

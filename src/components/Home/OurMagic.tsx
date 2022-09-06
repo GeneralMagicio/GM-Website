@@ -23,7 +23,15 @@ export function Magic() {
   }
   useEffect(() => {
     if (width) {
-      width > 768 ? setSwiperPerPage(2.3) : setSwiperPerPage(1.3)
+      width > 2000
+        ? setSwiperPerPage(3)
+        : width > 1324
+        ? setSwiperPerPage(2.3)
+        : width > 1023
+        ? setSwiperPerPage(1.5)
+        : width > 550
+        ? setSwiperPerPage(2)
+        : setSwiperPerPage(1.2)
     }
   }, [width])
 
@@ -41,10 +49,40 @@ export function Magic() {
       bgColor: 'orange',
     },
     {
-      title: 'DAO',
+      title: 'Full stack development',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       bgColor: 'pink',
+    },
+    {
+      title: 'user research and ux design',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      bgColor: 'purple',
+    },
+    {
+      title: 'product design',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      bgColor: 'blue',
+    },
+    {
+      title: 'branding',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      bgColor: 'orange',
+    },
+    {
+      title: 'copywriting',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      bgColor: 'pink',
+    },
+    {
+      title: 'hr & hiring',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      bgColor: 'purple',
     },
   ]
   return (

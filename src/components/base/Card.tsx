@@ -20,7 +20,7 @@ export function ProjectCard({ title, description, bgColor }: ProjectsCard) {
   return (
     <div
       className={classnames(
-        'relative lg:w-[535px] lg:h-[595px] w-[274px] h-[306px]',
+        'relative lg:min-w-[535px] lg:h-[595px] min-w-[274px] h-[306px]',
         bgColors[bgColor]
       )}
     >
@@ -33,7 +33,9 @@ export function ProjectCard({ title, description, bgColor }: ProjectsCard) {
             <Image src={leftArrow} alt="" />
           </div>
           <div className="mx-4 pb-4">
-            <h2 className="font-akira text-[26px] lg:text-[40px]">{title}</h2>
+            <h2 className="font-akira text-xl lg:text-[40px] lg:leading-[48px]">
+              {title}
+            </h2>
             <p className="text-sm lg:text-2xl">{description}</p>
           </div>
         </div>
