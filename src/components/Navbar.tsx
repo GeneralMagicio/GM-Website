@@ -75,7 +75,7 @@ export function Navbar() {
                 })}
               </div>
               <button className="hidden uppercase bg-magicPurple-300 h-full md:flex items-center hover:bg-opacity-70">
-                <h1 className="text-white font-akira 2xl:px-11 xl:px-8 md:px-3 lg:text-base text-[8px]">
+                <h1 className="text-white font-akira 2xl:px-11 xl:px-8 md:px-5 lg:text-base text-[8px]">
                   work with us
                 </h1>
               </button>
