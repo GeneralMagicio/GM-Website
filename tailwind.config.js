@@ -1,3 +1,5 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 module.exports = {
   mode: 'jit',
   content: [
@@ -10,6 +12,10 @@ module.exports = {
       akira: ['Akira Expanded', 'sans-serif'],
     },
     extend: {
+      screens: {
+        'dao-md': '1200px',
+        ...defaultTheme.screens,
+      },
       colors: {
         neutral: {
           600: '#959DB2',

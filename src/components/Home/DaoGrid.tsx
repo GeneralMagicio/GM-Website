@@ -7,7 +7,6 @@ import GivethLogo from '../../../public/images/GivethLogo.svg'
 import CSLogo from '../../../public/images/CSlogo.svg'
 import TSLogo from '../../../public/images/TSLogo.svg'
 import Image from 'next/image'
-import { Button } from '../base/Button'
 import aguila from '../../../public/images/aguila.png'
 
 export function DaoGrid() {
@@ -59,19 +58,18 @@ export function DaoGrid() {
         <div className="hidden md:block bg-neutral-900 h-16"></div>
         <div className="hidden md:block bg-neutral-900 h-16"></div>
         <div className="hidden md:block bg-neutral-900"></div>
-        <div className="bg-neutral-900 pt-8 w-full col-span-2 row-span-3 z-10 mr-10">
+        <div className="bg-neutral-900 pt-8 w-full col-span-2 row-span-3 z-10 pr-10">
           <Title>
-            <span className="xl:text-7xl">We</span>
-            <span className="xl:text-7xl">support</span>
-            <span className="xl:text-7xl">DAO&apos;S</span>
+            <span className="md:text-4xl dao-md:text-6xl xl:text-7xl">We</span>
+            <span className="md:text-4xl  dao-md:text-6xl xl:text-7xl">
+              support
+            </span>
+            <span className="md:text-4xl  dao-md:text-6xl xl:text-7xl">
+              DAO&apos;S
+            </span>
           </Title>
           <Subtitle paddingBottom={true} paddingTop={true}>
-            <span className="hidden md:flex flex-col">
-              <span>that create greater value for the society,</span>
-              <span>and anticipate to build a brighter future</span>
-              <span>for the Decentralized Web.</span>
-            </span>
-            <span className="md:hidden block ">
+            <span className="max-w-[440px] ">
               that create greater value for the society, and anticipate to build
               a brighter future for the Decentralized Web.
             </span>
