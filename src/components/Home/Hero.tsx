@@ -13,7 +13,7 @@ interface HomeHeroProps {
 export function HomeHero({ handleScroll }: HomeHeroProps) {
   return (
     <>
-      <div className="relative xl:h-[calc(100vh_-_108px)]">
+      <div className="relative h-[calc(100vh_-_108px)]">
         <div className="flex justify-between h-full">
           <div className="absolute inset-0 bg-home bg-cover bg-center bg-no-repeat bg-neutral-900 bg-blend-multiply" />
           <div className="hidden md:block absolute 2xl:right-96 xl:right-64 lg:right-56 right-20 top-20">
