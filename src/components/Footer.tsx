@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import GM from '../../public/images/GM.svg'
 
 const pages = [
@@ -11,7 +12,7 @@ const pages = [
     label: 'About',
   },
   {
-    url: '',
+    url: '/projects',
     label: 'Projects',
   },
   {
@@ -29,15 +30,15 @@ const pages = [
 ]
 const socials = [
   {
-    url: '',
+    url: 'https://twitter.com/generalmagicio',
     label: 'Twitter',
   },
   {
-    url: '',
+    url: 'https://discord.gg/72HUmabwEs',
     label: 'Discord',
   },
   {
-    url: '',
+    url: 'https://github.com/GeneralMagicio/',
     label: 'Github',
   },
 ]
@@ -45,14 +46,10 @@ const socials = [
 export function Footer() {
   return (
     <div className="h-[680px] bg-footer bg-no-repeat bg-cover md:bg-[center_bottom_-70px] md:px-32 px-12 md:py-32 py-10">
-      <p className="md:hidden block text-center">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua.
-      </p>
       <div className="flex sm:hidden justify-center mt-8">
         <Image src={GM} alt="General Magic" width={72} height={44} />
       </div>
-      <div className="grid md:grid-cols-4 sm:grid-cols-3 grid-cols-2 mt-8 md:mt-0">
+      <div className="grid md:grid-cols-3 grid-cols-2 mt-8 md:mt-0">
         <div className="sm:flex justify-center hidden">
           <div>
             <Image src={GM} alt="General Magic" width={72} height={44} />
@@ -60,18 +57,30 @@ export function Footer() {
         </div>
         <div className="grid gap-y-6 h-fit justify-center">
           {pages.map((page) => {
-            return <p key={page.label}>{page.label}</p>
+            return (
+              <Link key={page.label} href={page.url}>
+                <p className="hover:text-magicPurple-300 hover:cursor-pointer hover:underline">
+                  {page.label}
+                </p>
+              </Link>
+            )
           })}
         </div>
         <div className="grid gap-y-6 h-fit justify-center">
           {socials.map((social) => {
-            return <p key={social.label}>{social.label}</p>
+            return (
+              <a
+                key={social.label}
+                href={social.url}
+                target="_blank"
+                rel="noreferrer"
+                className="hover:text-magicPurple-300 hover:underline"
+              >
+                {social.label}
+              </a>
+            )
           })}
         </div>
-        <p className="hidden md:block">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
       </div>
     </div>
   )

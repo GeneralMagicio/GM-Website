@@ -16,6 +16,7 @@ export function Build() {
       <div className="grid lg:grid-cols-2 gap-x-12 mt-16 md:justify-center gap-y-4 md:w-fit">
         <div>
           <Button
+            url="/projects"
             text="explore projects"
             arrowColor="#A569FF"
             bgColor="gray"
@@ -25,6 +26,7 @@ export function Build() {
         </div>
         <div>
           <Button
+            url="/"
             text="meet our team"
             arrowColor="#A569FF"
             bgColor="gray"
