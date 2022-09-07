@@ -33,7 +33,7 @@ export function ProjectsCards({
   console.log(projectImg)
   return (
     <div className="px-12 md:px-36">
-      <div className="flex-col md:flex-row flex py-8 md:py-36 justify-center items-center">
+      <div className="flex-col lg:flex-row flex py-8 md:py-36 justify-center items-center">
         <div className="relative">
           <div
             className={classnames(
@@ -56,7 +56,7 @@ export function ProjectsCards({
             </div>
           </div>
         </div>
-        <div className="grid gap-y-5 md:ml-[72px] mt-24 md:mt-0">
+        <div className="grid gap-y-5 md:ml-[72px] mt-24 lg:mt-0">
           <div className="flex justify-center md:justify-start">
             <Image src={clientLogo} alt="" />
           </div>
