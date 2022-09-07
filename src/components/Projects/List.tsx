@@ -4,7 +4,7 @@ import GivethLogo from '../../../public/images/logo/GivethLogo.svg'
 import CSLogo from '../../../public/images/logo/CSlogo.svg'
 import givethProject from '../../../public/images/projects/GivethProject.png'
 import tecProject from '../../../public/images/projects/TecProject.png'
-import csProject from '../../../public/images/projects/CsProject.png'
+import csProject from '../../../public/images/projects/CSProject.png'
 import { Join } from '../Join'
 
 const projects: ProjectsCardsProps[] = [
