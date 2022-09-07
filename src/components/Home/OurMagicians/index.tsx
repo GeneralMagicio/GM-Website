@@ -6,9 +6,9 @@ import AHMAD from '../../../../public/images/members/AHMAD.png'
 import FRESHELLE from '../../../../public/images/members/FRESHELLE.png'
 import TOMO from '../../../../public/images/members/TOMO.png'
 import MITCH from '../../../../public/images/members/MITCH.png'
-import { Button } from '../../base/Button'
 import Image from 'next/image'
 import membersBg from '../../../../public/images/members.png'
+import { Join } from '../../Join'
 
 const members: OurMagiciansCardProps[] = [
   {
@@ -93,25 +93,7 @@ export function OurMagicians() {
               </div>
             </div>
           </div>
-          <div className="flex flex-col justify-center text-center items-center">
-            <Title>
-              <span className="text-[32px]">Join our team</span>
-            </Title>
-            <Subtitle paddingBottom={true} paddingTop={true}>
-              <span className="lg:px-56 sm:px-20">
-                If you are different; If you have Web3 magical talent; And if
-                you are restlessly passionate about public goods and effecting
-                positive change. then you are a fit at General Magic!
-              </span>
-            </Subtitle>
-            <Button
-              text="Join us"
-              arrowColor="#A569FF"
-              bgColor="gray"
-              border="linear"
-              breakText={false}
-            />
-          </div>
+          <Join />
         </div>
       </div>
       <div className="hidden md:block absolute top-0 sm:top-[-300px] right-0 2xl:right-44 xl:right-20 w-[500px]">
