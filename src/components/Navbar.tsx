@@ -2,9 +2,8 @@ import Link from 'next/link'
 import { Disclosure } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import Image from 'next/image'
-import gmLogo from '../../public/images/gmLogo.svg'
+import gmLogo from '../../public/images/logo/gmLogo.svg'
 import { AnimatePresence, motion } from 'framer-motion'
-import { useState } from 'react'
 
 export function Navbar() {
   const pages = [
@@ -18,7 +17,7 @@ export function Navbar() {
     },
     {
       title: 'Projects',
-      url: '',
+      url: '/projects',
     },
     {
       title: 'Careers',
@@ -51,11 +50,13 @@ export function Navbar() {
             </div>
             <div className="h-full flex-1 flex items-center justify-start sm:items-stretch sm:justify-between">
               <div className="hidden md:flex divide-x divide-neutral-800 h-full">
-                <button className="xl:mx-24 md:mx-10 mx-5">
-                  <div className="hover:drop-shadow-[0_0_35px_rgba(165,105,255,1)]">
-                    <Image src={gmLogo} alt="General Magic" />
-                  </div>
-                </button>
+                <Link href="/">
+                  <button className="xl:mx-24 md:mx-10 mx-5">
+                    <div className="hover:drop-shadow-[0_0_35px_rgba(165,105,255,1)]">
+                      <Image src={gmLogo} alt="General Magic" />
+                    </div>
+                  </button>
+                </Link>
                 <div></div>
               </div>
               <div className="flex md:hidden">
@@ -68,12 +69,11 @@ export function Navbar() {
               <div className="hidden md:grid grid-cols-6 h-full items-center md:gap-x-14 px-10">
                 {pages.map((page) => {
                   return (
-                    <button
-                      key={page.title}
-                      className="text-white hover:text-magicPurple-300 text-center text-xs xl:text-base max-w-fit"
-                    >
-                      {page.title}
-                    </button>
+                    <Link key={page.title} href={page.url}>
+                      <p className="text-white hover:text-magicPurple-300 text-center text-xs xl:text-base max-w-fit hover:cursor-pointer">
+                        {page.title}
+                      </p>
+                    </Link>
                   )
                 })}
               </div>
@@ -101,7 +101,7 @@ export function Navbar() {
                     </Link>
                     {pages.map((page) => {
                       return (
-                        <Link href="/" key={page.title}>
+                        <Link href={page.url} key={page.title}>
                           <a className="border-transparent text-white hover:bg-gray-50 hover:border-gray-300 hover:text-magicPurple-300 block pl-3 pr-4 py-2 text-base font-medium">
                             {page.title}
                           </a>

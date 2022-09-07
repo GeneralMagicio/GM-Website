@@ -41,6 +41,7 @@ module.exports = {
         homeBg: "url('/images/homeBg.png')",
         pinkHomeBg: "url('/images/pinkHomeBg.png')",
         footer: "url('/images/footer.png')",
+        projects: "url('/images/projectsBg.png')",
       }),
     },
   },
