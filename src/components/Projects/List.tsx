@@ -11,6 +11,7 @@ const projects: ProjectsCardsProps[] = [
   {
     id: 1,
     bgColor: 'purple',
+    projectUrl: 'https://giveth.io/',
     projectImg: givethProject,
     clientLogo: GivethLogo,
     services: ['Branding', 'UX'],
@@ -23,6 +24,7 @@ const projects: ProjectsCardsProps[] = [
   {
     id: 2,
     bgColor: 'pink',
+    projectUrl: 'https://tecommons.org/',
     projectImg: tecProject,
     clientLogo: TECLogo,
     services: ['Development', 'UX'],
@@ -33,6 +35,7 @@ const projects: ProjectsCardsProps[] = [
   {
     id: 3,
     bgColor: 'orange',
+    projectUrl: 'https://commonsstack.org/',
     projectImg: csProject,
     clientLogo: CSLogo,
     services: ['Development', 'Branding'],
@@ -51,6 +54,7 @@ export function ProjectsList() {
             id={project.id}
             key={project.id}
             bgColor={project.bgColor}
+            projectUrl={project.projectUrl}
             projectImg={project.projectImg}
             clientLogo={project.clientLogo}
             services={project.services}

@@ -7,10 +7,10 @@ import { AnimatePresence, motion } from 'framer-motion'
 
 export function Navbar() {
   const pages = [
-    {
-      title: 'Services',
-      url: '',
-    },
+    // {
+    //   title: 'Services',
+    //   url: '',
+    // },
     {
       title: 'About',
       url: '',
@@ -48,7 +48,7 @@ export function Navbar() {
                 )}
               </Disclosure.Button>
             </div>
-            <div className="h-full flex-1 flex items-center justify-start sm:items-stretch sm:justify-between">
+            <div className="h-full flex-1 flex items-center sm:items-stretch justify-between">
               <div className="hidden md:flex divide-x divide-neutral-800 h-full">
                 <Link href="/">
                   <button className="xl:mx-24 md:mx-10 mx-5">
@@ -68,7 +68,9 @@ export function Navbar() {
                   </button>
                 </Link>
               </div>
-              <div className="hidden md:grid grid-cols-6 h-full items-center md:gap-x-14 px-10">
+              {/* <div className="hidden md:grid grid-cols-6 h-full items-center md:gap-x-14 px-10"> */}
+
+              <div className="hidden md:grid grid-cols-5 h-full items-center md:gap-x-14 px-10">
                 {pages.map((page) => {
                   return (
                     <Link key={page.title} href={page.url}>
