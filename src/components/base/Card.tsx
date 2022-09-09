@@ -27,10 +27,10 @@ export function ProjectCard({ title, description, bgColor }: ProjectsCard) {
       <div className="absolute card top-[-20px] left-5 lg:w-[535px] lg:h-[595px] w-[274px] h-[306px] flex justify-center items-center">
         <div className="flex flex-col justify-between bg-neutral-900 lg:h-[593px] lg:w-[532px] w-[272px] h-[304px]">
           <div className="flex m-7 self-end">
-            <p className="uppercase text-magicSky-300 mr-2 text-xs lg:text-base">
+            {/* <p className="uppercase text-magicSky-300 mr-2 text-xs lg:text-base">
               Learn more
             </p>
-            <Image src={leftArrow} alt="" />
+            <Image src={leftArrow} alt="" /> */}
           </div>
           <div className="mx-4 pb-4">
             <h2 className="font-akira text-xl lg:text-[40px] lg:leading-[48px]">

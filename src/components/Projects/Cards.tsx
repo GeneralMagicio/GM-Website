@@ -32,7 +32,7 @@ export function ProjectsCards({
 
   console.log(projectImg)
   return (
-    <div className="px-12 md:px-36">
+    <div className="sm:px-12 md:px-36">
       <div className="flex-col lg:flex-row flex py-8 md:py-36 justify-center items-center">
         <div className="relative">
           <div

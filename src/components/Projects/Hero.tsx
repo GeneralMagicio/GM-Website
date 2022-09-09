@@ -5,10 +5,14 @@ import projectsHero from '../../../public/images/projectsHero.png'
 import projectsHeroMobile from '../../../public/images/projectsHeroMobile.png'
 import down from '../../../public/images/down.svg'
 
+interface ProjectHeroProps {
+  handleScroll: () => void
+}
+
 const projectsText =
   'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Facilisis vulputate arcu, in nisl rhoncus. Eu ut scelerisquevestibulum quam risus orci ultrices nec.'
 
-export function ProjectsHero() {
+export function ProjectsHero({ handleScroll }: ProjectHeroProps) {
   return (
     <>
       <div className="relative h-[calc(100vh_-_108px)] min-h-[552px] py-8">
@@ -24,7 +28,10 @@ export function ProjectsHero() {
               <p className="text-xl md:text-2xl lg:text-4xl xl:text-[40px] max-w-[320px] md:max-w-[660px] md:leading-[53px] my-2 lg:my-4 2xl:my-8">
                 We work alongside core teams to grow their impact
               </p>
-              <button className="block md:hidden hover:opacity-70 lg:mx-8 my-4 w-8 h-8 lg:h-12 lg:w-12 self-start lg:self-center">
+              <button
+                onClick={handleScroll}
+                className="block md:hidden hover:opacity-70 lg:mx-8 my-4 w-8 h-8 lg:h-12 lg:w-12 self-start lg:self-center"
+              >
                 <Image src={down} alt="Down" />
               </button>
             </div>

@@ -47,13 +47,17 @@ export function Footer() {
   return (
     <div className="h-[680px] bg-footer bg-no-repeat bg-cover md:bg-[center_bottom_-70px] md:px-32 px-12 md:py-32 py-10">
       <div className="flex sm:hidden justify-center mt-8">
-        <Image src={GM} alt="General Magic" width={72} height={44} />
+        <Link href="/">
+          <Image src={GM} alt="General Magic" width={72} height={44} />
+        </Link>
       </div>
       <div className="grid md:grid-cols-3 grid-cols-2 mt-8 md:mt-0">
         <div className="sm:flex justify-center hidden">
-          <div>
-            <Image src={GM} alt="General Magic" width={72} height={44} />
-          </div>
+          <Link href="/">
+            <div className="hover:cursor-pointer">
+              <Image src={GM} alt="General Magic" width={72} height={44} />
+            </div>
+          </Link>
         </div>
         <div className="grid gap-y-6 h-fit justify-center">
           {pages.map((page) => {
