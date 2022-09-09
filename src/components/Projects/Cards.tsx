@@ -4,6 +4,7 @@ import classnames from 'classnames'
 export interface ProjectsCardsProps {
   id: number
   bgColor: string
+  projectUrl: string
   projectImg: StaticImageData | string
   clientLogo: StaticImageData | string
   services: string[]
@@ -14,6 +15,7 @@ export interface ProjectsCardsProps {
 
 export function ProjectsCards({
   bgColor,
+  projectUrl,
   projectImg,
   clientLogo,
   services,
@@ -57,9 +59,14 @@ export function ProjectsCards({
           </div>
         </div>
         <div className="grid gap-y-5 md:ml-[72px] mt-24 lg:mt-0">
-          <div className="flex justify-center md:justify-start">
+          <a
+            className="flex justify-center md:justify-start hover:cursor-pointer w-fit"
+            href={projectUrl}
+            target="_blank"
+            rel="noreferrer"
+          >
             <Image src={clientLogo} alt="" />
-          </div>
+          </a>
           <div className="flex justify-center md:justify-start">
             {services.map((service, i, arr) => {
               if (arr.length - 1 === i) {
