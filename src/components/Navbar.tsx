@@ -60,11 +60,13 @@ export function Navbar() {
                 <div></div>
               </div>
               <div className="flex md:hidden">
-                <button className="xl:mx-24 md:mx-10">
-                  <div className="hover:drop-shadow-[0_0_35px_rgba(165,105,255,1)]">
-                    <Image src={gmLogo} alt="General Magic" />
-                  </div>
-                </button>
+                <Link href="/">
+                  <button className="xl:mx-24 md:mx-10">
+                    <div className="hover:drop-shadow-[0_0_35px_rgba(165,105,255,1)]">
+                      <Image src={gmLogo} alt="General Magic" />
+                    </div>
+                  </button>
+                </Link>
               </div>
               <div className="hidden md:grid grid-cols-6 h-full items-center md:gap-x-14 px-10">
                 {pages.map((page) => {
