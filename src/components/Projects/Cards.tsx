@@ -31,8 +31,6 @@ export function ProjectsCards({
     pink: 'bg-pinkPotion-300',
     blue: 'bg-magicSky-300',
   }
-
-  console.log(projectImg)
   return (
     <div className="sm:px-12 md:px-36">
       <div className="flex-col lg:flex-row flex py-8 md:py-36 justify-center items-center">
@@ -80,11 +78,8 @@ export function ProjectsCards({
                 )
               } else {
                 return (
-                  <div className="flex">
-                    <p
-                      key={service}
-                      className="px-2 uppercase font-akira text-xs sm:text-[18px] md:text-2xl"
-                    >
+                  <div className="flex" key={service}>
+                    <p className="px-2 uppercase font-akira text-xs sm:text-[18px] md:text-2xl">
                       {service}
                     </p>
                     <p className="font-akira text-xs sm:text-[18px] md:text-2xl">
@@ -105,11 +100,8 @@ export function ProjectsCards({
                 )
               } else {
                 return (
-                  <div className="flex flex-row">
-                    <p
-                      key={tool}
-                      className="px-2 uppercase text-xs sm:text-base"
-                    >
+                  <div className="flex flex-row" key={tool}>
+                    <p className="px-2 uppercase text-xs sm:text-base">
                       {tool}
                     </p>
                     <p className="text-xs sm:text-base">|</p>
