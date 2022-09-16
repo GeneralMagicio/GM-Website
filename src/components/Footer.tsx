@@ -52,7 +52,7 @@ export function Footer() {
         </Link>
       </div>
       <div className="grid md:grid-cols-3 grid-cols-2 mt-8 md:mt-0">
-        <div className="sm:flex justify-center hidden">
+        <div className="sm:flex justify-center hidden col-span-2 md:col-span-1">
           <Link href="/">
             <div className="hover:cursor-pointer">
               <Image src={GM} alt="General Magic" width={72} height={44} />

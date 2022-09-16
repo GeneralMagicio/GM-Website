@@ -58,7 +58,7 @@ export function ProjectsCards({
         </div>
         <div className="grid gap-y-5 md:ml-[72px] mt-24 lg:mt-0">
           <a
-            className="flex justify-center md:justify-start hover:cursor-pointer w-fit"
+            className="flex justify-center md:justify-start hover:cursor-pointer md:w-fit"
             href={projectUrl}
             target="_blank"
             rel="noreferrer"
