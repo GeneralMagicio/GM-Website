@@ -13,6 +13,7 @@ module.exports = {
     },
     extend: {
       screens: {
+        xs: '460px',
         'dao-md': '1200px',
         ...defaultTheme.screens,
       },
@@ -37,11 +38,12 @@ module.exports = {
         },
       },
       backgroundImage: (theme) => ({
-        home: "url('/images/homeHero.png')",
-        homeBg: "url('/images/homeBg.png')",
-        pinkHomeBg: "url('/images/pinkHomeBg.png')",
-        footer: "url('/images/footer.png')",
-        projects: "url('/images/projectsBg.png')",
+        home: "url('/images/background/homeHero.png')",
+        homeBg: "url('/images/background/homeBg.png')",
+        pinkHomeBg: "url('/images/background/pinkHomeBg.png')",
+        footer: "url('/images/background/footer.png')",
+        projects: "url('/images/background/projectsBg.png')",
+        about: "url('/images/background/aboutBg.png')",
       }),
     },
   },
