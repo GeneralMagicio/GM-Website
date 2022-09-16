@@ -12,7 +12,7 @@ export function History() {
           <DaoGrid />
           <div className="py-8">
             <Button
-              url="/"
+              url="/contact"
               arrowColor="#ffff"
               bgColor="orange"
               text="Work with us"

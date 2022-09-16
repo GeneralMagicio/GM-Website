@@ -24,7 +24,7 @@ const pages = [
     label: 'Shop',
   },
   {
-    url: '',
+    url: '/contact',
     label: 'Contact',
   },
 ]

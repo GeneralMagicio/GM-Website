@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export function HomeRedirect() {
   const buttons = [
-    { title: 'what we do', url: '/' },
+    { title: 'what we do', url: '/about' },
     { title: 'explore our projects', url: '/projects' },
   ]
 

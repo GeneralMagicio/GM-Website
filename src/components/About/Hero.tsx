@@ -50,7 +50,7 @@ export function AboutHero({ handleScroll }: AboutHeroProps) {
               </Subtitle>
               <div className="pt-8">
                 <Button
-                  url="/"
+                  url="/contact"
                   arrowColor="#ffff"
                   bgColor="purple"
                   text="Work with us"

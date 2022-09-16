@@ -16,7 +16,7 @@ export function Join() {
         </span>
       </Subtitle>
       <Button
-        url="/"
+        url="/contact"
         text="Join us"
         arrowColor="#A569FF"
         bgColor="gray"
