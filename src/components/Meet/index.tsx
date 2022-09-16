@@ -1,34 +1,34 @@
-import { Subtitle } from '../../base/Subtitle'
-import { MeetConference, MeetConfereProps } from './Conference'
+import { Subtitle } from '../base/Subtitle'
+import { MeetConference, MeetConferenceProps } from './Conference'
 
-const conferences: MeetConfereProps[] = [
+const conferences: MeetConferenceProps[] = [
   {
-    title: 'Conferece Title 1',
+    title: 'ETHCC 5',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    city: 'City',
-    country: 'Country',
-    date: 'mm/dd/yyyy',
+      'The Ethereum Community Conference (EthCC) is the largest annual European Ethereum event focused on technology and community. Three intense days of conferences, networking and learning.',
+    city: 'Paris',
+    country: 'France',
+    date: 'Jul 19-21, 2022',
   },
   {
-    title: 'Conferece Title 2',
+    title: 'ETH Berlin',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    city: 'City',
-    country: 'Country',
-    date: 'mm/dd/yyyy',
+      'ETHBerlin³ is a hackathon, a cultural festival, an educational event, a platform for hacktivism, and a community initiative to push the decentralized ecosystem forward.',
+    city: 'Berlin',
+    country: 'Germany',
+    date: 'Sep 16-18, 2022',
   },
   {
-    title: 'Conferece Title 3',
+    title: 'DEVCON BOGOTA',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    city: 'City',
-    country: 'Country',
-    date: 'mm/dd/yyyy',
+      'Devcon is an intensive introduction for new Ethereum explorers, a global family reunion for those already a part of our ecosystem, and a source of energy and creativity for all.',
+    city: 'Bogota',
+    country: 'Colombia',
+    date: 'Oct 11-14, 2022',
   },
 ]
 
-export function HomeMeet() {
+export function MeetConferences() {
   return (
     <div className="bg-black">
       <div className="h-grid-line h-[1px]"></div>
@@ -41,7 +41,7 @@ export function HomeMeet() {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </Subtitle>
-        <div className="grid gap-y-8 md:gap-y-[72px] md:my-16">
+        <div className="grid gap-y-8 md:gap-y-[72px] md:mb-16">
           {conferences.map((conference) => {
             return (
               <MeetConference

@@ -2,6 +2,7 @@ import Head from 'next/head'
 import { useRef } from 'react'
 import { AboutHero } from '../components/About/Hero'
 import { AboutValues } from '../components/About/Values'
+import { MeetConferences } from '../components/Meet'
 import { OurMagicians } from '../components/OurMagicians'
 
 export default function About() {
@@ -23,8 +24,9 @@ export default function About() {
         className="bg-homeBg bg-cover bg-center bg-no-repeat bg-blend-darken bg-neutral-900"
       >
         <AboutValues />
-        <OurMagicians page="About" />
       </div>
+      <OurMagicians page="About" />
+      <MeetConferences />
     </>
   )
 }
