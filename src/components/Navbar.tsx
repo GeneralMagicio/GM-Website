@@ -13,7 +13,7 @@ export function Navbar() {
     // },
     {
       title: 'About',
-      url: '',
+      url: '/about',
     },
     {
       title: 'Projects',

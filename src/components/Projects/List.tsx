@@ -51,8 +51,8 @@ export function ProjectsList() {
       {projects.map((project) => {
         return (
           <ProjectsCards
-            id={project.id}
             key={project.id}
+            id={project.id}
             bgColor={project.bgColor}
             projectUrl={project.projectUrl}
             projectImg={project.projectImg}
