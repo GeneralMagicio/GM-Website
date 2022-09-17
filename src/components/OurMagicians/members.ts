@@ -1,6 +1,7 @@
 import { OurMagiciansCardProps } from './Card'
 
 import Marko from '../../../public/images/members/MARKO.png'
+import GRIFF from '../../../public/images/members/GRIFF.png'
 import AHMAD from '../../../public/images/members/AHMAD.png'
 import FRESHELLE from '../../../public/images/members/FRESHELLE.png'
 import TOMO from '../../../public/images/members/TOMO.png'
@@ -34,6 +35,7 @@ export const members: OurMagiciansCardProps[] = [
   {
     name: 'Griff',
     role: 'Co-founder',
+    image: GRIFF,
   },
   {
     name: 'Mitch',

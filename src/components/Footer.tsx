@@ -41,6 +41,14 @@ const socials = [
     url: 'https://github.com/GeneralMagicio/',
     label: 'Github',
   },
+  {
+    url: 'https://medium.com/@generalmagic',
+    label: 'Medium',
+  },
+  {
+    url: 'https://www.linkedin.com/company/generalmagicio/',
+    label: 'Linkedin',
+  },
 ]
 
 export function Footer() {

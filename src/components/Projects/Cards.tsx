@@ -9,6 +9,7 @@ export interface ProjectsCardsProps {
   clientLogo: StaticImageData | string
   services: string[]
   tools: string[]
+  tools2row?: string[]
   mainDescription: string
   secoundDescription?: string
 }
@@ -20,6 +21,7 @@ export function ProjectsCards({
   clientLogo,
   services,
   tools,
+  tools2row,
   mainDescription,
   secoundDescription,
 }: ProjectsCardsProps) {
@@ -43,7 +45,7 @@ export function ProjectsCards({
           ></div>
           <div
             className={classnames(
-              'absolute min-w-[285px] min-h-[170px] md:min-w-[500px] md:min-h-[273px] max-h-[273px] bg-neutral-900 top-6 left-6 border border-pinkPotion-300'
+              'absolute min-w-[285px] min-h-[170px] md:min-w-[500px] md:min-h-[273px] max-h-[273px] bg-neutral-900 top-2 left-2 md:top-6 md:left-6 border border-pinkPotion-300'
             )}
           >
             <div className="relative z-10 h-4 md:h-7 bg-neutral-900 border-b border-pinkPotion-300 flex items-center">
@@ -58,14 +60,14 @@ export function ProjectsCards({
         </div>
         <div className="grid gap-y-5 md:ml-[72px] mt-24 lg:mt-0">
           <a
-            className="flex justify-center md:justify-start hover:cursor-pointer md:w-fit"
+            className="flex justify-center lg:justify-start hover:cursor-pointer lg:w-fit"
             href={projectUrl}
             target="_blank"
             rel="noreferrer"
           >
             <Image src={clientLogo} alt="" />
           </a>
-          <div className="flex justify-center md:justify-start">
+          <div className="flex justify-center lg:justify-start">
             {services.map((service, i, arr) => {
               if (arr.length - 1 === i) {
                 return (
@@ -90,7 +92,7 @@ export function ProjectsCards({
               }
             })}
           </div>
-          <div className="flex justify-center md:justify-start">
+          <div className="flex justify-center lg:justify-start">
             {tools.map((tool, i, toolSubArr) => {
               if (toolSubArr.length - 1 === i) {
                 return (
@@ -101,7 +103,7 @@ export function ProjectsCards({
               } else {
                 return (
                   <div className="flex flex-row" key={tool}>
-                    <p className="px-2 uppercase text-xs sm:text-base">
+                    <p className="px-2 uppercase text-xs sm:text-base whitespace-nowrap">
                       {tool}
                     </p>
                     <p className="text-xs sm:text-base">|</p>
@@ -110,11 +112,35 @@ export function ProjectsCards({
               }
             })}
           </div>
-          <p className="px-2 max-w-[650px] text-[20px] leading-7 text-center md:text-start">
+          <div className="flex justify-center lg:justify-start">
+            {tools2row &&
+              tools2row.map((tool2row, i, toolSubArr) => {
+                if (toolSubArr.length - 1 === i) {
+                  return (
+                    <p
+                      key={tool2row}
+                      className="px-2 uppercase text-xs sm:text-base"
+                    >
+                      {tool2row}
+                    </p>
+                  )
+                } else {
+                  return (
+                    <div className="flex flex-row" key={tool2row}>
+                      <p className="px-2 uppercase text-xs sm:text-base whitespace-nowrap">
+                        {tool2row}
+                      </p>
+                      <p className="text-xs sm:text-base">|</p>
+                    </div>
+                  )
+                }
+              })}
+          </div>
+          <p className="px-10 sm:px-12 md:px-0 max-w-[650px] text-[20px] leading-7 text-center lg:text-start">
             {mainDescription}
           </p>
           {secoundDescription && (
-            <p className="px-2 max-w-[650px] text-[20px] leading-7 text-center md:text-start">
+            <p className="px-10 sm:px-12 md:px-0 max-w-[650px] text-[20px] leading-7 text-center lg:text-start">
               {secoundDescription}
             </p>
           )}

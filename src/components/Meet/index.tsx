@@ -38,8 +38,8 @@ export function MeetConferences() {
           <span>Conferences</span>
         </div>
         <Subtitle paddingBottom={true} paddingTop={true}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          We frequent the conference circuit and would love to meet up if
+          you&apos;re attending any of the events below.
         </Subtitle>
         <div className="grid gap-y-8 md:gap-y-[72px] md:mb-16">
           {conferences.map((conference) => {

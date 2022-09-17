@@ -5,19 +5,19 @@ import { WeDoCard, WeDoCardProps } from './Card'
 export function HomeWhatWeDo() {
   const cards: WeDoCardProps[] = [
     {
-      title: 'Dao',
+      title: 'Dao Partnerships',
       description:
-        'We invest in DAOs such as Giveth, Commons Stack, TEC and more, and actively participate in their governance.',
+        'We partner with DAOs such as Giveth, Commons Stack, TEC and more, and actively participate in their governance.',
     },
     {
-      title: 'r&d',
+      title: 'Product Development',
       description:
-        'Our robust R&D team is developing groundbreaking technologies and making ongoing contributions to the Ethereum Ecosystem.',
+        'Our robust R&D team is developing groundbreaking technologies and making ongoing contributions to the Ethereum ecosystem and the impact DAO space.',
     },
     {
-      title: 'education',
+      title: 'Technical Support',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        'We provide technical expertise, consulting and hands-on work to help you take your impact DAO to the next level.',
     },
   ]
   return (
