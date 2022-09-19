@@ -31,6 +31,18 @@
       format('svg');
 }
 
+input[type='date']::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  border-radius: 4px;
+  margin-right: 2px;
+  opacity: 0.6;
+  filter: invert(1);
+}
+
+input[type='date']::-webkit-calendar-picker-indicator:hover {
+  opacity: 1;
+}
+
 /* @font-face {
   font-family: 'Akira Expanded';
   src: url('../../public/fonts/AkiraExpanded.woff2') format('woff2'),
