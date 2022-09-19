@@ -2,9 +2,11 @@ import { ProjectsCards, ProjectsCardsProps } from './Cards'
 import TECLogo from '../../../public/images/logo/TEClogo.svg'
 import GivethLogo from '../../../public/images/logo/GivethLogo.svg'
 import CSLogo from '../../../public/images/logo/CSlogo.svg'
+import swagLogo from '../../../public/images/logo/SWAGlogo.svg'
 import givethProject from '../../../public/images/projects/GivethProject.png'
 import tecProject from '../../../public/images/projects/TecProject.png'
 import csProject from '../../../public/images/projects/CSProject.png'
+import ensProject from '../../../public/images/projects/ENSProject.png'
 import { Join } from '../Join'
 
 const projects: ProjectsCardsProps[] = [
@@ -38,6 +40,18 @@ const projects: ProjectsCardsProps[] = [
   {
     id: 3,
     bgColor: 'orange',
+    projectUrl: 'https://commonsstack.org/',
+    projectImg: ensProject,
+    clientLogo: swagLogo,
+    services: ['Development', 'Branding'],
+    tools: ['React', 'Rust', 'IPFS', 'Mongo DB'],
+    mainDescription: `The ENS DAO is a DAO that governs the ENS protocol. In 2022 won the bid to create ENS’s official Merch Store (Swag Shop).`,
+    secoundDescription:
+      'Our team is building the ENS Merch Store, and handling the entire product design journey from UX design to product selection, crypto wallet integration, development of the entire store and order fulfillment post launch.',
+  },
+  {
+    id: 4,
+    bgColor: 'purple',
     projectUrl: 'https://commonsstack.org/',
     projectImg: csProject,
     clientLogo: CSLogo,

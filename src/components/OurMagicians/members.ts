@@ -21,14 +21,13 @@ import RODRI from '../../../public/images/members/RODRI.png'
 import TOSIN from '../../../public/images/members/TOSIN.png'
 import VALERIE from '../../../public/images/members/VALERIE.png'
 import VYVY from '../../../public/images/members/VYVY.png'
-import ZHIWEI from '../../../public/images/members/ZHIWEI.png'
 import DEFAULT_02 from '../../../public/images/members/DEFAULT_02.png'
 import DEFAULT_03 from '../../../public/images/members/DEFAULT_03.png'
 import DEFAULT_04 from '../../../public/images/members/DEFAULT_04.png'
 
 export const members: OurMagiciansCardProps[] = [
   {
-    name: 'Marko',
+    name: 'Magic Marko',
     role: 'Design Manager / Lead',
     image: Marko,
   },
@@ -108,11 +107,6 @@ export const members: OurMagiciansCardProps[] = [
     image: VYVY,
   },
   {
-    name: 'Zhiwei',
-    role: 'Data scientist',
-    image: ZHIWEI,
-  },
-  {
     name: 'Rb',
     role: 'Project Manager',
     image: RB,
@@ -123,7 +117,7 @@ export const members: OurMagiciansCardProps[] = [
     image: DEFAULT_02,
   },
   {
-    name: 'Yassaman 0.',
+    name: 'Yassaman',
     role: 'Fundraiser',
     image: DEFAULT_03,
   },
