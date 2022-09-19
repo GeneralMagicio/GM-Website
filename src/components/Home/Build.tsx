@@ -26,7 +26,7 @@ export function Build() {
         </div>
         <div>
           <Button
-            url="/"
+            url="/about"
             text="meet our team"
             arrowColor="#A569FF"
             bgColor="gray"

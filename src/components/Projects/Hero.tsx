@@ -10,7 +10,7 @@ interface ProjectHeroProps {
 }
 
 const projectsText =
-  'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Facilisis vulputate arcu, in nisl rhoncus. Eu ut scelerisquevestibulum quam risus orci ultrices nec.'
+  'Browse some of our ongoing and successfully completed projects below, to learn about how we support impact DAOs.'
 
 export function ProjectsHero({ handleScroll }: ProjectHeroProps) {
   return (

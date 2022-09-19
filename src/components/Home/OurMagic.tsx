@@ -38,50 +38,43 @@ export function Magic() {
   const projects = [
     {
       title: 'Token Economics',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      description: `Whether you're thinking of launching an NFT project, a social or governance token or a full token economy, we have the expertise to make it happen.`,
       bgColor: 'blue',
     },
     {
       title: 'DAO Tooling and DESIGN',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        'Working on the cutting edge of DAO tooling and Tokenomics, our deep knowledge of the ecosystem will help you design your organization based on your needs.',
       bgColor: 'orange',
     },
     {
       title: 'Full stack development',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      description: `Our world class dev team can build any app from the ground up. We cover everything from databases, backend systems, API's, Frontend UI's, Smart Contracts and Fullstack apps.`,
       bgColor: 'pink',
     },
     {
       title: 'user research and ux design',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      description: `We know the importance of a great user experience. Our world class design team can help you craft streamlined user journeys that delight.`,
       bgColor: 'purple',
     },
     {
       title: 'product design',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      description: `From ideation to prototyping, our team can design your product from the ground up and make it ready to go-to-market. We also offer a revenue share partnership model to get your project off the ground.`,
       bgColor: 'blue',
     },
     {
       title: 'branding',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      description: `With our strong Design and UX team, we can help you brand stand out from the crowd and with a distinct identity.`,
       bgColor: 'orange',
     },
     {
       title: 'copywriting',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      description: `We know the words that are needed to make your content stand out. From web3 marketing to DAO proposals & technical writing.`,
       bgColor: 'pink',
     },
     {
       title: 'hr & hiring',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      description: `Through our expansive web3 network, we can help you find the talent you need and offer solutions on best practices for a globally decentralized team.`,
       bgColor: 'purple',
     },
   ]
@@ -111,7 +104,7 @@ export function Magic() {
               assigning top-notch Web3 professionals to assist them in their
               goals, either by integrating with existing teams, or creating
               resources from scratch. We have a diverse range of web3-related
-              talents that can handle almost any task needed.
+              talents that can handle virtually any task.
             </p>
           </div>
           <div className="md:hidden block mt-4">

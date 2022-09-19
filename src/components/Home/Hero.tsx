@@ -39,7 +39,7 @@ export function HomeHero({ handleScroll }: HomeHeroProps) {
               </Subtitle>
               <button
                 onClick={handleScroll}
-                className="hover:opacity-70 lg:mx-8 my-4 w-8 h-8 lg:h-12 lg:w-12 self-start lg:self-center"
+                className="animate-bounce hover:opacity-70 lg:mx-8 my-4 w-8 h-8 lg:h-12 lg:w-12 self-start lg:self-center"
               >
                 <Image src={down} alt="Down" />
               </button>

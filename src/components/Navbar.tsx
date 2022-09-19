@@ -29,7 +29,7 @@ export function Navbar() {
     },
     {
       title: 'Contact',
-      url: '',
+      url: '/contact',
     },
   ]
 

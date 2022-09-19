@@ -47,11 +47,7 @@ export function Button({
             {breakText && <p>{firstWord}</p>}
             <div className="flex items-center justify-between">
               {breakText && <p>{rest}</p>}
-              {!breakText && (
-                <p>
-                  {firstWord} {rest}
-                </p>
-              )}
+              {!breakText && <p>{text}</p>}
               <span>
                 <svg
                   width="25"

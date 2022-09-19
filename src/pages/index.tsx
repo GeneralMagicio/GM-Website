@@ -3,7 +3,7 @@ import { useRef } from 'react'
 import { HomeBg } from '../components/Home/Background'
 import { HomeHero } from '../components/Home/Hero'
 import { History } from '../components/Home/History'
-import { HomeMeet } from '../components/Home/Meet'
+import { MeetConferences } from '../components/Meet'
 import { HomeRedirect } from '../components/Home/Redirect'
 
 export default function Home() {
@@ -26,7 +26,7 @@ export default function Home() {
         </div>
         <History />
         <HomeBg />
-        <HomeMeet />
+        <MeetConferences />
       </div>
     </>
   )
