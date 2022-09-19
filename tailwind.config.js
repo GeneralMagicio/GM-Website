@@ -44,6 +44,8 @@ module.exports = {
         footer: "url('/images/background/footer.png')",
         projects: "url('/images/background/projectsBg.png')",
         about: "url('/images/background/aboutBg.png')",
+        contact: "url('/images/background/contactBg.png')",
+        contactMobile: "url('/images/background/contactBgMobile.png')",
       }),
     },
   },
