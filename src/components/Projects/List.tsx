@@ -40,7 +40,7 @@ const projects: ProjectsCardsProps[] = [
   {
     id: 3,
     bgColor: 'orange',
-    projectUrl: 'https://commonsstack.org/',
+    projectUrl: '',
     projectImg: ensProject,
     clientLogo: swagLogo,
     services: ['Development', 'Branding'],

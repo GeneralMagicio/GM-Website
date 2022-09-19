@@ -59,7 +59,7 @@ export function ContactHero({ handleScroll }: ContactHeroProps) {
         <div className="hidden absolute bottom-0 right-0 md:flex items-end justify-end">
           <Image src={plantR} alt="plant" height={641} width={240} />
         </div>
-        <div className="absolute bottom-60 md:bottom-[-50px] flex items-end justify-end">
+        <div className="absolute bottom-32 md:bottom-[-50px] flex items-end justify-end">
           <Image src={contactBanner} alt="Let's work together" />
         </div>
       </div>
