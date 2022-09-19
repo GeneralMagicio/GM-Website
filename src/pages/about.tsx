@@ -24,8 +24,8 @@ export default function About() {
         className="bg-homeBg bg-cover bg-center bg-no-repeat bg-blend-darken bg-neutral-900"
       >
         <AboutValues />
+        <OurMagicians page="About" />
       </div>
-      <OurMagicians page="About" />
       <MeetConferences />
     </>
   )
