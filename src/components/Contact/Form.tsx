@@ -2,6 +2,7 @@ import { Button } from '../base/Button'
 import { ContactButton } from '../base/ContactButton'
 import { Input } from '../base/Input'
 import { FormHeader } from './FormHeader'
+import { SubmitModal } from './Modal/SubmitModal'
 
 export function ContactForm() {
   const checkboxes = [
@@ -98,6 +99,7 @@ export function ContactForm() {
           />
         </div>
       </div>
+      <SubmitModal />
     </>
   )
 }
