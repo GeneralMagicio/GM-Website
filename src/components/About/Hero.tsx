@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { Title } from '../base/Title'
-import down from '../../../public/images/down.svg'
+import down from '../../../public/images/icons/down.svg'
 import { Subtitle } from '../base/Subtitle'
 import aboutAguila from '../../../public/images/aboutAguila.png'
 import { Button } from '../base/Button'

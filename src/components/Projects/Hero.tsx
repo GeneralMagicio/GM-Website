@@ -3,7 +3,7 @@ import { Subtitle } from '../base/Subtitle'
 import { Title } from '../base/Title'
 import projectsHero from '../../../public/images/projectsHero.png'
 import projectsHeroMobile from '../../../public/images/projectsHeroMobile.png'
-import down from '../../../public/images/down.svg'
+import down from '../../../public/images/icons/down.svg'
 
 interface ProjectHeroProps {
   handleScroll: () => void

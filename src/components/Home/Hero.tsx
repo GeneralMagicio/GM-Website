@@ -3,7 +3,7 @@ import { Subtitle } from '../base/Subtitle'
 import Image from 'next/image'
 import plantL from '../../../public/images/homePlantL.svg'
 import plantR from '../../../public/images/homePlantR.svg'
-import down from '../../../public/images/down.svg'
+import down from '../../../public/images/icons/down.svg'
 import aguila from '../../../public/images/aguila.png'
 
 interface HomeHeroProps {

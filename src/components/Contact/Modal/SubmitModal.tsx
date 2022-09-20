@@ -1,8 +1,8 @@
 import { Dialog } from '@headlessui/react'
 import Image from 'next/image'
 import { useState } from 'react'
-import succeessSubmit from '../../../../public/images/succeessSubmit.svg'
-import failSubmit from '../../../../public/images/failSubmit.svg'
+import succeessSubmit from '../../../../public/images/icons/succeessSubmit.svg'
+import failSubmit from '../../../../public/images/icons/failSubmit.svg'
 export function SubmitModal() {
   const [dialog, setDialog] = useState(false)
   const [sucess, setSucess] = useState(true)
@@ -39,7 +39,8 @@ export function SubmitModal() {
               <div className="flex flex-col items-center justify-center h-full w-full">
                 <Image src={failSubmit} alt="Fail" />
                 <h2 className="font-akira text-3xl text-center pt-6 pb-4">
-                  OPS . . .
+                  OPS
+                  <span className="tracking-[5px] ml-1">...</span>
                 </h2>
                 <div className="text-center px-4">
                   Something is not working right, sorry, try again later.
