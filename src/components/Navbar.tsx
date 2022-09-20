@@ -25,7 +25,7 @@ export function Navbar() {
     },
     {
       title: 'Shop',
-      url: '',
+      url: '/shop',
     },
     {
       title: 'Contact',

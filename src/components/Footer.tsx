@@ -8,7 +8,7 @@ const pages = [
     label: 'Services',
   },
   {
-    url: '',
+    url: '/about',
     label: 'About',
   },
   {
@@ -20,7 +20,7 @@ const pages = [
     label: 'Careers',
   },
   {
-    url: '',
+    url: '/shop',
     label: 'Shop',
   },
   {

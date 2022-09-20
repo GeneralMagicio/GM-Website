@@ -17,7 +17,6 @@ export function Magic() {
   const { width } = useWindowDimensions()
 
   function handleSwiper(swiper: any) {
-    console.log(swiper.realIndex)
     swiper.isBeginning ? setIsBeginning(true) : setIsBeginning(false)
     swiper.isEnd ? setIsEnd(true) : setIsEnd(false)
   }
@@ -127,6 +126,7 @@ export function Magic() {
             <SwiperSlide key={project.title}>
               <div className="flex justify-center mt-20 md:ml-20 ml-8">
                 <ProjectCard
+                  page="Home"
                   title={project.title}
                   description={project.description}
                   bgColor={project.bgColor}

@@ -1,6 +1,6 @@
 import React from 'react'
 import classnames from 'classnames'
-import swiperLogo from '../../../public/images/swiper.svg'
+import swiperLogo from '../../../public/images/icons/swiper.svg'
 import Image from 'next/image'
 
 interface SwipperNextProps {

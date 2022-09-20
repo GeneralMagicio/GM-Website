@@ -1,7 +1,7 @@
 import { Subtitle } from '../base/Subtitle'
 import { Title } from '../base/Title'
 import plantR from '../../../public/images/homePlantR.svg'
-import down from '../../../public/images/down.svg'
+import down from '../../../public/images/icons/down.svg'
 import contactBanner from '../../../public/images/contactBanner.png'
 import Image from 'next/image'
 
