@@ -20,6 +20,7 @@ module.exports = {
       colors: {
         neutral: {
           600: '#959DB2',
+          700: '#6F7689',
           800: '#3E4557',
           900: '#161718',
         },
@@ -46,6 +47,7 @@ module.exports = {
         about: "url('/images/background/aboutBg.png')",
         contact: "url('/images/background/contactBg.png')",
         contactMobile: "url('/images/background/contactBgMobile.png')",
+        shop: "url('/images/background/shopBg.png')",
       }),
     },
   },
