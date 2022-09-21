@@ -46,7 +46,7 @@ export function ProjectCard({
           )}
         >
           {page === 'Home' && (
-            <div>
+            <div className="justify-between flex flex-col h-full">
               <div className="flex m-7 self-end">
                 {/* <p className="uppercase text-magicSky-300 mr-2 text-xs lg:text-base">
               Learn more
