@@ -38,17 +38,21 @@ export function ShopWhatOthers() {
   return (
     <div className="bg-homeBg bg-cover bg-center bg-no-repeat bg-blend-darken bg-neutral-900 md:pb-24 pb-16 flex flex-col items-center justify-center pt-28">
       <Title>
-        <span className="text-center md:text-[32px] max-w-2xl leading-10">
+        <span className="text-center md:text-[32px] max-w-2xl leading-10 px-8">
           What other say
         </span>
       </Title>
       <Subtitle paddingTop={true} paddingBottom={true}>
-        <span className="text-center md:text-xl max-w-2xl">
+        <span className="text-center md:text-xl max-w-2xl px-8">
           Don&apos;t just take our word for it. See what other DAO&apos;s say
           about our swag shop service.
         </span>
       </Subtitle>
-      <div className="max-w-full">
+      <div className="md:hidden block mb-4">
+        <SwiperButtonPrev swiper={swiperIstance} isBeginning={isBeginning} />
+        <SwiperButtonNext swiper={swiperIstance} isEnd={isEnd} />
+      </div>
+      <div className="max-w-full px-3">
         <Swiper
           slidesPerView={1}
           onSwiper={(swiper) => setSwiperInstance(swiper)}
@@ -70,7 +74,7 @@ export function ShopWhatOthers() {
           })}
         </Swiper>
       </div>
-      <div className="block mt-4">
+      <div className="hidden md:block mt-4">
         <SwiperButtonPrev swiper={swiperIstance} isBeginning={isBeginning} />
         <SwiperButtonNext swiper={swiperIstance} isEnd={isEnd} />
       </div>

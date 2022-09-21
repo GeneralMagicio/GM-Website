@@ -3,6 +3,9 @@ import membersBg from '../../../public/images/members.png'
 import shopWallet from '../../../public/images/shopWallet.svg'
 import shopApparel from '../../../public/images/shopApparel.png'
 import shopElipse from '../../../public/images/shopElipse.png'
+import stars from '../../../public/images/stars.png'
+import Image from 'next/image'
+import plantL from '../../../public/images/homePlantL.svg'
 
 export function ShopFeatures() {
   const values: AboutValueProps[] = [
@@ -44,7 +47,7 @@ export function ShopFeatures() {
     },
   ]
   return (
-    <div className="bg-homeBg bg-cover bg-center bg-no-repeat bg-blend-darken bg-neutral-900 md:pb-24 pb-16">
+    <div className="bg-homeBg bg-cover bg-center bg-no-repeat bg-blend-darken bg-neutral-900 md:pb-24 pb-16 relative pt-16 md:pt-0">
       {values.map((value) => {
         return (
           <AboutValue
@@ -58,6 +61,12 @@ export function ShopFeatures() {
           />
         )
       })}
+      <div className="absolute left-0 top-0 z-20">
+        <Image src={stars} alt="" width={163} height={163} />
+      </div>
+      <div className="hidden md:flex absolute bottom-[-63px] right-[64px] -rotate-90">
+        <Image src={plantL} alt="plant" />
+      </div>
     </div>
   )
 }

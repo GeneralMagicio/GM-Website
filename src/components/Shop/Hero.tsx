@@ -11,7 +11,7 @@ export function ShopHero() {
       <div className="relative h-[calc(100vh_-_108px)] min-h-[552px]">
         <div className="flex justify-between h-full">
           <div className="absolute inset-0 bg-shop bg-auto bg-center bg-no-repeat bg-neutral-900" />
-          <div className="z-40 self-center ml-28">
+          <div className="z-40 self-center md:mt-0 mx-6 md:mx-0 md:ml-28">
             <Title>
               <span className="max-w-3xl leading-[66.3px]">
                 get your Web3 native swag shop
@@ -22,9 +22,9 @@ export function ShopHero() {
                 Open-sourced and built specifically to serve web3 communities.
               </span>
             </Subtitle>
-            <ShopButton bgColor="purple" text="get quote" />
+            <ShopButton bgColor="purple" text="get quote" url="/contact" />
           </div>
-          <div className="absolute top-3 left-28 z-40">
+          <div className="absolute top-3 inset-x-0 md:left-28 z-40">
             <LatestWork />
           </div>
           <div className="absolute right-0 bottom-0 flex mix-blend-overlay lg:mix-blend-normal">

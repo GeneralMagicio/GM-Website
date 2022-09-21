@@ -3,11 +3,15 @@ import ENSlogo from '../../../public/images/logo/ENSlogo.svg'
 
 export function LatestWork() {
   return (
-    <div className="flex items-center">
-      <h3 className="uppercase tracking-[4px] mr-5">Look at our latest work</h3>
-      <button className="flex items-center w-fit border border-white px-6 py-4 bg-neutral-900 hover:bg-opacity-70">
+    <div className="flex flex-col md:flex-row items-center justify-center md:justify-start">
+      <h3 className="uppercase tracking-[4px] md:mr-5">
+        Look at our latest work
+      </h3>
+      <button className="flex items-center w-fit border border-white px-4 md:px-6 py-4 bg-neutral-900 hover:bg-opacity-70">
         <div className="w-fit">
-          <p className="font-akira text-sm tracking-[1px]">Swag shop for</p>
+          <p className="font-akira text-xs md:text-sm tracking-[1px]">
+            Swag shop for
+          </p>
         </div>
         <div className="w-fit mx-3">
           <svg
