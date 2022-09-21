@@ -1,9 +1,9 @@
-import { Swiper, SwiperSlide } from 'swiper/react'
 import { ProjectCard } from '../base/Card'
 import { Subtitle } from '../base/Subtitle'
 import { Title } from '../base/Title'
 
 import 'swiper/css'
+import { Swiper, SwiperSlide } from 'swiper/react'
 import { SwiperButtonNext } from './SwipperNextButton'
 import { useEffect, useState } from 'react'
 import { SwiperButtonPrev } from './SwipperPrevButton'
