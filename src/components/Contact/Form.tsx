@@ -14,6 +14,7 @@ export function ContactForm() {
     'Copywriting',
     'User research and UX Desgin',
     'HR & Hiring',
+    'Swag Shop',
   ]
   return (
     <>
@@ -41,7 +42,7 @@ export function ContactForm() {
             <Input placeholder="Project Link" />
           </div>
         </FormHeader>
-        <FormHeader title="Project Details">
+        <FormHeader title="Required Services">
           <div className="flex justify-center">
             <div className="grid grid-cols-2 w-fit gap-y-6 gap-x-2 sm:gap-x-8 md:gap-x-16">
               {checkboxes.map((checkbox) => {
