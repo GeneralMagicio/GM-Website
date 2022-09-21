@@ -4,6 +4,7 @@ import { Title } from '../base/Title'
 import bird from '../../../public/images/bird.svg'
 import ring from '../../../public/images/ring.svg'
 import Image from 'next/image'
+import aguila from '../../../public/images/aguila.png'
 
 export function ShopLaunch() {
   const cards = [
@@ -27,11 +28,11 @@ export function ShopLaunch() {
   ]
   return (
     <div className="bg-neutral-900 relative ">
-      <div className="absolute left-0 top-0">
+      <div className="hidden md:block absolute left-0 top-0">
         <Image src={bird} alt="bird" />
       </div>
       <div className="h-grid-line h-[1px]"></div>
-      <div className="relative z-40 flex flex-col items-center mx-12 lg:mx-32 my-32">
+      <div className="relative z-40 flex flex-col items-center mx-12 lg:mx-32 my-12 md:my-32">
         <Title>
           <span className="text-center md:text-[32px]">
             Launch your own Swag Shop
@@ -44,9 +45,12 @@ export function ShopLaunch() {
           </span>
         </Subtitle>
       </div>
-      <div className="grid grid-cols-2 w-full my-10 relative">
-        <div className="absolute right-0 top-[-100px]">
+      <div className="grid dao-md:grid-cols-2 w-full my-10 relative gap-y-12">
+        <div className="hidden dao-md:block absolute right-0 top-[-100px]">
           <Image src={ring} alt="ring" />
+        </div>
+        <div className="sm:hidden block z-50 absolute top-[-50px] left-0 w-32">
+          <Image src={aguila} alt="making magic happen" />
         </div>
         {cards.map((card) => {
           return (

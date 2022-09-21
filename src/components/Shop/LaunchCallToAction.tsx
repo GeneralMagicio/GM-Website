@@ -11,7 +11,7 @@ export function ShopLaunchCallToAction() {
       <div className="absolute bottom-0 flex left-0">
         <Image src={shopTshirts} alt="" />
       </div>
-      <div className="absolute bottom-0 flex right-0 max-h-[529px]">
+      <div className="hidden md:flex absolute bottom-0 right-0 max-h-[529px]">
         <Image src={shopHats} alt="" />
       </div>
       <div className="h-grid-line h-[1px]"></div>

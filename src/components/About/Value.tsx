@@ -29,16 +29,18 @@ export function AboutValue({
   return (
     <div
       className={classnames(
-        'flex flex-col-reverse items-center justify-center md:px-28 px-12 mt-16',
+        'flex flex-col-reverse items-center justify-center md:px-28 px-12 mt-16 relative z-40',
         side['position']
       )}
     >
-      <div className="max-w-[650px]">
+      <div className="max-w-[650px] mt-5 md:mt-0">
         <div className="flex justify-center md:justify-start">
           <Title>
-            <span>{titleFirst}</span>
-            <span>{titleSecond}</span>
-            {titleThird && <span>{titleSecond}</span>}
+            <span className="text-center md:text-start">{titleFirst}</span>
+            <span className="text-center md:text-start">{titleSecond}</span>
+            {titleThird && (
+              <span className="text-center md:text-start">{titleThird}</span>
+            )}
           </Title>
         </div>
         <Subtitle paddingBottom={false} paddingTop={true}>

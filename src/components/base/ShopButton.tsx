@@ -19,11 +19,11 @@ export function ShopButton({ bgColor, text, url }: ButtonProps) {
         <Link href={url}>
           <button
             className={classnames(
-              'py-7 px-20 hover:bg-opacity-70 m-[1px]',
+              'py-3 lg:py-7 px-10 lg:px-20 hover:bg-opacity-70 m-[1px]',
               bgColors[bgColor]
             )}
           >
-            <div className="uppercase sm:text-xl md:text-2xl text-center">
+            <div className="uppercase text-xs lg:text-2xl text-center">
               <p>{text}</p>
             </div>
           </button>
@@ -31,11 +31,11 @@ export function ShopButton({ bgColor, text, url }: ButtonProps) {
       ) : (
         <button
           className={classnames(
-            'py-7 px-20 hover:bg-opacity-70 m-[1px]',
+            'py-3 lg:py-7 px-10 lg:px-20 hover:bg-opacity-70 m-[1px]',
             bgColors[bgColor]
           )}
         >
-          <div className="uppercase sm:text-xl md:text-2xl text-center">
+          <div className="uppercase text-xs lg:text-2xl text-center">
             <p>{text}</p>
           </div>
         </button>

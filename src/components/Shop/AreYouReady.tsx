@@ -8,11 +8,17 @@ import readyR from '../../../public/images/readyR.svg'
 export function ShopAreYouReady() {
   return (
     <div className="bg-neutral-900 relative ">
-      <div className="absolute bottom-0 flex left-0">
+      <div className="hidden md:flex absolute bottom-0 left-0">
         <Image src={readyL} alt="" />
       </div>
-      <div className="absolute bottom-0 flex right-0">
+      <div className="hidden md:flex absolute bottom-0 right-0">
         <Image src={readyR} alt="" />
+      </div>
+      <div className="md:hidden flex absolute bottom-0 left-0 justify-start">
+        <Image src={readyL} alt="" height={150} width={150} />
+      </div>
+      <div className="md:hidden flex absolute bottom-0 right-0">
+        <Image src={readyR} alt="" height={150} width={150} />
       </div>
       <div className="h-grid-line h-[1px]"></div>
       <div className="relative z-40 flex flex-col items-center mx-12 lg:mx-32 my-32">
