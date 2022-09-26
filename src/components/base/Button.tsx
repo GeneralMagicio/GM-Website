@@ -8,6 +8,8 @@ interface ButtonProps {
   breakText: boolean
   border?: string
   url: string
+  type?: 'button' | 'submit' | 'reset' | undefined
+  disabled?: boolean
 }
 
 export function Button({
@@ -17,6 +19,7 @@ export function Button({
   border,
   breakText,
   url,
+  disabled,
 }: ButtonProps) {
   const bgColors: { [key: string]: string } = {
     white: 'bg-white',
@@ -42,6 +45,7 @@ export function Button({
             'w-[calc(100%_-_2px)] sm:w-[367px] p-5 hover:bg-opacity-70 m-[1px]',
             bgColors[bgColor]
           )}
+          disabled={disabled}
         >
           <div className="uppercase font-akira text-2xl text-left">
             {breakText && <p>{firstWord}</p>}

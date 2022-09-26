@@ -4,9 +4,10 @@ interface ButtonProps {
   bgColor: string
   text: string
   border?: string
+  checked?: boolean
 }
 
-export function ContactButton({ bgColor, text, border }: ButtonProps) {
+export function ContactButton({ bgColor, text, border, checked }: ButtonProps) {
   const bgColors: { [key: string]: string } = {
     white: 'bg-white',
     gray: 'bg-neutral-900',
@@ -17,19 +18,22 @@ export function ContactButton({ bgColor, text, border }: ButtonProps) {
   return (
     <div
       className={classnames(
-        border ? 'button-border w-fullrelative z-50' : 'bg-neutral-900 w-full'
+        border
+          ? 'button-border w-fullrelative z-50 flex'
+          : 'bg-neutral-900 w-full'
       )}
     >
-      <button
+      <div
         className={classnames(
-          'w-[calc(100%_-_2px)] h-[calc(100%_-_2px)] p-5 hover:bg-opacity-70 m-[1px]',
-          bgColors[bgColor]
+          'w-[calc(100%_-_2px)] h-[calc(100%_-_2px)] p-5 hover:bg-opacity-70 m-[1px] selected:bg-red-500',
+          bgColors[bgColor],
+          checked ? 'bg-opacity-70' : ''
         )}
       >
         <div className="uppercase font-akira sm:text-xl md:text-2xl text-center">
           <p>{text}</p>
         </div>
-      </button>
+      </div>
     </div>
   )
 }

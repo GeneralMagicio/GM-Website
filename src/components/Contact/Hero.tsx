@@ -10,7 +10,6 @@ interface ContactHeroProps {
 }
 
 export function ContactHero({ handleScroll }: ContactHeroProps) {
-  const bannerText = ` let's work together -`
   const description =
     'We are a group of Web3 professionals with deep roots/ embedded in the Ethereum ecosystem devoted to supporting commons-based organizations and public good projects.'
   return (
@@ -38,23 +37,6 @@ export function ContactHero({ handleScroll }: ContactHeroProps) {
               </button>
             </div>
           </div>
-          {/* <div className="bg-neutral-900 absolute bottom-0 -rotate-[7.6deg] whitespace-nowrap overflow-hidden text-clip max-w-full py-5 z-30">
-            <span className="font-akira text-[32px] bg-clip-text text-transparent bg-gradient-to-r from-[#A569FF] via-[#A569FF] to-[#71DDE4] overflow-hidden">
-              {bannerText}
-            </span>
-            <span className="font-akira text-[32px] bg-clip-text text-transparent bg-gradient-to-r from-[#A569FF] via-[#A569FF] to-[#71DDE4] overflow-hidden">
-              {bannerText}
-            </span>
-            <span className="font-akira text-[32px] bg-clip-text text-transparent bg-gradient-to-r from-[#A569FF] via-[#A569FF] to-[#71DDE4] overflow-hidden">
-              {bannerText}
-            </span>
-            <span className="font-akira text-[32px] bg-clip-text text-transparent bg-gradient-to-r from-[#A569FF] via-[#A569FF] to-[#71DDE4] overflow-hidden">
-              {bannerText}
-            </span>
-            <span className="font-akira text-[32px] bg-clip-text text-transparent bg-gradient-to-r from-[#A569FF] via-[#A569FF] to-[#71DDE4] overflow-hidden">
-              {bannerText}
-            </span>
-          </div> */}
         </div>
         <div className="hidden absolute bottom-0 right-0 md:flex items-end justify-end">
           <Image src={plantR} alt="plant" height={641} width={240} />
