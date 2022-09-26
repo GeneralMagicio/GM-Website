@@ -51,42 +51,15 @@ export function ContactForm() {
     {} as IContactForm
   )
   const checkboxes = [
-    {
-      label: 'Token Economics',
-      name: 'tokenEconomics',
-    },
-    {
-      label: 'Product Design',
-      name: 'productDesign',
-    },
-    {
-      label: 'DAO Design',
-      name: 'daoDesign',
-    },
-    {
-      label: 'Branding',
-      name: 'branding',
-    },
-    {
-      label: 'Full stack development',
-      name: 'fullstackDevelopment',
-    },
-    {
-      label: 'Copywriting',
-      name: 'copywriting',
-    },
-    {
-      label: 'User research and UX Desgin',
-      name: 'userResearchAndUxDesgin',
-    },
-    {
-      label: 'HR & Hiring',
-      name: 'HrAndHiring',
-    },
-    {
-      label: 'Swag Shop',
-      name: 'swag',
-    },
+    'Token Economics',
+    'Product Design',
+    'DAO Design',
+    'Branding',
+    'Full stack development',
+    'Copywriting',
+    'User research and UX Desgin',
+    'HR & Hiring',
+    'Swag Shop',
   ]
 
   function handleCheck(event: ChangeEvent<HTMLInputElement>) {
@@ -140,6 +113,8 @@ export function ContactForm() {
     }
     setIsLoading(false)
   }
+
+  console.log(contactForm)
 
   useEffect(() => {
     const requestedFields: IRequestedFields = (({
@@ -233,14 +208,14 @@ export function ContactForm() {
             <div className="grid grid-cols-2 w-fit gap-y-6 gap-x-2 sm:gap-x-8 md:gap-x-16">
               {checkboxes.map((checkbox) => {
                 return (
-                  <div key={checkbox.label} className="w-fit">
+                  <div key={checkbox} className="w-fit">
                     <input
                       className="appearance-none h-4 w-4 border border-pinkPotion-300 rounded bg-neutral-900 checked:bg-pinkPotion-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
                       type="checkbox"
-                      name={checkbox.name}
+                      name={checkbox}
                       onChange={handleCheck}
                     />
-                    <label className="inline">{checkbox.label}</label>
+                    <label className="inline">{checkbox}</label>
                   </div>
                 )
               })}
