@@ -113,9 +113,6 @@ export function ContactForm() {
     }
     setIsLoading(false)
   }
-
-  console.log(contactForm)
-
   useEffect(() => {
     const requestedFields: IRequestedFields = (({
       firstName,
