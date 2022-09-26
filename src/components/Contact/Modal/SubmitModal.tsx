@@ -1,11 +1,16 @@
 import { Dialog } from '@headlessui/react'
 import Image from 'next/image'
-import { useState } from 'react'
+import { Dispatch, SetStateAction, useState } from 'react'
 import succeessSubmit from '../../../../public/images/icons/succeessSubmit.svg'
 import failSubmit from '../../../../public/images/icons/failSubmit.svg'
-export function SubmitModal() {
-  const [dialog, setDialog] = useState(false)
-  const [sucess, setSucess] = useState(true)
+
+interface SubmitModalProps {
+  status: string
+  setDialog: Dispatch<SetStateAction<boolean>>
+  dialog: boolean
+}
+
+export function SubmitModal({ status, dialog, setDialog }: SubmitModalProps) {
   return (
     <Dialog
       open={dialog}
@@ -16,7 +21,7 @@ export function SubmitModal() {
       <div className="fixed inset-0 flex items-center justify-center">
         <div className="h-1/2 w-3/4 md:w-1/2 button-border flex items-center">
           <Dialog.Panel className="mx-auto bg-neutral-900 w-[calc(100%_-_2px)] h-[calc(100%_-_2px)]">
-            {sucess ? (
+            {status === 'success' ? (
               <div className="flex flex-col items-center justify-center h-full w-full">
                 <Image src={succeessSubmit} alt="Success" />
                 <h2 className="font-akira text-3xl text-center pt-6 pb-4">
