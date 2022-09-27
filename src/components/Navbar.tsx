@@ -81,11 +81,13 @@ export function Navbar() {
                   )
                 })}
               </div>
-              <button className="hidden uppercase bg-magicPurple-300 h-full md:flex items-center hover:bg-opacity-70 justify-center">
-                <h1 className="text-white font-akira 2xl:px-11 xl:px-8 md:px-5 xl:text-base text-[8px]">
-                  work with us
-                </h1>
-              </button>
+              <Link href="/contact">
+                <button className="hidden uppercase bg-magicPurple-300 h-full md:flex items-center hover:bg-opacity-70 justify-center">
+                  <h1 className="text-white font-akira 2xl:px-11 xl:px-8 md:px-5 xl:text-base text-[8px]">
+                    work with us
+                  </h1>
+                </button>
+              </Link>
             </div>
           </div>
           <AnimatePresence>
