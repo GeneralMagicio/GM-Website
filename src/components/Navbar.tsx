@@ -21,7 +21,7 @@ export function Navbar() {
     },
     {
       title: 'Careers',
-      url: '',
+      url: '/contact',
     },
     {
       title: 'Shop',
@@ -112,7 +112,7 @@ export function Navbar() {
                         </Link>
                       )
                     })}
-                    <Link href="/">
+                    <Link href="/contact">
                       <div className="px-8 w-full">
                         <div className="text-white hover:bg-gray-50 hover:border-gray-300 hover:text-magicPurple-300 border-transparent bg-magicPurple-300 w-full">
                           <a className="font-akira block pl-3 pr-4 py-3 text-base text-center">

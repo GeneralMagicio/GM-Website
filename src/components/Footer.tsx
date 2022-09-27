@@ -16,7 +16,7 @@ const pages = [
     label: 'Projects',
   },
   {
-    url: '',
+    url: '/contact',
     label: 'Careers',
   },
   {
