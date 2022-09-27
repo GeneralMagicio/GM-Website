@@ -21,7 +21,7 @@ export function Navbar() {
     },
     {
       title: 'Careers',
-      url: '',
+      url: '/contact',
     },
     {
       title: 'Shop',
@@ -81,11 +81,13 @@ export function Navbar() {
                   )
                 })}
               </div>
-              <button className="hidden uppercase bg-magicPurple-300 h-full md:flex items-center hover:bg-opacity-70 justify-center">
-                <h1 className="text-white font-akira 2xl:px-11 xl:px-8 md:px-5 xl:text-base text-[8px]">
-                  work with us
-                </h1>
-              </button>
+              <Link href="/contact">
+                <button className="hidden uppercase bg-magicPurple-300 h-full md:flex items-center hover:bg-opacity-70 justify-center">
+                  <h1 className="text-white font-akira 2xl:px-11 xl:px-8 md:px-5 xl:text-base text-[8px]">
+                    work with us
+                  </h1>
+                </button>
+              </Link>
             </div>
           </div>
           <AnimatePresence>
@@ -112,12 +114,12 @@ export function Navbar() {
                         </Link>
                       )
                     })}
-                    <Link href="/">
+                    <Link href="/contact">
                       <div className="px-8 w-full">
                         <div className="text-white hover:bg-gray-50 hover:border-gray-300 hover:text-magicPurple-300 border-transparent bg-magicPurple-300 w-full">
-                          <a className="font-akira block pl-3 pr-4 py-3 text-base text-center">
+                          <span className="font-akira block pl-3 pr-4 py-3 text-base text-center">
                             Work with us
-                          </a>
+                          </span>
                         </div>
                       </div>
                     </Link>
