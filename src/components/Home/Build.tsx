@@ -22,6 +22,7 @@ export function Build() {
             bgColor="gray"
             border="linear"
             breakText={true}
+            externalLink={false}
           />
         </div>
         <div>
@@ -32,6 +33,7 @@ export function Build() {
             bgColor="gray"
             border="linear"
             breakText={true}
+            externalLink={false}
           />
         </div>
       </div>
