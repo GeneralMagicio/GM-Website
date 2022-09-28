@@ -16,7 +16,6 @@ import NEBS from '../../../public/images/members/NEBS.png'
 import NICO from '../../../public/images/members/NICO.png'
 import NUGGAN from '../../../public/images/members/NUGGAN.png'
 import PETER from '../../../public/images/members/PETER.png'
-import RB from '../../../public/images/members/RB.png'
 import RODRI from '../../../public/images/members/RODRI.png'
 import TOSIN from '../../../public/images/members/TOSIN.png'
 import VALERIE from '../../../public/images/members/VALERIE.png'
@@ -53,7 +52,7 @@ export const members: OurMagiciansCardProps[] = [
   },
   {
     name: 'FRESHELLE',
-    role: 'Accounting Manager and HR Support',
+    role: 'Accounting and Talent Administration',
     image: FRESHELLE,
   },
   {
@@ -105,11 +104,6 @@ export const members: OurMagiciansCardProps[] = [
     name: 'Vyvy-vi',
     role: 'Developer',
     image: VYVY,
-  },
-  {
-    name: 'Rb',
-    role: 'Project Manager',
-    image: RB,
   },
   {
     name: 'Fabio',
