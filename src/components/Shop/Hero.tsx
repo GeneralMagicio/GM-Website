@@ -24,9 +24,9 @@ export function ShopHero() {
             </Subtitle>
             <ShopButton bgColor="purple" text="get quote" url="/contact" />
           </div>
-          <div className="absolute top-3 inset-x-0 md:left-28 z-40">
+          {/* <div className="absolute top-3 inset-x-0 md:left-28 z-40">
             <LatestWork />
-          </div>
+          </div> */}
           <div className="absolute right-0 bottom-0 flex mix-blend-overlay lg:mix-blend-normal">
             <Image src={shopHero} alt="" />
           </div>

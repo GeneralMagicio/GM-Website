@@ -17,6 +17,7 @@ export function History() {
               bgColor="orange"
               text="Work with us"
               breakText={true}
+              externalLink={false}
             />
           </div>
         </div>

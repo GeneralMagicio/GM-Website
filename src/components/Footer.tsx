@@ -1,33 +1,8 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import GM from '../../public/images/GM.svg'
+import { pages } from './pages'
 
-const pages = [
-  {
-    url: '',
-    label: 'Services',
-  },
-  {
-    url: '/about',
-    label: 'About',
-  },
-  {
-    url: '/projects',
-    label: 'Projects',
-  },
-  {
-    url: 'https://giveth.recruitee.com/',
-    label: 'Careers',
-  },
-  {
-    url: '/shop',
-    label: 'Shop',
-  },
-  {
-    url: '/contact',
-    label: 'Contact',
-  },
-]
 const socials = [
   {
     url: 'https://twitter.com/generalmagicio',
@@ -70,10 +45,20 @@ export function Footer() {
         <div className="grid gap-y-6 h-fit justify-center">
           {pages.map((page) => {
             return (
-              <Link key={page.label} href={page.url}>
-                <p className="hover:text-magicPurple-300 hover:cursor-pointer hover:underline">
-                  {page.label}
-                </p>
+              <Link key={page.title} href={page.url}>
+                {page.external ? (
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
+                    className="hover:text-magicPurple-300 hover:cursor-pointer hover:underline"
+                  >
+                    {page.title}
+                  </a>
+                ) : (
+                  <a className="hover:text-magicPurple-300 hover:cursor-pointer hover:underline">
+                    {page.title}
+                  </a>
+                )}
               </Link>
             )
           })}

@@ -22,6 +22,7 @@ export function Join() {
         bgColor="gray"
         border="linear"
         breakText={false}
+        externalLink={true}
       />
     </div>
   )

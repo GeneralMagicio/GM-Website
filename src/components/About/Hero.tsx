@@ -55,6 +55,7 @@ export function AboutHero({ handleScroll }: AboutHeroProps) {
                   bgColor="purple"
                   text="Work with us"
                   breakText={true}
+                  externalLink={false}
                 />
               </div>
             </div>
@@ -79,11 +80,12 @@ export function AboutHero({ handleScroll }: AboutHeroProps) {
           <p className="text-center px-12 sm:py-10">{projectsTextSecond}</p>
           <div className=" pt-8 px-12 flex justify-center">
             <Button
-              url="/"
+              url="/contact"
               arrowColor="#ffff"
               bgColor="purple"
               text="Work with us"
               breakText={true}
+              externalLink={true}
             />
           </div>
         </div>
