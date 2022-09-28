@@ -4,35 +4,9 @@ import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import Image from 'next/image'
 import gmLogo from '../../public/images/logo/gmLogo.svg'
 import { AnimatePresence, motion } from 'framer-motion'
+import { pages } from './pages'
 
 export function Navbar() {
-  const pages = [
-    // {
-    //   title: 'Services',
-    //   url: '',
-    // },
-    {
-      title: 'About',
-      url: '/about',
-    },
-    {
-      title: 'Projects',
-      url: '/projects',
-    },
-    {
-      title: 'Careers',
-      url: 'https://giveth.recruitee.com/',
-    },
-    {
-      title: 'Shop',
-      url: '/shop',
-    },
-    {
-      title: 'Contact',
-      url: '/contact',
-    },
-  ]
-
   return (
     <Disclosure as="nav" className="bg-neutral-900 z-50 relative">
       {({ open }) => (
@@ -74,9 +48,19 @@ export function Navbar() {
                 {pages.map((page) => {
                   return (
                     <Link key={page.title} href={page.url}>
-                      <p className="text-white hover:text-magicPurple-300 text-center text-xs xl:text-base max-w-fit hover:cursor-pointer">
-                        {page.title}
-                      </p>
+                      {page.external ? (
+                        <a
+                          target="_blank"
+                          rel="noreferrer"
+                          className="text-white hover:text-magicPurple-300 text-center text-xs xl:text-base max-w-fit hover:cursor-pointer"
+                        >
+                          {page.title}
+                        </a>
+                      ) : (
+                        <a className="text-white hover:text-magicPurple-300 text-center text-xs xl:text-base max-w-fit hover:cursor-pointer">
+                          {page.title}
+                        </a>
+                      )}
                     </Link>
                   )
                 })}
@@ -108,9 +92,19 @@ export function Navbar() {
                     {pages.map((page) => {
                       return (
                         <Link href={page.url} key={page.title}>
-                          <a className="border-transparent text-white hover:bg-gray-50 hover:border-gray-300 hover:text-magicPurple-300 block pl-3 pr-4 py-2 text-base font-medium">
-                            {page.title}
-                          </a>
+                          {page.external ? (
+                            <a
+                              target="_blank"
+                              rel="noreferrer"
+                              className="border-transparent text-white hover:bg-gray-50 hover:border-gray-300 hover:text-magicPurple-300 block pl-3 pr-4 py-2 text-base font-medium"
+                            >
+                              {page.title}
+                            </a>
+                          ) : (
+                            <a className="border-transparent text-white hover:bg-gray-50 hover:border-gray-300 hover:text-magicPurple-300 block pl-3 pr-4 py-2 text-base font-medium">
+                              {page.title}
+                            </a>
+                          )}
                         </Link>
                       )
                     })}
