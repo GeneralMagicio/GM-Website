@@ -15,8 +15,8 @@ export function AboutValues() {
       componentPosition: 'left',
     },
     {
-      titleFirst: 'What',
-      titleSecond: 'We do',
+      titleFirst: 'why do',
+      titleSecond: 'We do it',
       image: whyWeDoIt,
       imageAlt: 'How are funded',
       description:
@@ -24,8 +24,9 @@ export function AboutValues() {
       componentPosition: 'right',
     },
     {
-      titleFirst: 'What',
-      titleSecond: 'We do',
+      titleFirst: 'How',
+      titleSecond: 'Are we',
+      titleThird: 'funded',
       image: howAreWeFunded,
       imageAlt: 'How are funded',
       description:
@@ -42,6 +43,7 @@ export function AboutValues() {
             key={value.description}
             titleFirst={value.titleFirst}
             titleSecond={value.titleSecond}
+            titleThird={value.titleThird}
             description={value.description}
             componentPosition={value.componentPosition}
             image={value.image}
