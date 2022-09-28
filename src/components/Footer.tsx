@@ -16,7 +16,7 @@ const pages = [
     label: 'Projects',
   },
   {
-    url: '/contact',
+    url: 'https://giveth.recruitee.com/',
     label: 'Careers',
   },
   {

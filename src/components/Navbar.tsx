@@ -21,7 +21,7 @@ export function Navbar() {
     },
     {
       title: 'Careers',
-      url: '/contact',
+      url: 'https://giveth.recruitee.com/',
     },
     {
       title: 'Shop',

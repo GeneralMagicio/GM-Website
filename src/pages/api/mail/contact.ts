@@ -43,8 +43,7 @@ export default async function serverSideCall(
       from: process.env.GMAIL_ACCOUNT as string,
       to: process.env.EMAIL_RECIPIENT as string,
       subject: `Project Resquest from: ${firstName} | ${projectName}`,
-      text: `
-      Who requested: 
+      text: `Who requested: 
         First Name: ${firstName} 
         E-mail: ${email}
       Project Name: ${projectName}

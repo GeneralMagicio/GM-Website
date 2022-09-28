@@ -16,7 +16,7 @@ export function Join() {
         </span>
       </Subtitle>
       <Button
-        url="/contact"
+        url="https://giveth.recruitee.com/"
         text="Join us"
         arrowColor="#A569FF"
         bgColor="gray"
