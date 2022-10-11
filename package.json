@@ -19,6 +19,7 @@
     "next": "12.2.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-gtm-module": "^2.0.11",
     "react-loader-spinner": "^5.3.4",
     "swiper": "^8.3.2"
   },
