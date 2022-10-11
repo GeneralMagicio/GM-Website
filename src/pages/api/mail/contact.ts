@@ -42,7 +42,7 @@ export default async function serverSideCall(
     const mailData = {
       from: process.env.GMAIL_ACCOUNT as string,
       to: process.env.EMAIL_RECIPIENT as string,
-      subject: `Project Resquest from: ${firstName} | ${projectName}`,
+      subject: `Project Request from: ${firstName} | ${projectName}`,
       text: `Who requested: 
         First Name: ${firstName} 
         E-mail: ${email}
@@ -58,7 +58,7 @@ export default async function serverSideCall(
       Telegram handle ${telegram}
       Github Profile: ${github}
       Project Link: ${projectLink}
-      Aditional information given by the client: ${aditionalInformation}`,
+      Additional Information given by the client: ${aditionalInformation}`,
     }
     try {
       mailingClient.sendMail(mailData, (err) => {
