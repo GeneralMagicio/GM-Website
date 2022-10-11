@@ -282,12 +282,12 @@ export function ContactForm() {
             </div>
           </div>
         </FormHeader>
-        <FormHeader title="Aditional Information">
+        <FormHeader title="Additional Information">
           <div className="h-72">
             <textarea
               className="resize-none bg-neutral-900 h-full w-full border border-magicPurple-300 px-7 py-3 focus:outline-none focus:border-pinkPotion-300"
               placeholder="Tell us!"
-              name="extra"
+              name="aditionalInformation"
               onChange={handleChange}
             />
           </div>
