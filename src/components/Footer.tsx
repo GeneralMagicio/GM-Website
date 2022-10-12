@@ -1,6 +1,8 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import GM from '../../public/images/GM.svg'
+import useReferenceContext from '../hooks/useReference'
 import { pages } from './pages'
 
 const socials = [
@@ -27,11 +29,15 @@ const socials = [
 ]
 
 export function Footer() {
+  const { setScrollToServices } = useReferenceContext()
+  const router = useRouter()
   return (
     <div className="h-[680px] bg-footer bg-no-repeat bg-cover md:bg-[center_bottom_-70px] md:px-32 px-12 md:py-32 py-10">
       <div className="flex sm:hidden justify-center mt-8">
         <Link href="/">
-          <Image src={GM} alt="General Magic" width={72} height={44} />
+          <div className="hover:cursor-pointer">
+            <Image src={GM} alt="General Magic" width={72} height={44} />
+          </div>
         </Link>
       </div>
       <div className="grid md:grid-cols-3 grid-cols-2 mt-8 md:mt-0">
@@ -43,6 +49,23 @@ export function Footer() {
           </Link>
         </div>
         <div className="grid gap-y-6 h-fit justify-center">
+          <button
+            onClick={() => {
+              setScrollToServices(true)
+            }}
+          >
+            {router.asPath === '/' ? (
+              <a className="hover:text-magicPurple-300 hover:cursor-pointer hover:underline">
+                Services
+              </a>
+            ) : (
+              <Link href="/">
+                <a className="hover:text-magicPurple-300 hover:cursor-pointer hover:underline">
+                  Services
+                </a>
+              </Link>
+            )}
+          </button>
           {pages.map((page) => {
             return (
               <Link key={page.title} href={page.url}>

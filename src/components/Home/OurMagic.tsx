@@ -16,17 +16,17 @@ export function Magic() {
   const [isEnd, setIsEnd] = useState(false)
   const [swiperPerPage, setSwiperPerPage] = useState(2.3)
   const { width } = useWindowDimensions()
-  const { serviceRef,scrollToServices,setScrollToServices } = useReferenceContext()
+  const { serviceRef, scrollToServices, setScrollToServices } =
+    useReferenceContext()
 
   useEffect(() => {
-    if(scrollToServices){
+    if (scrollToServices) {
       if (null !== serviceRef.current) {
         serviceRef.current.scrollIntoView({ behavior: 'smooth' })
       }
       setScrollToServices(false)
     }
-  }, [])
-  console.log(scrollToServices)
+  }, [serviceRef, scrollToServices, setScrollToServices])
 
   function handleSwiper(swiper: any) {
     swiper.isBeginning ? setIsBeginning(true) : setIsBeginning(false)
@@ -91,7 +91,10 @@ export function Magic() {
   ]
   return (
     <>
-      <div className="mt-20 md:mt-44 mx-12 lg:ml-32 lg:mr-52 md:mx-16" ref={serviceRef}>
+      <div
+        className="mt-20 md:mt-44 mx-12 lg:ml-32 lg:mr-52 md:mx-16"
+        ref={serviceRef}
+      >
         <div className="flex flex-col md:flex-row md:items-center">
           <div className="mr-24">
             <Title>
