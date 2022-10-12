@@ -7,18 +7,19 @@ import { Join } from '../Join'
 import classNames from 'classnames'
 import { members } from './members'
 import useReferenceContext from '../../hooks/useReference'
-import { forwardRef, useEffect } from 'react'
+import { useEffect } from 'react'
 import Link from 'next/link'
 
 interface OurMagiciansProps {
   page: string
 }
 
-export const OurMagicians = forwardRef<HTMLDivElement, OurMagiciansProps>(({page}, ref) => {
-  const { memberRef, scrollToMembers, setScrollToMembers } = useReferenceContext()
+export function OurMagicians({ page }: OurMagiciansProps) {
+  const { memberRef, scrollToMembers, setScrollToMembers } =
+    useReferenceContext()
 
   useEffect(() => {
-    if(scrollToMembers){
+    if (scrollToMembers) {
       if (null !== memberRef.current) {
         memberRef.current.scrollIntoView({ behavior: 'smooth' })
       }
@@ -96,7 +97,7 @@ export const OurMagicians = forwardRef<HTMLDivElement, OurMagiciansProps>(({page
             <>
               <div className="flex justify-center">
                 <div className="my-6 flex items-center w-fit  hover:underline text-magicPurple-300 hover:cursor-pointer">
-                  <button onClick={()=>setScrollToMembers(true)}>
+                  <button onClick={() => setScrollToMembers(true)}>
                     <Link href="/about">
                       <div className="flex items-center">
                         <p className="uppercase mr-2">See all</p>
@@ -138,4 +139,4 @@ export const OurMagicians = forwardRef<HTMLDivElement, OurMagiciansProps>(({page
       </div>
     </div>
   )
-})
+}

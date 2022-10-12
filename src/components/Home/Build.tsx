@@ -27,7 +27,11 @@ export function Build() {
             externalLink={false}
           />
         </div>
-        <div onClick={()=>{setScrollToMembers(true)}}>
+        <div
+          onClick={() => {
+            setScrollToMembers(true)
+          }}
+        >
           <Button
             url="/about"
             text="meet our team"
