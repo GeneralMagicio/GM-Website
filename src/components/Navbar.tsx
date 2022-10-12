@@ -5,8 +5,10 @@ import Image from 'next/image'
 import gmLogo from '../../public/images/logo/gmLogo.svg'
 import { AnimatePresence, motion } from 'framer-motion'
 import { pages } from './pages'
+import useReferenceContext from '../hooks/useReference'
 
 export function Navbar() {
+  const { setScrollToServices } = useReferenceContext()
   return (
     <Disclosure as="nav" className="bg-neutral-900 z-50 relative">
       {({ open }) => (
@@ -42,9 +44,14 @@ export function Navbar() {
                   </button>
                 </Link>
               </div>
-              {/* <div className="hidden md:grid grid-cols-6 h-full items-center md:gap-x-14 px-10"> */}
-
-              <div className="hidden md:grid grid-cols-5 h-full items-center md:gap-x-14 px-10">
+              <div className="hidden md:grid grid-cols-6 h-full items-center md:gap-x-14 px-10">
+                <button onClick={()=>{setScrollToServices(true)}}>
+                  <Link href="/">
+                    <a className="text-white hover:text-magicPurple-300 text-center text-xs xl:text-base max-w-fit hover:cursor-pointer">
+                      Services
+                    </a>
+                  </Link>
+                </button>
                 {pages.map((page) => {
                   return (
                     <Link key={page.title} href={page.url}>
