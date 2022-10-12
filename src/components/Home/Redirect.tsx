@@ -1,7 +1,7 @@
 import Link from 'next/link'
-import React, { forwardRef, Ref } from 'react'
+import { forwardRef } from 'react'
 
-export const HomeRedirect = React.forwardRef<HTMLDivElement>((props, ref) => {
+export const HomeRedirect = forwardRef<HTMLDivElement>((props, ref) => {
   const buttons = [
     { title: 'what we do', url: '/about' },
     { title: 'explore our projects', url: '/projects' },
@@ -23,3 +23,5 @@ export const HomeRedirect = React.forwardRef<HTMLDivElement>((props, ref) => {
     </div>
   )
 })
+
+HomeRedirect.displayName = 'HomeRedirect'

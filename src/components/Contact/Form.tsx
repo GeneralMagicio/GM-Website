@@ -1,4 +1,4 @@
-import { ChangeEvent, useEffect, useState } from 'react'
+import { ChangeEvent, forwardRef, useEffect, useState } from 'react'
 import { ContactButton } from '../base/ContactButton'
 import { Input } from '../base/Input'
 import { FormHeader } from './FormHeader'
@@ -38,7 +38,7 @@ interface IRequestedFields {
   deadline: string | undefined
 }
 
-export function ContactForm() {
+export const ContactForm = forwardRef<HTMLDivElement>((props, ref) => {
   const [emailSentStatus, setEmailSentStatus] = useState<EmailSentStatus>(
     EmailSentStatus.UNDEFINED
   )
@@ -139,7 +139,7 @@ export function ContactForm() {
     }
   }, [contactForm])
   return (
-    <>
+    <div ref={ref}>
       <form
         className="pt-12 pb-12 md:pt-32 md:pb-16 px-8 sm:px-16 md:px-36"
         onSubmit={(e) => {
@@ -327,6 +327,8 @@ export function ContactForm() {
           setDialog={setDialog}
         />
       )}
-    </>
+    </div>
   )
-}
+})
+
+ContactForm.displayName = 'ContactForm'
