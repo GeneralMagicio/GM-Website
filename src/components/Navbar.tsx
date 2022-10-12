@@ -108,6 +108,23 @@ export function Navbar() {
                         Home
                       </a>
                     </Link>
+                    <button
+                      onClick={() => {
+                        setScrollToServices(true)
+                      }}
+                    >
+                      {router.asPath === '/' ? (
+                        <a className="uppercase border-transparent text-white hover:bg-gray-50 hover:border-gray-300 hover:text-magicPurple-300 block pl-3 pr-4 py-2 text-base font-medium">
+                          Services
+                        </a>
+                      ) : (
+                        <Link href="/">
+                          <a className="uppercase border-transparent text-white hover:bg-gray-50 hover:border-gray-300 hover:text-magicPurple-300 block pl-3 pr-4 py-2 text-base font-medium">
+                            Services
+                          </a>
+                        </Link>
+                      )}
+                    </button>
                     {pages.map((page) => {
                       return (
                         <Link href={page.url} key={page.title}>
