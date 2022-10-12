@@ -8,6 +8,7 @@ import tecProject from '../../../public/images/projects/TecProject.png'
 import csProject from '../../../public/images/projects/CSProject.png'
 import ensProject from '../../../public/images/projects/ENSProject.png'
 import { Join } from '../Join'
+import { forwardRef } from 'react'
 
 const projects: ProjectsCardsProps[] = [
   {
@@ -63,9 +64,12 @@ const projects: ProjectsCardsProps[] = [
   },
 ]
 
-export function ProjectsList() {
+export const ProjectsList = forwardRef<HTMLDivElement>((props, ref) => {
   return (
-    <div className="min-h-screen bg-homeBg bg-cover bg-center bg-no-repeat bg-blend-darken bg-neutral-900 md:first-letter:pb-24 pb-16">
+    <div
+      ref={ref}
+      className="min-h-screen bg-homeBg bg-cover bg-center bg-no-repeat bg-blend-darken bg-neutral-900 md:first-letter:pb-24 pb-16"
+    >
       {projects.map((project) => {
         return (
           <ProjectsCards
@@ -88,4 +92,6 @@ export function ProjectsList() {
       </div>
     </div>
   )
-}
+})
+
+ProjectsList.displayName = 'ProjectsList'

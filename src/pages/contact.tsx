@@ -19,9 +19,7 @@ const Contact: NextPageWithLayout = () => {
         <title>Contact Us | General Magic</title>
       </Head>
       <ContactHero handleScroll={handleScroll} />
-      <div ref={contactRef}>
-        <ContactForm />
-      </div>
+      <ContactForm ref={contactRef} />
     </>
   )
 }

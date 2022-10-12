@@ -10,8 +10,8 @@ interface IAppLayout {
 export function AppLayout({ children }: IAppLayout) {
   return (
     <div className="divide-y divide-neutral-800">
-      <Navbar/>
-        {children}
+      <Navbar />
+      {children}
       <Footer />
     </div>
   )

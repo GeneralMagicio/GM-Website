@@ -5,8 +5,12 @@ import Image from 'next/image'
 import gmLogo from '../../public/images/logo/gmLogo.svg'
 import { AnimatePresence, motion } from 'framer-motion'
 import { pages } from './pages'
+import useReferenceContext from '../hooks/useReference'
+import { useRouter } from 'next/router'
 
 export function Navbar() {
+  const { setScrollToServices } = useReferenceContext()
+  const router = useRouter()
   return (
     <Disclosure as="nav" className="bg-neutral-900 z-50 relative">
       {({ open }) => (
@@ -42,9 +46,24 @@ export function Navbar() {
                   </button>
                 </Link>
               </div>
-              {/* <div className="hidden md:grid grid-cols-6 h-full items-center md:gap-x-14 px-10"> */}
-
-              <div className="hidden md:grid grid-cols-5 h-full items-center md:gap-x-14 px-10">
+              <div className="hidden md:grid grid-cols-6 h-full items-center md:gap-x-14 px-10">
+                <button
+                  onClick={() => {
+                    setScrollToServices(true)
+                  }}
+                >
+                  {router.asPath === '/' ? (
+                    <a className="text-white hover:text-magicPurple-300 text-center text-xs xl:text-base max-w-fit hover:cursor-pointer">
+                      Services
+                    </a>
+                  ) : (
+                    <Link href="/">
+                      <a className="text-white hover:text-magicPurple-300 text-center text-xs xl:text-base max-w-fit hover:cursor-pointer">
+                        Services
+                      </a>
+                    </Link>
+                  )}
+                </button>
                 {pages.map((page) => {
                   return (
                     <Link key={page.title} href={page.url}>
@@ -89,6 +108,23 @@ export function Navbar() {
                         Home
                       </a>
                     </Link>
+                    <button
+                      onClick={() => {
+                        setScrollToServices(true)
+                      }}
+                    >
+                      {router.asPath === '/' ? (
+                        <a className="uppercase border-transparent text-white hover:bg-gray-50 hover:border-gray-300 hover:text-magicPurple-300 block pl-3 pr-4 py-2 text-base font-medium">
+                          Services
+                        </a>
+                      ) : (
+                        <Link href="/">
+                          <a className="uppercase border-transparent text-white hover:bg-gray-50 hover:border-gray-300 hover:text-magicPurple-300 block pl-3 pr-4 py-2 text-base font-medium">
+                            Services
+                          </a>
+                        </Link>
+                      )}
+                    </button>
                     {pages.map((page) => {
                       return (
                         <Link href={page.url} key={page.title}>

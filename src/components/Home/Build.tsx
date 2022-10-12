@@ -1,8 +1,10 @@
 import Image from 'next/image'
 import { Button } from '../base/Button'
 import build from '../../../public/images/build.png'
+import useReferenceContext from '../../hooks/useReference'
 
 export function Build() {
+  const { setScrollToMembers } = useReferenceContext()
   return (
     <>
       <div className="absolute right-0 top-5 z-20">
@@ -25,7 +27,11 @@ export function Build() {
             externalLink={false}
           />
         </div>
-        <div>
+        <div
+          onClick={() => {
+            setScrollToMembers(true)
+          }}
+        >
           <Button
             url="/about"
             text="meet our team"

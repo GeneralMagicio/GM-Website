@@ -23,9 +23,7 @@ const Home: NextPageWithLayout = () => {
       </Head>
       <div className="divide-y divide-neutral-800">
         <HomeHero handleScroll={handleScroll} />
-        <div ref={redirectRef}>
-          <HomeRedirect />
-        </div>
+        <HomeRedirect ref={redirectRef} />
         <History />
         <HomeBg />
         <MeetConferences />

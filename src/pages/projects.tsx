@@ -19,9 +19,7 @@ const Projects: NextPageWithLayout = () => {
         <title>Projects | General Magic</title>
       </Head>
       <ProjectsHero handleScroll={handleScroll} />
-      <div ref={projectRef}>
-        <ProjectsList />
-      </div>
+      <ProjectsList ref={projectRef} />
     </>
   )
 }
@@ -31,4 +29,3 @@ Projects.getLayout = function getLayout(page: ReactElement) {
 }
 
 export default Projects
-

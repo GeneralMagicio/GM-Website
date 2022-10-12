@@ -2,8 +2,9 @@ import { AboutValue, AboutValueProps } from './Value'
 import whatWeAre from '../../../public/images/values/whatWeAre.png'
 import whyWeDoIt from '../../../public/images/values/whyWeDoIt.png'
 import howAreWeFunded from '../../../public/images/values/howAreWeFunded.png'
+import { forwardRef } from 'react'
 
-export function AboutValues() {
+export const AboutValues = forwardRef<HTMLDivElement>((props, ref) => {
   const values: AboutValueProps[] = [
     {
       titleFirst: 'What',
@@ -36,7 +37,7 @@ export function AboutValues() {
   ]
 
   return (
-    <div className="md:pb-24 pb-16">
+    <div className="md:pb-24 pb-16" ref={ref}>
       {values.map((value) => {
         return (
           <AboutValue
@@ -53,4 +54,6 @@ export function AboutValues() {
       })}
     </div>
   )
-}
+})
+
+AboutValues.displayName = 'AboutValues'

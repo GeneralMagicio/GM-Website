@@ -1,8 +1,4 @@
 export const pages = [
-  // {
-  //   title: 'Services',
-  //   url: '',
-  // },
   {
     title: 'About',
     url: '/about',
