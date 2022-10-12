@@ -1,12 +1,14 @@
 import Head from 'next/head'
-import { useRef } from 'react'
+import { ReactElement, useRef } from 'react'
 import { HomeBg } from '../components/Home/Background'
 import { HomeHero } from '../components/Home/Hero'
 import { History } from '../components/Home/History'
 import { MeetConferences } from '../components/Meet'
 import { HomeRedirect } from '../components/Home/Redirect'
+import { NextPageWithLayout } from './_app'
+import { AppLayout } from '../layouts/AppLayout'
 
-export default function Home() {
+const Home: NextPageWithLayout = () => {
   const redirectRef = useRef<HTMLDivElement>(null)
 
   function handleScroll() {
@@ -31,3 +33,9 @@ export default function Home() {
     </>
   )
 }
+
+Home.getLayout = function getLayout(page: ReactElement) {
+  return <AppLayout>{page}</AppLayout>
+}
+
+export default Home

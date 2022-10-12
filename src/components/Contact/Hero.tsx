@@ -4,6 +4,7 @@ import plantR from '../../../public/images/homePlantR.svg'
 import down from '../../../public/images/icons/down.svg'
 import contactBanner from '../../../public/images/contactBanner.png'
 import Image from 'next/image'
+import { LayoutHero } from '../base/LayoutHero'
 
 interface ContactHeroProps {
   handleScroll: () => void
@@ -14,7 +15,7 @@ export function ContactHero({ handleScroll }: ContactHeroProps) {
     'We are a group of Web3 professionals with deep roots/ embedded in the Ethereum ecosystem devoted to supporting commons-based organizations and public good projects.'
   return (
     <>
-      <div className="relative h-[calc(100vh_-_108px)] min-h-[552px]">
+      <LayoutHero>
         <div className="flex justify-center h-full">
           <div className="absolute inset-0 bg-contactMobile md:bg-contact bg-cover bg-top bg-no-repeat bg-neutral-900" />
           <div className="z-40 self-center px-10 md:px-20">
@@ -37,14 +38,14 @@ export function ContactHero({ handleScroll }: ContactHeroProps) {
               </button>
             </div>
           </div>
+          <div className="hidden absolute bottom-0 right-0 md:flex items-end justify-end">
+            <Image src={plantR} alt="plant" height={641} width={240} />
+          </div>
+          <div className="absolute bottom-32 md:bottom-[-50px] flex items-end justify-end">
+            <Image src={contactBanner} alt="Let's work together" />
+          </div>
         </div>
-        <div className="hidden absolute bottom-0 right-0 md:flex items-end justify-end">
-          <Image src={plantR} alt="plant" height={641} width={240} />
-        </div>
-        <div className="absolute bottom-32 md:bottom-[-50px] flex items-end justify-end">
-          <Image src={contactBanner} alt="Let's work together" />
-        </div>
-      </div>
+      </LayoutHero>
       <div className="block md:hidden">
         <div className="h-grid-line h-[1px]"></div>
         <p className="text-center px-12 py-6 sm:py-10">{description}</p>

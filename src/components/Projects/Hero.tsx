@@ -4,6 +4,7 @@ import { Title } from '../base/Title'
 import projectsHero from '../../../public/images/projectsHero.png'
 import projectsHeroMobile from '../../../public/images/projectsHeroMobile.png'
 import down from '../../../public/images/icons/down.svg'
+import { LayoutHero } from '../base/LayoutHero'
 
 interface ProjectHeroProps {
   handleScroll: () => void
@@ -15,8 +16,8 @@ const projectsText =
 export function ProjectsHero({ handleScroll }: ProjectHeroProps) {
   return (
     <>
-      <div className="relative h-[calc(100vh_-_108px)] min-h-[552px] py-8">
-        <div className="flex justify-center h-full items-center px-10 sm:px-16 md:px-24 lg:px-32">
+      <LayoutHero>
+        <div className="flex justify-center h-full items-center px-10 sm:px-16 md:px-24 lg:px-32 py-8">
           <div className="absolute inset-0 bg-projects bg-cover bg-center bg-no-repeat bg-neutral-900" />
           <div className="z-40">
             <Title>
@@ -44,11 +45,11 @@ export function ProjectsHero({ handleScroll }: ProjectHeroProps) {
           <div className="hidden md:block">
             <Image src={projectsHero} alt="" height={625} width={500} />
           </div>
+          <div className="block md:hidden absolute top-32 right-0 brightness-50">
+            <Image src={projectsHeroMobile} alt="" />
+          </div>
         </div>
-        <div className="block md:hidden absolute top-32 right-0 brightness-50">
-          <Image src={projectsHeroMobile} alt="" />
-        </div>
-      </div>
+      </LayoutHero>
       <div className="block md:hidden">
         <div className="h-grid-line h-[1px]"></div>
         <p className="text-center px-12 py-6 sm:py-10">{projectsText}</p>

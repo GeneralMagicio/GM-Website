@@ -5,6 +5,7 @@ import plantL from '../../../public/images/homePlantL.svg'
 import plantR from '../../../public/images/homePlantR.svg'
 import down from '../../../public/images/icons/down.svg'
 import aguila from '../../../public/images/aguila.png'
+import { LayoutHero } from '../base/LayoutHero'
 
 interface HomeHeroProps {
   handleScroll: () => void
@@ -13,7 +14,7 @@ interface HomeHeroProps {
 export function HomeHero({ handleScroll }: HomeHeroProps) {
   return (
     <>
-      <div className="relative h-[calc(100vh_-_108px)] min-h-[552px]">
+      <LayoutHero>
         <div className="flex justify-between h-full">
           <div className="absolute inset-0 bg-home bg-cover bg-center bg-no-repeat bg-neutral-900 bg-blend-multiply" />
           <div className="hidden md:block absolute 2xl:right-96 xl:right-64 lg:right-56 right-20 top-20">
@@ -49,7 +50,7 @@ export function HomeHero({ handleScroll }: HomeHeroProps) {
             <Image src={plantR} alt="plant" height={641} width={240} />
           </div>
         </div>
-      </div>
+      </LayoutHero>
     </>
   )
 }

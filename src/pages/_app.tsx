@@ -1,20 +1,26 @@
 import type { AppProps } from 'next/app'
-import { Footer } from '../components/Footer'
-import { Navbar } from '../components/Navbar'
 import '../styles/globals.css'
-import { useEffect } from 'react';
+import { ReactElement, ReactNode, useEffect } from 'react';
 import TagManager from 'react-gtm-module';
+import { NextPage } from 'next';
 
-function MyApp({ Component, pageProps }: AppProps) {
+export type NextPageWithLayout = NextPage & {
+  getLayout?: (page: ReactElement) => ReactNode
+}
+
+type AppPropsWithLayout = AppProps & {
+  Component: NextPageWithLayout
+}
+
+function MyApp({ Component, pageProps }: AppPropsWithLayout) {
+  const getLayout = Component.getLayout || ((page) => page)
   useEffect(() => {
     TagManager.initialize({ gtmId: 'GTM-WLQQCZP' });
 }, []);
   return (
-    <div className="divide-y divide-neutral-800">
-      <Navbar />
-      <Component {...pageProps} />
-      <Footer />
-    </div>
+    <>
+      {getLayout(<Component {...pageProps} />)}
+    </>
   )
 }
 
