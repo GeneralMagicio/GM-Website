@@ -4,6 +4,7 @@ import down from '../../../public/images/icons/down.svg'
 import { Subtitle } from '../base/Subtitle'
 import aboutAguila from '../../../public/images/aboutAguila.png'
 import { Button } from '../base/Button'
+import { LayoutHero } from '../base/LayoutHero'
 
 interface AboutHeroProps {
   handleScroll: () => void
@@ -17,8 +18,8 @@ export function AboutHero({ handleScroll }: AboutHeroProps) {
 
   return (
     <>
-      <div className="relative h-[calc(100vh_-_108px)] min-h-[552px] py-8">
-        <div className="flex justify-between h-full items-center ">
+      <LayoutHero>
+        <div className="flex justify-between h-full items-center py-8">
           <div className="absolute inset-0 bg-about bg-cover bg-center bg-no-repeat bg-neutral-900 mix-blend-overlay" />
           <div className="z-40 pl-10 sm:pl-16 md:pl-24 lg:pl-32">
             <Title>
@@ -70,11 +71,11 @@ export function AboutHero({ handleScroll }: AboutHeroProps) {
               objectFit="contain"
             />
           </div>
+          <div className="block md:hidden absolute top-32 xs:top-64 right-0 brightness-50">
+            <Image src={aboutAguila} alt="" width={350} height={350} />
+          </div>
         </div>
-        <div className="block md:hidden absolute top-32 xs:top-64 right-0 brightness-50">
-          <Image src={aboutAguila} alt="" width={350} height={350} />
-        </div>
-      </div>
+      </LayoutHero>
       <div className="block md:hidden">
         <div className="py-10">
           <p className="text-center px-12 sm:py-10">{projectsTextSecond}</p>

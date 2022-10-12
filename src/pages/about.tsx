@@ -1,11 +1,13 @@
 import Head from 'next/head'
-import { useRef } from 'react'
+import { ReactElement, useRef } from 'react'
 import { AboutHero } from '../components/About/Hero'
 import { AboutValues } from '../components/About/Values'
 import { MeetConferences } from '../components/Meet'
 import { OurMagicians } from '../components/OurMagicians'
+import { AppLayout } from '../layouts/AppLayout'
+import { NextPageWithLayout } from './_app'
 
-export default function About() {
+const About: NextPageWithLayout = () => {
   const aboutRef = useRef<HTMLDivElement>(null)
 
   function handleScroll() {
@@ -30,3 +32,9 @@ export default function About() {
     </>
   )
 }
+
+About.getLayout = function getLayout(page: ReactElement) {
+  return <AppLayout>{page}</AppLayout>
+}
+
+export default About

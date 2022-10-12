@@ -4,11 +4,12 @@ import Image from 'next/image'
 import { ShopButton } from '../base/ShopButton'
 import shopHero from '../../../public/images/shopHero.png'
 import { LatestWork } from './LatestWork'
+import { LayoutHero } from '../base/LayoutHero'
 
 export function ShopHero() {
   return (
     <>
-      <div className="relative h-[calc(100vh_-_108px)] min-h-[552px]">
+      <LayoutHero>
         <div className="flex justify-between h-full">
           <div className="absolute inset-0 bg-shop bg-auto bg-center bg-no-repeat bg-neutral-900" />
           <div className="z-40 self-center md:mt-0 mx-6 md:mx-0 md:ml-28">
@@ -31,7 +32,7 @@ export function ShopHero() {
             <Image src={shopHero} alt="" />
           </div>
         </div>
-      </div>
+      </LayoutHero>
     </>
   )
 }

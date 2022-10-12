@@ -1,9 +1,11 @@
 import Head from 'next/head'
-import { useRef } from 'react'
+import { ReactElement, useRef } from 'react'
 import { ProjectsHero } from '../components/Projects/Hero'
 import { ProjectsList } from '../components/Projects/List'
+import { AppLayout } from '../layouts/AppLayout'
+import { NextPageWithLayout } from './_app'
 
-export default function Projects() {
+const Projects: NextPageWithLayout = () => {
   const projectRef = useRef<HTMLDivElement>(null)
 
   function handleScroll() {
@@ -23,3 +25,10 @@ export default function Projects() {
     </>
   )
 }
+
+Projects.getLayout = function getLayout(page: ReactElement) {
+  return <AppLayout>{page}</AppLayout>
+}
+
+export default Projects
+

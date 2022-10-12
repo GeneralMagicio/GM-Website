@@ -1,9 +1,11 @@
 import Head from 'next/head'
-import { useRef } from 'react'
+import { ReactElement, useRef } from 'react'
 import { ContactForm } from '../components/Contact/Form'
 import { ContactHero } from '../components/Contact/Hero'
+import { AppLayout } from '../layouts/AppLayout'
+import { NextPageWithLayout } from './_app'
 
-export default function Contact() {
+const Contact: NextPageWithLayout = () => {
   const contactRef = useRef<HTMLDivElement>(null)
 
   function handleScroll() {
@@ -23,3 +25,9 @@ export default function Contact() {
     </>
   )
 }
+
+Contact.getLayout = function getLayout(page: ReactElement) {
+  return <AppLayout>{page}</AppLayout>
+}
+
+export default Contact
