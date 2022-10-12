@@ -51,12 +51,12 @@ export function Button({
               )}
               disabled={disabled}
             >
-              <div className="uppercase font-akira text-2xl text-left">
+              <div className="uppercase font-akira md:text-2xl text-left">
                 {breakText && <p>{firstWord}</p>}
                 <div className="flex items-center justify-between">
                   {breakText && <p>{rest}</p>}
                   {!breakText && <p>{text}</p>}
-                  <span>
+                  <span className="ml-3 sm:ml-0">
                     <svg
                       width="25"
                       height="16"
@@ -90,12 +90,12 @@ export function Button({
               )}
               disabled={disabled}
             >
-              <div className="uppercase font-akira text-2xl text-left">
+              <div className="uppercase font-akira md:text-2xl text-left">
                 {breakText && <p>{firstWord}</p>}
                 <div className="flex items-center justify-between">
                   {breakText && <p>{rest}</p>}
                   {!breakText && <p>{text}</p>}
-                  <span>
+                  <span className="ml-3 sm:ml-0">
                     <svg
                       width="25"
                       height="16"

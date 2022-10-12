@@ -4,7 +4,7 @@ import { Title } from './base/Title'
 
 export function Join() {
   return (
-    <div className="flex flex-col justify-center text-center items-center px-8">
+    <div className="flex flex-col justify-center text-center items-center sm:px-8">
       <Title>
         <span className="text-[32px]">Join our team</span>
       </Title>
