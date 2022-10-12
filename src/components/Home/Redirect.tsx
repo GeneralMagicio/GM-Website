@@ -8,7 +8,7 @@ export function HomeRedirect() {
 
   return (
     <div className="flex items-center justify-center">
-      <div className="grid md:grid-cols-2 justify-center items-center py-14 max-w-fit gap-x-16 px-10">
+      <div className="grid lg:grid-cols-2 justify-center items-center py-14 max-w-fit gap-x-16 px-10">
         {buttons.map((button) => {
           return (
             <Link key={button.title} href={button.url}>
