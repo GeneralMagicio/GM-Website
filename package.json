@@ -19,6 +19,7 @@
     "next": "12.2.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-gtm-module": "^2.0.11",
     "react-loader-spinner": "^5.3.4",
     "swiper": "^8.3.2"
   },
@@ -27,6 +28,7 @@
     "@types/nodemailer": "^6.4.6",
     "@types/react": "18.0.17",
     "@types/react-dom": "18.0.6",
+    "@types/react-gtm-module": "^2.0.1",
     "@typescript-eslint/eslint-plugin": "^5.31.0",
     "autoprefixer": "^10.4.8",
     "eslint": "8.21.0",
