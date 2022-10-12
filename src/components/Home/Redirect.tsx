@@ -1,13 +1,14 @@
 import Link from 'next/link'
+import React, { forwardRef, Ref } from 'react'
 
-export function HomeRedirect() {
+export const HomeRedirect = React.forwardRef<HTMLDivElement>((props, ref) => {
   const buttons = [
     { title: 'what we do', url: '/about' },
     { title: 'explore our projects', url: '/projects' },
   ]
 
   return (
-    <div className="flex items-center justify-center">
+    <div className="flex items-center justify-center" ref={ref}>
       <div className="grid lg:grid-cols-2 justify-center items-center py-14 max-w-fit gap-x-16 px-10">
         {buttons.map((button) => {
           return (
@@ -21,4 +22,4 @@ export function HomeRedirect() {
       </div>
     </div>
   )
-}
+})
