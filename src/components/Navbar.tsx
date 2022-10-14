@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Disclosure } from '@headlessui/react'
+import { Disclosure, Transition } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import Image from 'next/image'
 import gmLogo from '../../public/images/logo/gmLogo.svg'
@@ -17,7 +17,7 @@ export function Navbar() {
         <>
           <div className="flex items-center h-[108px] justify-between z-50 relative mx-5 md:mx-0">
             <div className="absolute inset-y-0 right-0 flex items-center md:hidden">
-              <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-magicPurple-300 focus:outline-none focus:ring-1 focus:ring-inset focus:ring-magicPurple-300">
+              <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-magicPurple-300 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-magicPurple-300">
                 <span className="sr-only">Open main menu</span>
                 {open ? (
                   <XIcon className="block h-6 w-6" aria-hidden="true" />
@@ -93,71 +93,74 @@ export function Navbar() {
               </Link>
             </div>
           </div>
-          <AnimatePresence>
-            {open && (
-              <motion.div
-                key="nav"
-                initial={{ y: -20, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                exit={{ y: -20, opacity: 0 }}
-              >
-                <Disclosure.Panel className="md:hidden">
-                  <div className="pt-2 pb-8 space-y-1 uppercase flex flex-col items-center">
+          <Transition
+            enter="transition duration-100 ease-out duration-1000"
+            enterFrom="transform scale-95 opacity-0 duration-1000"
+            enterTo="transform scale-100 opacity-100 duration-1000"
+            leave="transition duration-75 ease-out duration-500"
+            leaveFrom="transform scale-100 opacity-100 duration-150"
+            leaveTo="transform scale-95 opacity-0 duration-150"
+          >
+            <Disclosure.Panel className="md:hidden">
+            {({ close }) => (
+              <div className="pt-2 pb-8 space-y-1 uppercase flex flex-col items-center">
+                <Link href="/">
+                  <a className="border-transparent text-white hover:bg-gray-50 hover:border-gray-300 hover:text-magicPurple-300 block pl-3 pr-4 py-2 text-base font-medium" onClick={()=>close()}>
+                    Home
+                  </a>
+                </Link>
+                <button
+                  onClick={() => {
+                    setScrollToServices(true)
+                    close()
+                  }}
+                >
+                  {router.asPath === '/' ? (
+                    <a className="uppercase border-transparent text-white hover:bg-gray-50 hover:border-gray-300 hover:text-magicPurple-300 block pl-3 pr-4 py-2 text-base font-medium">
+                      Services
+                    </a>
+                  ) : (
                     <Link href="/">
-                      <a className="border-transparent text-white hover:bg-gray-50 hover:border-gray-300 hover:text-magicPurple-300 block pl-3 pr-4 py-2 text-base font-medium">
-                        Home
+                      <a className="uppercase border-transparent text-white hover:bg-gray-50 hover:border-gray-300 hover:text-magicPurple-300 block pl-3 pr-4 py-2 text-base font-medium">
+                        Services
                       </a>
                     </Link>
-                    <button
-                      onClick={() => {
-                        setScrollToServices(true)
-                      }}
-                    >
-                      {router.asPath === '/' ? (
-                        <a className="uppercase border-transparent text-white hover:bg-gray-50 hover:border-gray-300 hover:text-magicPurple-300 block pl-3 pr-4 py-2 text-base font-medium">
-                          Services
+                  )}
+                </button>
+                {pages.map((page) => {
+                  return (
+                    <Link href={page.url} key={page.title}>
+                      {page.external ? (
+                        <a
+                          target="_blank"
+                          rel="noreferrer"
+                          className="border-transparent text-white hover:bg-gray-50 hover:border-gray-300 hover:text-magicPurple-300 block pl-3 pr-4 py-2 text-base font-medium"
+                          onClick={()=>close()}
+                        >
+                          {page.title}
                         </a>
                       ) : (
-                        <Link href="/">
-                          <a className="uppercase border-transparent text-white hover:bg-gray-50 hover:border-gray-300 hover:text-magicPurple-300 block pl-3 pr-4 py-2 text-base font-medium">
-                            Services
-                          </a>
-                        </Link>
+                        <a className="border-transparent text-white hover:bg-gray-50 hover:border-gray-300 hover:text-magicPurple-300 block pl-3 pr-4 py-2 text-base font-medium"
+                        onClick={()=>close()}>
+                          {page.title}
+                        </a>
                       )}
-                    </button>
-                    {pages.map((page) => {
-                      return (
-                        <Link href={page.url} key={page.title}>
-                          {page.external ? (
-                            <a
-                              target="_blank"
-                              rel="noreferrer"
-                              className="border-transparent text-white hover:bg-gray-50 hover:border-gray-300 hover:text-magicPurple-300 block pl-3 pr-4 py-2 text-base font-medium"
-                            >
-                              {page.title}
-                            </a>
-                          ) : (
-                            <a className="border-transparent text-white hover:bg-gray-50 hover:border-gray-300 hover:text-magicPurple-300 block pl-3 pr-4 py-2 text-base font-medium">
-                              {page.title}
-                            </a>
-                          )}
-                        </Link>
-                      )
-                    })}
-                    <Link href="/contact">
-                      <div className="px-8 w-full">
-                        <div className="text-white hover:bg-gray-50 hover:border-gray-300 hover:text-magicPurple-300 border-transparent bg-magicPurple-300 w-full">
-                          <span className="font-akira block pl-3 pr-4 py-3 text-base text-center">
-                            Work with us
-                          </span>
-                        </div>
-                      </div>
                     </Link>
+                  )
+                })}
+                <Link href="/contact">
+                  <div className="px-8 w-full" onClick={()=>close()}>
+                    <div className="text-white hover:bg-gray-50 hover:border-gray-300 hover:text-magicPurple-300 border-transparent bg-magicPurple-300 w-full">
+                      <span className="font-akira block pl-3 pr-4 py-3 text-base text-center">
+                        Work with us
+                      </span>
+                    </div>
                   </div>
-                </Disclosure.Panel>
-              </motion.div>
-            )}
-          </AnimatePresence>
+                </Link>
+              </div>
+                )}
+            </Disclosure.Panel>
+          </Transition>
         </>
       )}
     </Disclosure>
