@@ -6,6 +6,7 @@ import { SubmitModal } from './Modal/SubmitModal'
 import axios from 'axios'
 import { Oval } from 'react-loader-spinner'
 import { RadioGroup } from '@headlessui/react'
+import useSubmitContext from '../../hooks/useSubmit'
 
 export enum EmailSentStatus {
   UNDEFINED = 'undefined',
@@ -39,11 +40,26 @@ interface IRequestedFields {
 }
 
 export const ContactForm = forwardRef<HTMLDivElement>((props, ref) => {
+  const { 
+    firstName,
+    email,
+    projectName,
+    projectDescription,
+    deadline,
+    discord,
+    telegram,
+    github,
+    projectLink,
+    aditionalInformation ,
+    budgetState,
+    handleChange,
+    handleCheck,
+    handleButton
+  } = useSubmitContext()
+
   const [emailSentStatus, setEmailSentStatus] = useState<EmailSentStatus>(
     EmailSentStatus.UNDEFINED
   )
-  const [selectedCheck, setSelectedCheck] = useState<string[]>([])
-  const [budget, setBudget] = useState('')
   const [dialog, setDialog] = useState(false)
   const [isLoading, setIsLoading] = useState<boolean>(false)
   const [disabled, setDisabled] = useState<boolean>(true)
@@ -61,38 +77,6 @@ export const ContactForm = forwardRef<HTMLDivElement>((props, ref) => {
     'HR & Hiring',
     'Swag Shop',
   ]
-
-  function handleCheck(event: ChangeEvent<HTMLInputElement>) {
-    let updatedList = [...selectedCheck]
-    if (event.target.checked) {
-      updatedList = [...selectedCheck, event.target.name]
-    } else {
-      updatedList.splice(selectedCheck.indexOf(event.target.name), 1)
-    }
-    setSelectedCheck(updatedList)
-    setContactForm((previousState) => ({
-      ...previousState,
-      services: updatedList,
-    }))
-  }
-
-  function handleChange(
-    e: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLTextAreaElement>
-  ) {
-    const { name, value } = e.target
-    setContactForm((previousState) => ({
-      ...previousState,
-      [name]: value,
-    }))
-  }
-
-  function handleButton(e: any) {
-    setBudget(e)
-    setContactForm((previousState) => ({
-      ...previousState,
-      budget: e,
-    }))
-  }
 
   const handleSubmit = async (e: any) => {
     setIsLoading(true)
@@ -132,6 +116,7 @@ export const ContactForm = forwardRef<HTMLDivElement>((props, ref) => {
       deadline,
     }))(contactForm)
     const valuesOfRequeredFields = Object.values(requestedFields)
+
     if (valuesOfRequeredFields.includes(undefined)) {
       setDisabled(true)
     } else {
@@ -152,28 +137,33 @@ export const ContactForm = forwardRef<HTMLDivElement>((props, ref) => {
               placeholder="First Name *"
               onChange={handleChange}
               name="firstName"
+              value={firstName}
             />
             <Input
               placeholder="E-mail *"
               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
               onChange={handleChange}
               name="email"
+              value={email}
             />
             <Input
               placeholder="Discord Handle"
               name="discord"
               onChange={handleChange}
+              value={discord}
             />
             <Input
               placeholder="Telegram Handle"
               name="telegram"
               onChange={handleChange}
+              value={telegram}
             />
             <div className="md:col-span-2">
               <Input
                 placeholder="Github Handle"
                 name="github"
                 onChange={handleChange}
+                value={github}
               />
             </div>
           </div>
@@ -184,6 +174,7 @@ export const ContactForm = forwardRef<HTMLDivElement>((props, ref) => {
               placeholder="Project Name *"
               name="projectName"
               onChange={handleChange}
+              value={projectName}
             />
             <div className="h-72">
               <textarea
@@ -191,12 +182,14 @@ export const ContactForm = forwardRef<HTMLDivElement>((props, ref) => {
                 placeholder="Description *"
                 name="projectDescription"
                 onChange={handleChange}
+                value={projectDescription}
               />
             </div>
             <Input
               placeholder="Project Link"
               name="projectLink"
               onChange={handleChange}
+              value={projectLink}
             />
           </div>
         </FormHeader>
@@ -222,7 +215,7 @@ export const ContactForm = forwardRef<HTMLDivElement>((props, ref) => {
         <FormHeader title="Budget & Timeline">
           <div className="flex flex-col items-center">
             <RadioGroup
-              value={budget}
+              value={budgetState}
               onChange={(e: any) => {
                 handleButton(e)
               }}
@@ -278,6 +271,7 @@ export const ContactForm = forwardRef<HTMLDivElement>((props, ref) => {
                 className="w-[calc(100%_-_2px)] sm:w-[367px] p-5 hover:bg-opacity-70 m-[1px] bg-neutral-900 font-akira text-center sm:text-xl md:text-[26px]"
                 onChange={handleChange}
                 name="deadline"
+                value={deadline}
               />
             </div>
           </div>
@@ -289,6 +283,7 @@ export const ContactForm = forwardRef<HTMLDivElement>((props, ref) => {
               placeholder="Tell us!"
               name="aditionalInformation"
               onChange={handleChange}
+              value={aditionalInformation}
             />
           </div>
         </FormHeader>
