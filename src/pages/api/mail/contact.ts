@@ -39,26 +39,34 @@ export default async function serverSideCall(
       projectLink,
       aditionalInformation,
     } = req.body
+    const aditionalInformationHeader = discord || telegram || github || projectLink || aditionalInformation? 
+    'Aditional information': ''
+    const discordHandle = discord ?  `Discord handle: ${discord}` : ''
+    const telegramHandle = telegram ?  `Telegram handle ${telegram}` : ''
+    const githubHandle = github ?  `Github Profile: ${github}` : ''
+    const projectLinkText = projectLink ?  `Project Link: ${projectLink}` : ''
+    const aditionalInformationText = aditionalInformation ?  `Additional Information given by the client: ${aditionalInformation}` : ''
+
     const mailData = {
       from: process.env.GMAIL_ACCOUNT as string,
       to: process.env.EMAIL_RECIPIENT as string,
       subject: `Project Request from: ${firstName} | ${projectName}`,
       text: `Who requested: 
-        First Name: ${firstName} 
-        E-mail: ${email}
+      First Name: ${firstName} 
+      E-mail: ${email}
       Project Name: ${projectName}
       Project Description: ${projectDescription}
       Type of services: ${services}
       Budget Range: ${budget}
-      Deadline(yyyy/mm/dd): ${deadline}
-      
-      Aditional information:
-      (Undefined means the client didn't gave that information)
-      Discord handle: ${discord}
-      Telegram handle ${telegram}
-      Github Profile: ${github}
-      Project Link: ${projectLink}
-      Additional Information given by the client: ${aditionalInformation}`,
+      Deadline(yyyy-mm-dd): ${deadline}
+
+      ${aditionalInformationHeader}
+      ${discordHandle}
+      ${telegramHandle}
+      ${githubHandle}
+      ${projectLinkText}
+      ${aditionalInformationText}
+      `,
     }
     try {
       mailingClient.sendMail(mailData, (err) => {
