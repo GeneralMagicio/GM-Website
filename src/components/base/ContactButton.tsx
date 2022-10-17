@@ -25,7 +25,7 @@ export function ContactButton({ bgColor, text, border, checked }: ButtonProps) {
     >
       <div
         className={classnames(
-          'w-[calc(100%_-_2px)] h-[calc(100%_-_2px)] p-5 hover:bg-opacity-70 m-[1px] selected:bg-red-500',
+          'w-[calc(100%_-_2px)] h-[calc(100%_-_2px)] p-5 hover:bg-opacity-70 m-[1px] selected:bg-red-500 min-h-[112px] flex justify-center items-center md:min-h-min md:block ',
           bgColors[bgColor],
           checked ? 'bg-opacity-70' : ''
         )}

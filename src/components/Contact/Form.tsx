@@ -195,7 +195,7 @@ export const ContactForm = forwardRef<HTMLDivElement>((props, ref) => {
         </FormHeader>
         <FormHeader title="Required Services">
           <div className="flex justify-center">
-            <div className="grid grid-cols-2 w-fit gap-y-6 gap-x-2 sm:gap-x-8 md:gap-x-16">
+            <div className="grid md:grid-cols-2 w-fit gap-y-6 gap-x-2 sm:gap-x-8 md:gap-x-16 justify-items-center md:justify-items-start">
               {checkboxes.map((checkbox) => {
                 return (
                   <div key={checkbox} className="w-fit">
