@@ -1,43 +1,23 @@
-import { ChangeEvent, forwardRef, useEffect, useState } from 'react'
+import { forwardRef, useEffect } from 'react'
 import { ContactButton } from '../base/ContactButton'
 import { Input } from '../base/Input'
 import { FormHeader } from './FormHeader'
 import { SubmitModal } from './Modal/SubmitModal'
-import axios from 'axios'
 import { Oval } from 'react-loader-spinner'
 import { RadioGroup } from '@headlessui/react'
 import useSubmitContext from '../../hooks/useSubmit'
 
-export enum EmailSentStatus {
-  UNDEFINED = 'undefined',
-  SUCCESS = 'success',
-  ERROR = 'error',
-}
-
-interface IContactForm {
-  firstName: string
-  email: string
-  projectName: string
-  projectDescription: string
-  services: string[]
-  budget: string
-  deadline: string
-  discord: string
-  telegram: string
-  github: string
-  projectLink: string
-  aditionalInformation: string
-}
-
-interface IRequestedFields {
-  firstName: string | undefined
-  email: string | undefined
-  projectName: string | undefined
-  projectDescription: string | undefined
-  services: string[] | undefined
-  budget: string | undefined
-  deadline: string | undefined
-}
+export const checkboxes = [
+  'Token Economics',
+  'Product Design',
+  'DAO Design',
+  'Branding',
+  'Full stack development',
+  'Copywriting',
+  'User research and UX Desgin',
+  'HR & Hiring',
+  'Swag Shop',
+]
 
 export const ContactForm = forwardRef<HTMLDivElement>((props, ref) => {
   const { 
@@ -51,78 +31,28 @@ export const ContactForm = forwardRef<HTMLDivElement>((props, ref) => {
     github,
     projectLink,
     aditionalInformation ,
+    services,
     budgetState,
+    disabled,
     handleChange,
     handleCheck,
-    handleButton
+    handleButton,
+    emailSentStatus,
+    dialog,
+    isLoading,
+    setDialog,
+    handleSubmit
   } = useSubmitContext()
 
-  const [emailSentStatus, setEmailSentStatus] = useState<EmailSentStatus>(
-    EmailSentStatus.UNDEFINED
-  )
-  const [dialog, setDialog] = useState(false)
-  const [isLoading, setIsLoading] = useState<boolean>(false)
-  const [disabled, setDisabled] = useState<boolean>(true)
-  const [contactForm, setContactForm] = useState<IContactForm>(
-    {} as IContactForm
-  )
-  const checkboxes = [
-    'Token Economics',
-    'Product Design',
-    'DAO Design',
-    'Branding',
-    'Full stack development',
-    'Copywriting',
-    'User research and UX Desgin',
-    'HR & Hiring',
-    'Swag Shop',
-  ]
-
-  const handleSubmit = async (e: any) => {
-    setIsLoading(true)
-    e.preventDefault()
-    try {
-      const response = await axios.post('/api/mail/contact', contactForm)
-      const { status } = response
-
-      if (status === 200) {
-        setEmailSentStatus(EmailSentStatus.SUCCESS)
-        setDialog(true)
-      } else {
-        setEmailSentStatus(EmailSentStatus.ERROR)
-        setDialog(true)
-      }
-    } catch (e) {
-      setEmailSentStatus(EmailSentStatus.ERROR)
-    }
-    setIsLoading(false)
-  }
   useEffect(() => {
-    const requestedFields: IRequestedFields = (({
-      firstName,
-      email,
-      projectName,
-      projectDescription,
-      services,
-      budget,
-      deadline,
-    }) => ({
-      firstName,
-      email,
-      projectName,
-      projectDescription,
-      services,
-      budget,
-      deadline,
-    }))(contactForm)
-    const valuesOfRequeredFields = Object.values(requestedFields)
+    checkboxes.forEach((checkbox)=>{
+      const anyCheckbox = document.getElementsByName(checkbox)[0] as HTMLInputElement
+      if(services.includes(checkbox)){
+        anyCheckbox.checked = true
+      }
+    })
+  },[])
 
-    if (valuesOfRequeredFields.includes(undefined)) {
-      setDisabled(true)
-    } else {
-      setDisabled(false)
-    }
-  }, [contactForm])
   return (
     <div ref={ref}>
       <form

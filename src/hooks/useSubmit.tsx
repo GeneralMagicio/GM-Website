@@ -1,3 +1,4 @@
+import axios from 'axios'
 import {
     createContext,
     ReactNode,
@@ -8,6 +9,7 @@ import {
     ChangeEvent,
     useEffect,
   } from 'react'
+import { checkboxes } from '../components/Contact/Form'
   
   interface SubmitProviderProps {
     children: ReactNode
@@ -43,6 +45,11 @@ import {
     projectLink: string
     aditionalInformation: string
     budgetState:string
+    disabled: boolean
+    emailSentStatus: string
+    dialog: boolean
+    isLoading: boolean
+    setDialog: Dispatch<SetStateAction<boolean>>
     setBudgetState: Dispatch<string>
     setContactForm: Dispatch<SetStateAction<SubmitContextType>>
     handleChange: (
@@ -58,6 +65,7 @@ import {
       event:
         any
     ) => void
+    handleSubmit: (event: any)=>void
   }
   
 
@@ -66,15 +74,22 @@ import {
     email: '',
     projectName: '',
     projectDescription: '',
-    services: [],
-    budget: '$25k - $50k',
-    deadline: '2022-10-07',
+    services: [''],
+    budget: '',
+    deadline: '',
     discord: '',
     telegram: '',
     github: '',
     projectLink: '',
     aditionalInformation: '',
     budgetState:'',
+    disabled: true,    
+    emailSentStatus: '',
+    dialog: false,
+    isLoading: false,
+    setDialog: (): void => {
+      throw new Error('setDialog must be overridden')
+    }, 
     setBudgetState: (): void => {
       throw new Error('setParams must be overridden')
     },
@@ -90,6 +105,9 @@ import {
     handleButton: (): void => {
       throw new Error('handleButton must be overridden')
     },
+    handleSubmit: (): void => {
+      throw new Error('handleSubmit must be overridden')
+    },
   }
   
   const SubmitContext = createContext<SubmitContextType>(initialParams)
@@ -100,6 +118,11 @@ import {
     const [selectedCheck, setSelectedCheck] = useState<string[]>([])
     const { budget } = initialParams
     const [budgetState, setBudgetState] = useState(budget)
+    const [emailSentStatus, setEmailSentStatus] = useState<EmailSentStatus>(
+      EmailSentStatus.UNDEFINED
+    )
+    const [dialog, setDialog] = useState(false)
+    const [isLoading, setIsLoading] = useState<boolean>(false)
 
     function handleChange(
       e: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLTextAreaElement>
@@ -151,17 +174,45 @@ import {
         budget,
         deadline,
       }))(contactForm)
+      const missingFields: string[] = []
       for (const [k, v] of Object.entries(requestedFields)) {
-        console.log(k,v)
+        if(v.length === 0){
+          missingFields.push(k)
+        }
       }
-      // if (valuesOfRequeredFields.includes(undefined)) {
-      //   setDisabled(true)
-      // } else {
-      //   setDisabled(false)
-      // }
+      if (missingFields.length !== 0) {
+        setDisabled(true)
+      } else {
+         setDisabled(false)
+      }
     }, [contactForm])
 
-  
+    const handleSubmit = async (e: any) => {
+      e.preventDefault()      
+      setIsLoading(true)
+      try {
+        const response = await axios.post('/api/mail/contact', contactForm)
+        const { status } = response
+      
+        if (status === 200) {
+          setEmailSentStatus(EmailSentStatus.SUCCESS)
+          setDialog(true)
+        } else {
+            setEmailSentStatus(EmailSentStatus.ERROR)
+            setDialog(true)
+          }
+      } catch (e) {
+        setEmailSentStatus(EmailSentStatus.ERROR)
+      }
+      setIsLoading(false)
+      setBudgetState('')
+      setContactForm(initialParams)
+      checkboxes.forEach((checkbox)=>{
+        const anyCheckbox = document.getElementsByName(checkbox)[0] as HTMLInputElement
+        anyCheckbox.checked = false
+      })
+      setSelectedCheck([])
+    }
     return (
       <SubmitContext.Provider
         value={{
@@ -171,7 +222,13 @@ import {
         handleCheck,
         handleButton,
         budgetState,
-        setBudgetState
+        setBudgetState,
+        disabled,
+        emailSentStatus,
+        dialog,
+        isLoading,
+        setDialog,
+        handleSubmit
         }}
       >
         {children}
