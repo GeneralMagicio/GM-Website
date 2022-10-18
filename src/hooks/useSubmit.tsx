@@ -174,11 +174,16 @@ export function SubmitProvider({ children }: SubmitProviderProps) {
         missingFields.push(k)
       }
     }
-    if (missingFields.length !== 0) {
+    const { email } = contactForm
+    if (
+      missingFields.length !== 0 ||
+      !/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/.test(email)
+    ) {
       setDisabled(true)
     } else {
       setDisabled(false)
     }
+    console.log(contactForm)
   }, [contactForm])
 
   const handleSubmit = async (e: any) => {

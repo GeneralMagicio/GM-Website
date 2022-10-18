@@ -64,12 +64,13 @@ export const ContactForm = forwardRef<HTMLDivElement>((props, ref) => {
         }}
       >
         <FormHeader title="Personal Information">
-          <div className="grid md:grid-cols-2 gap-7">
+          <div className="grid md:grid-cols-2 gap-x-7">
             <Input
               placeholder="First Name *"
               onChange={handleChange}
               name="firstName"
               value={firstName}
+              isOnPersonalInfomation={true}
             />
             <Input
               placeholder="E-mail *"
@@ -77,18 +78,21 @@ export const ContactForm = forwardRef<HTMLDivElement>((props, ref) => {
               onChange={handleChange}
               name="email"
               value={email}
+              isOnPersonalInfomation={true}
             />
             <Input
               placeholder="Discord Handle"
               name="discord"
               onChange={handleChange}
               value={discord}
+              isOnPersonalInfomation={true}
             />
             <Input
               placeholder="Telegram Handle"
               name="telegram"
               onChange={handleChange}
               value={telegram}
+              isOnPersonalInfomation={true}
             />
             <div className="md:col-span-2">
               <Input
@@ -96,6 +100,7 @@ export const ContactForm = forwardRef<HTMLDivElement>((props, ref) => {
                 name="github"
                 onChange={handleChange}
                 value={github}
+                isOnPersonalInfomation={true}
               />
             </div>
           </div>
@@ -107,6 +112,7 @@ export const ContactForm = forwardRef<HTMLDivElement>((props, ref) => {
               name="projectName"
               onChange={handleChange}
               value={projectName}
+              isOnPersonalInfomation={false}
             />
             <div className="h-72">
               <textarea
@@ -122,6 +128,7 @@ export const ContactForm = forwardRef<HTMLDivElement>((props, ref) => {
               name="projectLink"
               onChange={handleChange}
               value={projectLink}
+              isOnPersonalInfomation={false}
             />
           </div>
         </FormHeader>
