@@ -102,63 +102,68 @@ export function Navbar() {
             leaveTo="transform scale-95 opacity-0 duration-150"
           >
             <Disclosure.Panel className="md:hidden">
-            {({ close }) => (
-              <div className="pt-2 pb-8 space-y-1 uppercase flex flex-col items-center">
-                <Link href="/">
-                  <a className="border-transparent text-white hover:bg-gray-50 hover:border-gray-300 hover:text-magicPurple-300 block pl-3 pr-4 py-2 text-base font-medium" onClick={()=>close()}>
-                    Home
-                  </a>
-                </Link>
-                <button
-                  onClick={() => {
-                    setScrollToServices(true)
-                    close()
-                  }}
-                >
-                  {router.asPath === '/' ? (
-                    <a className="uppercase border-transparent text-white hover:bg-gray-50 hover:border-gray-300 hover:text-magicPurple-300 block pl-3 pr-4 py-2 text-base font-medium">
-                      Services
+              {({ close }) => (
+                <div className="pt-2 pb-8 space-y-1 uppercase flex flex-col items-center">
+                  <Link href="/">
+                    <a
+                      className="border-transparent text-white hover:bg-gray-50 hover:border-gray-300 hover:text-magicPurple-300 block pl-3 pr-4 py-2 text-base font-medium"
+                      onClick={() => close()}
+                    >
+                      Home
                     </a>
-                  ) : (
-                    <Link href="/">
+                  </Link>
+                  <button
+                    onClick={() => {
+                      setScrollToServices(true)
+                      close()
+                    }}
+                  >
+                    {router.asPath === '/' ? (
                       <a className="uppercase border-transparent text-white hover:bg-gray-50 hover:border-gray-300 hover:text-magicPurple-300 block pl-3 pr-4 py-2 text-base font-medium">
                         Services
                       </a>
-                    </Link>
-                  )}
-                </button>
-                {pages.map((page) => {
-                  return (
-                    <Link href={page.url} key={page.title}>
-                      {page.external ? (
-                        <a
-                          target="_blank"
-                          rel="noreferrer"
-                          className="border-transparent text-white hover:bg-gray-50 hover:border-gray-300 hover:text-magicPurple-300 block pl-3 pr-4 py-2 text-base font-medium"
-                          onClick={()=>close()}
-                        >
-                          {page.title}
+                    ) : (
+                      <Link href="/">
+                        <a className="uppercase border-transparent text-white hover:bg-gray-50 hover:border-gray-300 hover:text-magicPurple-300 block pl-3 pr-4 py-2 text-base font-medium">
+                          Services
                         </a>
-                      ) : (
-                        <a className="border-transparent text-white hover:bg-gray-50 hover:border-gray-300 hover:text-magicPurple-300 block pl-3 pr-4 py-2 text-base font-medium"
-                        onClick={()=>close()}>
-                          {page.title}
-                        </a>
-                      )}
-                    </Link>
-                  )
-                })}
-                <Link href="/contact">
-                  <div className="px-8 w-full" onClick={()=>close()}>
-                    <div className="text-white hover:bg-gray-50 hover:border-gray-300 hover:text-magicPurple-300 border-transparent bg-magicPurple-300 w-full">
-                      <span className="font-akira block pl-3 pr-4 py-3 text-base text-center">
-                        Work with us
-                      </span>
+                      </Link>
+                    )}
+                  </button>
+                  {pages.map((page) => {
+                    return (
+                      <Link href={page.url} key={page.title}>
+                        {page.external ? (
+                          <a
+                            target="_blank"
+                            rel="noreferrer"
+                            className="border-transparent text-white hover:bg-gray-50 hover:border-gray-300 hover:text-magicPurple-300 block pl-3 pr-4 py-2 text-base font-medium"
+                            onClick={() => close()}
+                          >
+                            {page.title}
+                          </a>
+                        ) : (
+                          <a
+                            className="border-transparent text-white hover:bg-gray-50 hover:border-gray-300 hover:text-magicPurple-300 block pl-3 pr-4 py-2 text-base font-medium"
+                            onClick={() => close()}
+                          >
+                            {page.title}
+                          </a>
+                        )}
+                      </Link>
+                    )
+                  })}
+                  <Link href="/contact">
+                    <div className="px-8 w-full" onClick={() => close()}>
+                      <div className="text-white hover:bg-gray-50 hover:border-gray-300 hover:text-magicPurple-300 border-transparent bg-magicPurple-300 w-full">
+                        <span className="font-akira block pl-3 pr-4 py-3 text-base text-center">
+                          Work with us
+                        </span>
+                      </div>
                     </div>
-                  </div>
-                </Link>
-              </div>
-                )}
+                  </Link>
+                </div>
+              )}
             </Disclosure.Panel>
           </Transition>
         </>

@@ -4,6 +4,7 @@ import { ReactElement, ReactNode, useEffect } from 'react'
 import TagManager from 'react-gtm-module'
 import { NextPage } from 'next'
 import { ReferenceProvider } from '../hooks/useReference'
+import { SubmitProvider } from '../hooks/useSubmit'
 
 export type NextPageWithLayout = NextPage & {
   getLayout?: (page: ReactElement) => ReactNode
@@ -20,7 +21,7 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
   }, [])
   return (
     <ReferenceProvider>
-      {getLayout(<Component {...pageProps} />)}
+      <SubmitProvider>{getLayout(<Component {...pageProps} />)}</SubmitProvider>
     </ReferenceProvider>
   )
 }
