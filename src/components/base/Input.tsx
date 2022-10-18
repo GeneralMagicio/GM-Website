@@ -8,7 +8,13 @@ interface InputProps {
   value: string
 }
 
-export function Input({ placeholder, pattern, onChange, name, value }: InputProps) {
+export function Input({
+  placeholder,
+  pattern,
+  onChange,
+  name,
+  value,
+}: InputProps) {
   return (
     <input
       className="bg-neutral-900 border border-magicPurple-300 px-7 py-3 focus:outline-none focus:border-pinkPotion-300 invalid:border-[#F05548] w-full h-full"

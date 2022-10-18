@@ -1,11 +1,11 @@
-import { ReactElement } from "react"
+import { ReactElement } from 'react'
 
 interface ILayoutHero {
-    children: ReactElement
-  }
+  children: ReactElement
+}
 
-export function LayoutHero({children}:ILayoutHero){
-  return(
+export function LayoutHero({ children }: ILayoutHero) {
+  return (
     <>
       <div className="relative h-[calc(100vh_-_108px)] min-h-[552px]">
         {children}

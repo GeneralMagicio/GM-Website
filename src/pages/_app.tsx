@@ -21,9 +21,7 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
   }, [])
   return (
     <ReferenceProvider>
-      <SubmitProvider>
-        {getLayout(<Component {...pageProps} />)}
-      </SubmitProvider>
+      <SubmitProvider>{getLayout(<Component {...pageProps} />)}</SubmitProvider>
     </ReferenceProvider>
   )
 }

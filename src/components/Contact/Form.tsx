@@ -20,7 +20,7 @@ export const checkboxes = [
 ]
 
 export const ContactForm = forwardRef<HTMLDivElement>((props, ref) => {
-  const { 
+  const {
     firstName,
     email,
     projectName,
@@ -30,7 +30,7 @@ export const ContactForm = forwardRef<HTMLDivElement>((props, ref) => {
     telegram,
     github,
     projectLink,
-    aditionalInformation ,
+    aditionalInformation,
     services,
     budgetState,
     disabled,
@@ -41,17 +41,19 @@ export const ContactForm = forwardRef<HTMLDivElement>((props, ref) => {
     dialog,
     isLoading,
     setDialog,
-    handleSubmit
+    handleSubmit,
   } = useSubmitContext()
 
   useEffect(() => {
-    checkboxes.forEach((checkbox)=>{
-      const anyCheckbox = document.getElementsByName(checkbox)[0] as HTMLInputElement
-      if(services.includes(checkbox)){
+    checkboxes.forEach((checkbox) => {
+      const anyCheckbox = document.getElementsByName(
+        checkbox
+      )[0] as HTMLInputElement
+      if (services.includes(checkbox)) {
         anyCheckbox.checked = true
       }
     })
-  },[])
+  }, [])
 
   return (
     <div ref={ref}>
