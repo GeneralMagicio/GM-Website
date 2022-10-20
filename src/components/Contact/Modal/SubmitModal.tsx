@@ -1,6 +1,6 @@
 import { Dialog } from '@headlessui/react'
 import Image from 'next/image'
-import { Dispatch, SetStateAction, useState } from 'react'
+import { Dispatch, SetStateAction } from 'react'
 import succeessSubmit from '../../../../public/images/icons/succeessSubmit.svg'
 import failSubmit from '../../../../public/images/icons/failSubmit.svg'
 
@@ -32,7 +32,7 @@ export function SubmitModal({ status, dialog, setDialog }: SubmitModalProps) {
                   contact you.
                 </div>
                 <button
-                  onClick={(e) => {
+                  onClick={() => {
                     setDialog(false)
                   }}
                   className="border border-white px-16 py-3 font-akira mt-6 hover:border-[#00BF76] hover:text-[#00BF76] transition duration-200 outline-none"
@@ -51,7 +51,7 @@ export function SubmitModal({ status, dialog, setDialog }: SubmitModalProps) {
                   Something is not working right, sorry, try again later.
                 </div>
                 <button
-                  onClick={(e) => {
+                  onClick={() => {
                     setDialog(false)
                   }}
                   className="border border-white px-16 py-3 font-akira mt-6 hover:border-[#F05548] hover:text-[#F05548] transition duration-200 outline-none"
