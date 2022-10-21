@@ -31,7 +31,7 @@ export function ShopAreYouReady() {
             your specific needs, and start distributing your DAO Merch.
           </span>
         </Subtitle>
-        <ShopButton bgColor="purple" text="get your swag shop" />
+        <ShopButton bgColor="purple" text="get your swag shop" url="/contact"/>
       </div>
       <div className="h-grid-line h-[1px]"></div>
     </div>
