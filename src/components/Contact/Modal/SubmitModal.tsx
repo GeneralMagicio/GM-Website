@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { Dispatch, SetStateAction } from 'react'
 import succeessSubmit from 'public/images/icons/succeessSubmit.svg'
 import failSubmit from 'public/images/icons/failSubmit.svg'
+import Link from 'next/link'
 
 interface SubmitModalProps {
   status: string
@@ -31,14 +32,16 @@ export function SubmitModal({ status, dialog, setDialog }: SubmitModalProps) {
                   The form was sent successfully, one of our wizards will
                   contact you.
                 </div>
-                <button
-                  onClick={() => {
-                    setDialog(false)
-                  }}
-                  className="border border-white px-16 py-3 font-akira mt-6 hover:border-[#00BF76] hover:text-[#00BF76] transition duration-200 outline-none"
-                >
-                  ok
-                </button>
+                <Link href="/contact">
+                  <button
+                    onClick={() => {
+                      setDialog(false)
+                    }}
+                    className="border border-white px-16 py-3 font-akira mt-6 hover:border-[#00BF76] hover:text-[#00BF76] transition duration-200 outline-none"
+                    >
+                    ok
+                  </button>
+                  </Link>
               </div>
             ) : (
               <div className="flex flex-col items-center justify-center h-full w-full">
