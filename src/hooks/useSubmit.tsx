@@ -49,6 +49,7 @@ interface SubmitContextType {
   emailSentStatus: string
   dialog: boolean
   isLoading: boolean
+  missingFieldMessage: string[]
   setDialog: Dispatch<SetStateAction<boolean>>
   setBudgetState: Dispatch<string>
   setContactForm: Dispatch<SetStateAction<SubmitContextType>>
@@ -58,8 +59,8 @@ interface SubmitContextType {
       | React.ChangeEvent<HTMLTextAreaElement>
   ) => void
   handleCheck: (event: React.ChangeEvent<HTMLInputElement>) => void
-  handleButton: (budgetValue:  string) => void
-  handleSubmit: (event:  React.FormEvent<HTMLElement>) => void
+  handleButton: (budgetValue: string) => void
+  handleSubmit: (event: React.FormEvent<HTMLElement>) => void
 }
 
 export const initialParams: SubmitContextType = {
@@ -67,7 +68,7 @@ export const initialParams: SubmitContextType = {
   email: '',
   projectName: '',
   projectDescription: '',
-  services: [''],
+  services: [],
   budget: '',
   deadline: '',
   discord: '',
@@ -80,6 +81,7 @@ export const initialParams: SubmitContextType = {
   emailSentStatus: '',
   dialog: false,
   isLoading: false,
+  missingFieldMessage: [],
   setDialog: (): void => {
     throw new Error('setDialog must be overridden')
   },
@@ -117,6 +119,17 @@ export function SubmitProvider({ children }: SubmitProviderProps) {
   )
   const [dialog, setDialog] = useState(false)
   const [isLoading, setIsLoading] = useState<boolean>(false)
+  const [missingFieldMessage, setMissingFieldMessage] = useState<string[]>([])
+
+  const missingFieldsLabels = {
+    firstName: 'First name',
+    email: 'E-mail',
+    projectName: 'Project name',
+    projectDescription: 'Project Description',
+    services: 'Required services' ,
+    budget: 'Budget',
+    deadline: 'Expected deadline'
+  }
 
   function handleChange(
     e: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLTextAreaElement>
@@ -169,9 +182,16 @@ export function SubmitProvider({ children }: SubmitProviderProps) {
       deadline,
     }))(contactForm)
     const missingFields: string[] = []
-    for (const [k, v] of Object.entries(requestedFields)) {
-      if (v.length === 0) {
-        missingFields.push(k)
+    const missingFieldsState: string[] = []
+    for (const [key, value] of Object.entries(requestedFields)) {
+      if (value.length === 0) {
+        missingFields.push(key)
+      }
+    }
+    for(const [key,value] of Object.entries(missingFieldsLabels)){
+      if(missingFields.includes(key)){
+        missingFieldsState.push(value)
+        setMissingFieldMessage(missingFieldsState)
       }
     }
     const { email } = contactForm
@@ -185,7 +205,7 @@ export function SubmitProvider({ children }: SubmitProviderProps) {
     }
   }, [contactForm])
 
-  const handleSubmit = async (e:  React.FormEvent<HTMLElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLElement>) => {
     e.preventDefault()
     setIsLoading(true)
     try {
@@ -229,6 +249,7 @@ export function SubmitProvider({ children }: SubmitProviderProps) {
         isLoading,
         setDialog,
         handleSubmit,
+        missingFieldMessage
       }}
     >
       {children}
