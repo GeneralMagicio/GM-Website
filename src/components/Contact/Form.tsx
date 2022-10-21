@@ -1,4 +1,4 @@
-import { forwardRef, useEffect } from 'react'
+import { FormEvent, forwardRef, useEffect } from 'react'
 import { Oval } from 'react-loader-spinner'
 import { RadioGroup } from '@headlessui/react'
 import { ContactButton } from '@/components/base/ContactButton'
@@ -59,7 +59,7 @@ export const ContactForm = forwardRef<HTMLDivElement>((props, ref) => {
     <div ref={ref}>
       <form
         className="pt-12 pb-12 md:pt-32 md:pb-16 px-8 sm:px-16 md:px-36"
-        onSubmit={(e) => {
+        onSubmit={(e: FormEvent<HTMLElement>) => {
           handleSubmit(e)
         }}
       >
