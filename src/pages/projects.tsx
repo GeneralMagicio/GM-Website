@@ -1,9 +1,9 @@
-import Head from 'next/head'
 import { ReactElement, useRef } from 'react'
-import { ProjectsHero } from '../components/Projects/Hero'
-import { ProjectsList } from '../components/Projects/List'
-import { AppLayout } from '../layouts/AppLayout'
-import { NextPageWithLayout } from './_app'
+import Head from 'next/head'
+import { ProjectsHero } from '@/components/Projects/Hero'
+import { ProjectsList } from '@/components/Projects/List'
+import { AppLayout } from '@/layouts/AppLayout'
+import { NextPageWithLayout } from '@/pages/_app'
 
 const Projects: NextPageWithLayout = () => {
   const projectRef = useRef<HTMLDivElement>(null)

@@ -1,7 +1,7 @@
 import Image from 'next/image'
-import { Button } from '../base/Button'
-import build from '../../../public/images/build.png'
-import useReferenceContext from '../../hooks/useReference'
+import { Button } from '@/components/base/Button'
+import build from 'public/images/build.png'
+import useReferenceContext from '@/hooks/useReference'
 
 export function Build() {
   const { setScrollToMembers } = useReferenceContext()

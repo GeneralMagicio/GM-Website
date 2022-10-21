@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { mailingClient } from '../../../api/mailingClient'
+import { mailingClient } from '@/api/mailingClient'
 
 interface ContactFormNextApiRequest extends NextApiRequest {
   body: {

@@ -1,9 +1,9 @@
 import Image from 'next/image'
-import { ShopButton } from '../base/ShopButton'
-import { Subtitle } from '../base/Subtitle'
-import { Title } from '../base/Title'
-import readyL from '../../../public/images/readyL.svg'
-import readyR from '../../../public/images/readyR.svg'
+import { Title } from '@/components/base/Title'
+import { Subtitle } from '@/components/base/Subtitle'
+import { ShopButton } from '@/components/base/ShopButton'
+import readyL from 'public/images/readyL.svg'
+import readyR from 'public/images/readyR.svg'
 
 export function ShopAreYouReady() {
   return (
@@ -31,7 +31,7 @@ export function ShopAreYouReady() {
             your specific needs, and start distributing your DAO Merch.
           </span>
         </Subtitle>
-        <ShopButton bgColor="purple" text="get your swag shop" />
+        <ShopButton bgColor="purple" text="get your swag shop" url="/contact"/>
       </div>
       <div className="h-grid-line h-[1px]"></div>
     </div>

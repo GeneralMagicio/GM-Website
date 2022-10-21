@@ -11,7 +11,6 @@
   "dependencies": {
     "@headlessui/react": "^1.7.2",
     "@heroicons/react": "^1.0.6",
-    "@types/swiper": "^6.0.0",
     "axios": "^0.27.2",
     "classnames": "^2.3.1",
     "framer-motion": "^7.1.0",
@@ -29,6 +28,7 @@
     "@types/react": "18.0.17",
     "@types/react-dom": "18.0.6",
     "@types/react-gtm-module": "^2.0.1",
+    "@types/swiper": "^6.0.0",
     "@typescript-eslint/eslint-plugin": "^5.31.0",
     "autoprefixer": "^10.4.8",
     "eslint": "8.21.0",

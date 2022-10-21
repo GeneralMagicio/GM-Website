@@ -1,10 +1,10 @@
 import Image from 'next/image'
-import { Subtitle } from '../base/Subtitle'
-import { Title } from '../base/Title'
-import projectsHero from '../../../public/images/projectsHero.png'
-import projectsHeroMobile from '../../../public/images/projectsHeroMobile.png'
-import down from '../../../public/images/icons/down.svg'
-import { LayoutHero } from '../base/LayoutHero'
+import { Title } from '@/components/base/Title'
+import { Subtitle } from '@/components/base/Subtitle'
+import { LayoutHero } from '@/components/base/LayoutHero'
+import projectsHero from 'public/images/projectsHero.png'
+import projectsHeroMobile from 'public/images/projectsHeroMobile.png'
+import down from 'public/images/icons/down.svg'
 
 interface ProjectHeroProps {
   handleScroll: () => void

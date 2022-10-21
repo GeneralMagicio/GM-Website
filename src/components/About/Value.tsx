@@ -1,7 +1,7 @@
 import Image, { StaticImageData } from 'next/image'
-import { Subtitle } from '../base/Subtitle'
-import { Title } from '../base/Title'
 import classnames from 'classnames'
+import { Subtitle } from '@/components/base/Subtitle'
+import { Title } from '@/components/base/Title'
 
 export interface AboutValueProps {
   titleFirst: string

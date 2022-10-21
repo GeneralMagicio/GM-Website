@@ -1,11 +1,11 @@
-import Head from 'next/head'
 import { ReactElement, useRef } from 'react'
-import { AboutHero } from '../components/About/Hero'
-import { AboutValues } from '../components/About/Values'
-import { MeetConferences } from '../components/Meet'
-import { OurMagicians } from '../components/OurMagicians'
-import { AppLayout } from '../layouts/AppLayout'
-import { NextPageWithLayout } from './_app'
+import Head from 'next/head'
+import { AboutHero } from '@/components/About/Hero'
+import { AboutValues } from '@/components/About/Values'
+import { MeetConferences } from '@/components/Meet'
+import { OurMagicians } from '@/components/OurMagicians'
+import { AppLayout } from '@/layouts/AppLayout'
+import { NextPageWithLayout } from '@/pages/_app'
 
 const About: NextPageWithLayout = () => {
   const aboutRef = useRef<HTMLDivElement>(null)

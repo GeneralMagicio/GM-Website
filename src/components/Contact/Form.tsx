@@ -1,11 +1,11 @@
 import { forwardRef, useEffect } from 'react'
-import { ContactButton } from '../base/ContactButton'
-import { Input } from '../base/Input'
-import { FormHeader } from './FormHeader'
-import { SubmitModal } from './Modal/SubmitModal'
 import { Oval } from 'react-loader-spinner'
 import { RadioGroup } from '@headlessui/react'
-import useSubmitContext from '../../hooks/useSubmit'
+import { ContactButton } from '@/components/base/ContactButton'
+import { Input } from '@/components/base/Input'
+import { FormHeader } from '@/components/Contact/FormHeader'
+import { SubmitModal } from '@/components/Contact/Modal/SubmitModal'
+import useSubmitContext from '@/hooks/useSubmit'
 
 export const checkboxes = [
   'Token Economics',
@@ -155,8 +155,8 @@ export const ContactForm = forwardRef<HTMLDivElement>((props, ref) => {
           <div className="flex flex-col items-center">
             <RadioGroup
               value={budgetState}
-              onChange={(e: any) => {
-                handleButton(e)
+              onChange={(budgetValue: string) => {
+                handleButton(budgetValue)
               }}
               className="grid grid-cols-2 w-fit gap-8 mb-7"
             >

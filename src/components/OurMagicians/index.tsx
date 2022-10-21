@@ -1,14 +1,14 @@
-import { Title } from '../base/Title'
-import { Subtitle } from '../base/Subtitle'
-import { OurMagiciansCard } from './Card'
-import Image from 'next/image'
-import membersBg from '../../../public/images/members.png'
-import { Join } from '../Join'
-import classNames from 'classnames'
-import { members } from './members'
-import useReferenceContext from '../../hooks/useReference'
 import { useEffect } from 'react'
+import Image from 'next/image'
 import Link from 'next/link'
+import classNames from 'classnames'
+import { Join } from '@/components/Join'
+import { Title } from '@/components/base/Title'
+import { Subtitle } from '@/components/base/Subtitle'
+import { OurMagiciansCard } from '@/components/OurMagicians/Card'
+import { members } from '@/components/OurMagicians/members'
+import useReferenceContext from '@/hooks/useReference'
+import membersBg from 'public/images/members.png'
 
 interface OurMagiciansProps {
   page: string

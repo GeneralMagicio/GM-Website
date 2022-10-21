@@ -1,6 +1,6 @@
-import { Button } from './base/Button'
-import { Subtitle } from './base/Subtitle'
-import { Title } from './base/Title'
+import { Button } from '@/components/base/Button'
+import { Subtitle } from '@/components/base/Subtitle'
+import { Title } from '@/components/base/Title'
 
 export function Join() {
   return (

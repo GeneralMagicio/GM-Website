@@ -1,5 +1,5 @@
-import { Subtitle } from '../base/Subtitle'
-import { MeetConference, MeetConferenceProps } from './Conference'
+import { Subtitle } from '@/components/base/Subtitle'
+import { MeetConference, MeetConferenceProps } from '@/components/Meet/Conference'
 
 const conferences: MeetConferenceProps[] = [
   {

@@ -1,9 +1,9 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import GM from '../../public/images/GM.svg'
-import useReferenceContext from '../hooks/useReference'
-import { pages } from './pages'
+import { pages } from '@/components/pages'
+import useReferenceContext from '@/hooks/useReference'
+import GM from 'public/images/GM.svg'
 
 const socials = [
   {

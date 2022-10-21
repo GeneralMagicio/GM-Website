@@ -1,12 +1,11 @@
 import Link from 'next/link'
+import Image from 'next/image'
+import { useRouter } from 'next/router'
 import { Disclosure, Transition } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
-import Image from 'next/image'
-import gmLogo from '../../public/images/logo/gmLogo.svg'
-import { AnimatePresence, motion } from 'framer-motion'
-import { pages } from './pages'
-import useReferenceContext from '../hooks/useReference'
-import { useRouter } from 'next/router'
+import { pages } from '@/components/pages'
+import gmLogo from 'public/images/logo/gmLogo.svg'
+import useReferenceContext from '@/hooks/useReference'
 
 export function Navbar() {
   const { setScrollToServices } = useReferenceContext()

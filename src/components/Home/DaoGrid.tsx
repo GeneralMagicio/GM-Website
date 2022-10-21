@@ -1,13 +1,13 @@
-import { Subtitle } from '../base/Subtitle'
-import { Title } from '../base/Title'
-import panvalaLogo from '../../../public/images/logo/panvalaLogo.svg'
-import TECLogo from '../../../public/images/logo/TEClogo.svg'
-import EVMLogo from '../../../public/images/logo/EVMLogo.svg'
-import GivethLogo from '../../../public/images/logo/GivethLogo.svg'
-import CSLogo from '../../../public/images/logo/CSlogo.svg'
-import TSLogo from '../../../public/images/logo/TSLogo.svg'
 import Image from 'next/image'
-import aguila from '../../../public/images/aguila.png'
+import { Title } from '@/components/base/Title'
+import { Subtitle } from '@/components/base/Subtitle'
+import panvalaLogo from 'public/images/logo/panvalaLogo.svg'
+import TECLogo from 'public/images/logo/TEClogo.svg'
+import EVMLogo from 'public/images/logo/EVMLogo.svg'
+import GivethLogo from 'public/images/logo/GivethLogo.svg'
+import CSLogo from 'public/images/logo/CSlogo.svg'
+import TSLogo from 'public/images/logo/TSLogo.svg'
+import aguila from 'public/images/aguila.png'
 
 export function DaoGrid() {
   const daos = {
