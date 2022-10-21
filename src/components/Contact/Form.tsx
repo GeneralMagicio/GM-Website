@@ -41,6 +41,7 @@ export const ContactForm = forwardRef<HTMLDivElement>((props, ref) => {
     dialog,
     isLoading,
     setDialog,
+    missingFieldMessage,
     handleSubmit,
   } = useSubmitContext()
 
@@ -54,6 +55,8 @@ export const ContactForm = forwardRef<HTMLDivElement>((props, ref) => {
       }
     })
   }, [])
+
+  console.log(missingFieldMessage)
 
   return (
     <div ref={ref}>
@@ -132,7 +135,7 @@ export const ContactForm = forwardRef<HTMLDivElement>((props, ref) => {
             />
           </div>
         </FormHeader>
-        <FormHeader title="Required Services">
+        <FormHeader title="Required Services *">
           <div className="flex justify-center">
             <div className="grid md:grid-cols-2 w-fit gap-y-6 gap-x-2 sm:gap-x-8 md:gap-x-16 justify-items-center md:justify-items-start">
               {checkboxes.map((checkbox) => {
@@ -151,7 +154,7 @@ export const ContactForm = forwardRef<HTMLDivElement>((props, ref) => {
             </div>
           </div>
         </FormHeader>
-        <FormHeader title="Budget & Timeline">
+        <FormHeader title="Budget & Timeline *">
           <div className="flex flex-col items-center">
             <RadioGroup
               value={budgetState}
