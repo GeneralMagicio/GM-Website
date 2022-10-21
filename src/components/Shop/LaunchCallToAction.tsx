@@ -1,9 +1,9 @@
 import Image from 'next/image'
-import { ShopButton } from '../base/ShopButton'
-import { Subtitle } from '../base/Subtitle'
-import { Title } from '../base/Title'
-import shopHats from '../../../public/images/shopHats.png'
-import shopTshirts from '../../../public/images/shopTshirts.png'
+import { ShopButton } from '@/components/base/ShopButton'
+import { Subtitle } from '@/components/base/Subtitle'
+import { Title } from '@/components/base/Title'
+import shopHats from 'public/images/shopHats.png'
+import shopTshirts from 'public/images/shopTshirts.png'
 
 export function ShopLaunchCallToAction() {
   return (

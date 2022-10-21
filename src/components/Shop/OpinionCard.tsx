@@ -1,7 +1,7 @@
 import Image from 'next/image'
-import apos from '../../../public/images/icons/apos.svg'
-import { Subtitle } from '../base/Subtitle'
-import { Title } from '../base/Title'
+import { Subtitle } from '@/components/base/Subtitle'
+import { Title } from '@/components/base/Title'
+import apos from 'public/images/icons/apos.svg'
 
 export interface ShopOpinionCardProps {
   clientOrg: string

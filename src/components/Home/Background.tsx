@@ -1,7 +1,7 @@
-import { Build } from './Build'
-import { Magic } from './OurMagic'
-import { OurMagicians } from '../OurMagicians'
-import { HomeWhatWeDo } from './WeDo'
+import { Build } from '@/components/Home/Build'
+import { Magic } from '@/components/Home/OurMagic'
+import { OurMagicians } from '@/components/OurMagicians'
+import { HomeWhatWeDo } from '@/components/Home/WeDo'
 
 export function HomeBg() {
   return (

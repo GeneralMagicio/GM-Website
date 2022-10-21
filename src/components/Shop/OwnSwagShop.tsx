@@ -1,10 +1,10 @@
 import Image from 'next/image'
-import plantR from '../../../public/images/homePlantR.svg'
-import shopHat from '../../../public/images/shopHat.png'
-import shopMockup from '../../../public/images/shopMockup.svg'
-import plantL90 from '../../../public/images/plantL90.svg'
-import { Subtitle } from '../base/Subtitle'
-import { Title } from '../base/Title'
+import { Title } from '@/components/base/Title'
+import { Subtitle } from '@/components/base/Subtitle'
+import plantR from 'public/images/homePlantR.svg'
+import shopHat from 'public/images/shopHat.png'
+import shopMockup from 'public/images/shopMockup.svg'
+import plantL90 from 'public/images/plantL90.svg'
 
 export function OwnSwagShop() {
   return (

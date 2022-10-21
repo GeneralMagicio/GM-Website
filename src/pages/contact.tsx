@@ -1,9 +1,9 @@
-import Head from 'next/head'
 import { ReactElement, useRef } from 'react'
-import { ContactForm } from '../components/Contact/Form'
-import { ContactHero } from '../components/Contact/Hero'
-import { AppLayout } from '../layouts/AppLayout'
-import { NextPageWithLayout } from './_app'
+import Head from 'next/head'
+import { ContactForm } from '@/components/Contact/Form'
+import { ContactHero } from '@/components/Contact/Hero'
+import { AppLayout } from '@/layouts/AppLayout'
+import { NextPageWithLayout } from '@/pages/_app'
 
 const Contact: NextPageWithLayout = () => {
   const contactRef = useRef<HTMLDivElement>(null)

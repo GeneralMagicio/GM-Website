@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import ENSlogo from '../../../public/images/logo/ENSlogo.svg'
+import ENSlogo from 'public/images/logo/ENSlogo.svg'
 
 export function LatestWork() {
   return (

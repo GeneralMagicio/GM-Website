@@ -1,7 +1,7 @@
 import React from 'react'
 import type { ReactElement } from 'react'
-import { Navbar } from '../components/Navbar'
-import { Footer } from '../components/Footer'
+import { Navbar } from '@/components/Navbar'
+import { Footer } from '@/components/Footer'
 
 interface IAppLayout {
   children: ReactElement

@@ -1,14 +1,13 @@
-import { ProjectCard } from '../base/Card'
-import { Subtitle } from '../base/Subtitle'
-import { Title } from '../base/Title'
-
 import 'swiper/css'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { SwiperButtonNext } from './SwipperNextButton'
 import { useEffect, useState } from 'react'
-import { SwiperButtonPrev } from './SwipperPrevButton'
-import useWindowDimensions from '../../hooks/useWindowsDimensions'
-import useReferenceContext from '../../hooks/useReference'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { ProjectCard } from '@/components/base/Card'
+import { Title } from '@/components/base/Title'
+import { Subtitle } from '@/components/base/Subtitle'
+import { SwiperButtonNext } from '@/components/Home/SwipperNextButton'
+import { SwiperButtonPrev } from '@/components/Home/SwipperPrevButton'
+import useWindowDimensions from '@/hooks/useWindowsDimensions'
+import useReferenceContext from '@/hooks/useReference'
 
 export function Magic() {
   const [swiperIstance, setSwiperInstance] = useState({})

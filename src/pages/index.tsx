@@ -1,12 +1,12 @@
-import Head from 'next/head'
 import { ReactElement, useRef } from 'react'
-import { HomeBg } from '../components/Home/Background'
-import { HomeHero } from '../components/Home/Hero'
-import { History } from '../components/Home/History'
-import { MeetConferences } from '../components/Meet'
-import { HomeRedirect } from '../components/Home/Redirect'
-import { NextPageWithLayout } from './_app'
-import { AppLayout } from '../layouts/AppLayout'
+import Head from 'next/head'
+import { MeetConferences } from '@/components/Meet'
+import { HomeBg } from '@/components/Home/Background'
+import { HomeHero } from '@/components/Home/Hero'
+import { History } from '@/components/Home/History'
+import { HomeRedirect } from '@/components/Home/Redirect'
+import { NextPageWithLayout } from '@/pages/_app'
+import { AppLayout } from '@/layouts/AppLayout'
 
 const Home: NextPageWithLayout = () => {
   const redirectRef = useRef<HTMLDivElement>(null)

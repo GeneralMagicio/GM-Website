@@ -1,8 +1,8 @@
 import { Dialog } from '@headlessui/react'
 import Image from 'next/image'
 import { Dispatch, SetStateAction } from 'react'
-import succeessSubmit from '../../../../public/images/icons/succeessSubmit.svg'
-import failSubmit from '../../../../public/images/icons/failSubmit.svg'
+import succeessSubmit from 'public/images/icons/succeessSubmit.svg'
+import failSubmit from 'public/images/icons/failSubmit.svg'
 
 interface SubmitModalProps {
   status: string

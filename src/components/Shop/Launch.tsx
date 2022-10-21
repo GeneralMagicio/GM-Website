@@ -1,10 +1,10 @@
-import { ProjectCard } from '../base/Card'
-import { Subtitle } from '../base/Subtitle'
-import { Title } from '../base/Title'
-import bird from '../../../public/images/bird.svg'
-import ring from '../../../public/images/ring.svg'
 import Image from 'next/image'
-import aguila from '../../../public/images/aguila.png'
+import { ProjectCard } from '@/components/base/Card'
+import { Subtitle } from '@/components/base/Subtitle'
+import { Title } from '@/components/base/Title'
+import bird from 'public/images/bird.svg'
+import ring from 'public/images/ring.svg'
+import aguila from 'public/images/aguila.png'
 
 export function ShopLaunch() {
   const cards = [

@@ -1,8 +1,8 @@
 import Image from 'next/image'
 
-import stars from '../../../public/images/stars.png'
-import { Button } from '../base/Button'
-import { DaoGrid } from './DaoGrid'
+import { Button } from '@/components/base/Button'
+import { DaoGrid } from '@/components/Home/DaoGrid'
+import stars from 'public/images/stars.png'
 
 export function History() {
   return (

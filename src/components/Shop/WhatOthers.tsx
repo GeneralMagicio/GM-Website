@@ -1,12 +1,11 @@
-import { Subtitle } from '../base/Subtitle'
-import { Title } from '../base/Title'
-import { ShopOpinionCard, ShopOpinionCardProps } from './OpinionCard'
-
+import { useState } from 'react'
 import 'swiper/css'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { useState } from 'react'
-import { SwiperButtonPrev } from '../Home/SwipperPrevButton'
-import { SwiperButtonNext } from '../Home/SwipperNextButton'
+import { Subtitle } from '@/components/base/Subtitle'
+import { Title } from '@/components/base/Title'
+import { SwiperButtonPrev } from '@/components/Home/SwipperPrevButton'
+import { SwiperButtonNext } from '@/components/Home/SwipperNextButton'
+import { ShopOpinionCard, ShopOpinionCardProps } from '@/components/Shop/OpinionCard'
 
 export function ShopWhatOthers() {
   const [swiperIstance, setSwiperInstance] = useState({})

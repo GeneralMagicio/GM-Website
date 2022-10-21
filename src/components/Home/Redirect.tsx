@@ -1,5 +1,5 @@
-import Link from 'next/link'
 import { forwardRef } from 'react'
+import Link from 'next/link'
 
 export const HomeRedirect = forwardRef<HTMLDivElement>((props, ref) => {
   const buttons = [

@@ -1,8 +1,8 @@
-import { AboutValue, AboutValueProps } from './Value'
-import whatWeAre from '../../../public/images/values/whatWeAre.png'
-import whyWeDoIt from '../../../public/images/values/whyWeDoIt.png'
-import howAreWeFunded from '../../../public/images/values/howAreWeFunded.png'
 import { forwardRef } from 'react'
+import { AboutValue, AboutValueProps } from '@/components/About/Value'
+import whatWeAre from 'public/images/values/whatWeAre.png'
+import whyWeDoIt from 'public/images/values/whyWeDoIt.png'
+import howAreWeFunded from 'public/images/values/howAreWeFunded.png'
 
 export const AboutValues = forwardRef<HTMLDivElement>((props, ref) => {
   const values: AboutValueProps[] = [

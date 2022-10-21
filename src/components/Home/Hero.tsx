@@ -1,11 +1,11 @@
-import { Title } from '../base/Title'
-import { Subtitle } from '../base/Subtitle'
 import Image from 'next/image'
-import plantL from '../../../public/images/homePlantL.svg'
-import plantR from '../../../public/images/homePlantR.svg'
-import down from '../../../public/images/icons/down.svg'
-import aguila from '../../../public/images/aguila.png'
+import { Title } from '@/components/base/Title'
+import { Subtitle } from '@/components/base/Subtitle'
 import { LayoutHero } from '../base/LayoutHero'
+import plantL from 'public/images/homePlantL.svg'
+import plantR from 'public/images/homePlantR.svg'
+import down from 'public/images/icons/down.svg'
+import aguila from 'public/images/aguila.png'
 
 interface HomeHeroProps {
   handleScroll: () => void

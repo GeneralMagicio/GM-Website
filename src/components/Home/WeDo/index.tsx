@@ -1,6 +1,6 @@
-import { Subtitle } from '../../base/Subtitle'
-import { Title } from '../../base/Title'
-import { WeDoCard, WeDoCardProps } from './Card'
+import { Subtitle } from '@/components/base/Subtitle'
+import { Title } from '@/components/base/Title'
+import { WeDoCard, WeDoCardProps } from '@/components/Home/WeDo/Card'
 
 export function HomeWhatWeDo() {
   const cards: WeDoCardProps[] = [

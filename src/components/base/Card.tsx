@@ -1,7 +1,7 @@
 import classnames from 'classnames'
 import Image from 'next/image'
 import Link from 'next/link'
-import leftArrow from '../../../public/images/icons/leftArrow.svg'
+import leftArrow from 'public/images/icons/leftArrow.svg'
 import { ShopButton } from './ShopButton'
 
 interface ProjectsCard {

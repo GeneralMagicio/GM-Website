@@ -1,10 +1,10 @@
-import { Title } from '../base/Title'
-import { Subtitle } from '../base/Subtitle'
 import Image from 'next/image'
-import { ShopButton } from '../base/ShopButton'
-import shopHero from '../../../public/images/shopHero.png'
-import { LatestWork } from './LatestWork'
-import { LayoutHero } from '../base/LayoutHero'
+import { Title } from '@/components/base/Title'
+import { Subtitle } from '@/components/base/Subtitle'
+import { ShopButton } from '@/components/base/ShopButton'
+import { LayoutHero } from '@/components/base/LayoutHero'
+import { LatestWork } from '@/components/Shop/LatestWork'
+import shopHero from 'public/images/shopHero.png'
 
 export function ShopHero() {
   return (

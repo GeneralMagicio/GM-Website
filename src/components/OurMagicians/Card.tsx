@@ -1,5 +1,5 @@
 import Image, { StaticImageData } from 'next/image'
-import defaultUser from '../../../public/images/members/default.png'
+import defaultUser from 'public/images/members/default.png'
 
 export interface OurMagiciansCardProps {
   name: string
