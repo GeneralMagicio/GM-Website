@@ -58,8 +58,8 @@ interface SubmitContextType {
       | React.ChangeEvent<HTMLTextAreaElement>
   ) => void
   handleCheck: (event: React.ChangeEvent<HTMLInputElement>) => void
-  handleButton: (event: any) => void
-  handleSubmit: (event: any) => void
+  handleButton: (budgetValue:  string) => void
+  handleSubmit: (event:  React.FormEvent<HTMLElement>) => void
 }
 
 export const initialParams: SubmitContextType = {
@@ -150,8 +150,6 @@ export function SubmitProvider({ children }: SubmitProviderProps) {
     }))
   }
 
-  console.log(contactForm)
-
   useEffect(() => {
     const requestedFields: IRequestedFields = (({
       firstName,
@@ -187,7 +185,7 @@ export function SubmitProvider({ children }: SubmitProviderProps) {
     }
   }, [contactForm])
 
-  const handleSubmit = async (e: any) => {
+  const handleSubmit = async (e:  React.FormEvent<HTMLElement>) => {
     e.preventDefault()
     setIsLoading(true)
     try {
