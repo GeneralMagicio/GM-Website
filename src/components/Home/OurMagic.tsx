@@ -6,15 +6,12 @@ import { Title } from '@/components/base/Title'
 import { Subtitle } from '@/components/base/Subtitle'
 import { SwiperButtonNext } from '@/components/Home/SwipperNextButton'
 import { SwiperButtonPrev } from '@/components/Home/SwipperPrevButton'
-import useWindowDimensions from '@/hooks/useWindowsDimensions'
 import useReferenceContext from '@/hooks/useReference'
 
 export function Magic() {
   const [swiperIstance, setSwiperInstance] = useState({})
   const [isBeginning, setIsBeginning] = useState(true)
   const [isEnd, setIsEnd] = useState(false)
-  const [swiperPerPage, setSwiperPerPage] = useState(2.3)
-  const { width } = useWindowDimensions()
   const { serviceRef, scrollToServices, setScrollToServices } =
     useReferenceContext()
 
@@ -31,19 +28,6 @@ export function Magic() {
     swiper.isBeginning ? setIsBeginning(true) : setIsBeginning(false)
     swiper.isEnd ? setIsEnd(true) : setIsEnd(false)
   }
-  useEffect(() => {
-    if (width) {
-      width > 2000
-        ? setSwiperPerPage(3)
-        : width > 1324
-        ? setSwiperPerPage(2.3)
-        : width > 1023
-        ? setSwiperPerPage(1.5)
-        : width > 550
-        ? setSwiperPerPage(2)
-        : setSwiperPerPage(1.2)
-    }
-  }, [width])
 
   const projects = [
     {
@@ -131,14 +115,30 @@ export function Magic() {
       </div>
       <Swiper
         spaceBetween={50}
-        slidesPerView={swiperPerPage}
         onSwiper={(swiper) => setSwiperInstance(swiper)}
         onRealIndexChange={(swiper) => handleSwiper(swiper)}
+        breakpoints={{
+          550: {
+            slidesPerView: 1,
+          },
+          700:{
+            slidesPerView: 2,
+          },
+          1023: {
+            slidesPerView: 1.5,
+          },
+          1324: {
+            slidesPerView: 2.3,
+          },
+          2000: {
+            slidesPerView: 3,
+          },
+        }}
       >
         {projects.map((project) => {
           return (
             <SwiperSlide key={project.title}>
-              <div className="flex justify-center mt-20 md:ml-20 ml-8">
+              <div className="flex justify-center mt-20">
                 <ProjectCard
                   page="Home"
                   title={project.title}
