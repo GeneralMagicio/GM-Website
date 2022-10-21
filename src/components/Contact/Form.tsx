@@ -155,8 +155,8 @@ export const ContactForm = forwardRef<HTMLDivElement>((props, ref) => {
           <div className="flex flex-col items-center">
             <RadioGroup
               value={budgetState}
-              onChange={(e: any) => {
-                handleButton(e)
+              onChange={(budgetValue: string) => {
+                handleButton(budgetValue)
               }}
               className="grid grid-cols-2 w-fit gap-8 mb-7"
             >

@@ -142,13 +142,15 @@ export function SubmitProvider({ children }: SubmitProviderProps) {
     }))
   }
 
-  function handleButton(e: any) {
-    setBudgetState(e)
+  function handleButton(budgetValue: string) {
+    setBudgetState(budgetValue)
     setContactForm((previousState) => ({
       ...previousState,
-      budget: e,
+      budget: budgetValue,
     }))
   }
+
+  console.log(contactForm)
 
   useEffect(() => {
     const requestedFields: IRequestedFields = (({
@@ -183,7 +185,6 @@ export function SubmitProvider({ children }: SubmitProviderProps) {
     } else {
       setDisabled(false)
     }
-    console.log(contactForm)
   }, [contactForm])
 
   const handleSubmit = async (e: any) => {
