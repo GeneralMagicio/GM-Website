@@ -6,6 +6,7 @@ import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import { pages } from '@/components/pages'
 import gmLogo from 'public/images/logo/gmLogo.svg'
 import useReferenceContext from '@/hooks/useReference'
+import { ProductButtonMenu } from './base/ProductButton'
 
 export function Navbar() {
   const { setScrollToServices } = useReferenceContext()
@@ -45,7 +46,7 @@ export function Navbar() {
                   </button>
                 </Link>
               </div>
-              <div className="hidden md:grid grid-cols-6 h-full items-center md:gap-x-14 px-10">
+              <div className="hidden md:grid grid-cols-7 h-full items-center md:gap-x-14 px-10">
                 <button
                   onClick={() => {
                     setScrollToServices(true)
@@ -63,7 +64,27 @@ export function Navbar() {
                     </Link>
                   )}
                 </button>
-                {pages.map((page) => {
+                {pages.slice(0, 3).map((page) => {
+                  return (
+                    <Link key={page.title} href={page.url}>
+                      {page.external ? (
+                        <a
+                          target="_blank"
+                          rel="noreferrer"
+                          className="text-white hover:text-magicPurple-300 text-center text-xs xl:text-base max-w-fit hover:cursor-pointer"
+                        >
+                          {page.title}
+                        </a>
+                      ) : (
+                        <a className="text-white hover:text-magicPurple-300 text-center text-xs xl:text-base max-w-fit hover:cursor-pointer">
+                          {page.title}
+                        </a>
+                      )}
+                    </Link>
+                  )
+                })}
+                <ProductButtonMenu />
+                {pages.slice(3, 5).map((page) => {
                   return (
                     <Link key={page.title} href={page.url}>
                       {page.external ? (
