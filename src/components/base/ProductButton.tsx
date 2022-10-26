@@ -1,14 +1,43 @@
-import { Menu, Transition } from '@headlessui/react'
+import { Popover, Transition } from '@headlessui/react'
+import Link from 'next/link'
 import { Fragment } from 'react'
 
+interface product {
+  label: string
+  comingSoon: boolean
+  externalLink: boolean
+  url: string
+}
+
 export function ProductButtonMenu() {
+  const products: product[] = [
+    {
+      label: 'Swag Shop',
+      comingSoon: false,
+      externalLink: false,
+      url: '/'
+    },
+    {
+      label: 'Praise System',
+      comingSoon: true,
+      externalLink: false,
+      url: '/'
+    },
+    {
+      label: 'Commons Simulator',
+      comingSoon: false,
+      externalLink: false,
+      url: '/'
+    },
+  ]
+
   return (
     <div>
-      <Menu as="div" className="relative inline-block text-left">
+      <Popover as="div" className="relative inline-block text-left">
         <div>
-          <Menu.Button className="text-white hover:text-magicPurple-300 text-center text-xs xl:text-base max-w-fit hover:cursor-pointer">
+          <Popover.Button className="text-white hover:text-magicPurple-300 text-center text-xs xl:text-base max-w-fit hover:cursor-pointer">
             Products
-          </Menu.Button>
+          </Popover.Button>
         </div>
         <Transition
           as={Fragment}
@@ -19,40 +48,54 @@ export function ProductButtonMenu() {
           leaveFrom="transform opacity-100 scale-100"
           leaveTo="transform opacity-0 scale-95"
         >
-          <Menu.Items className="absolute left-0 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-            <Menu.Item>
-              {({ active }) => (
-                <button
-                  className={`${active ? 'bg-violet-500 text-white' : 'text-gray-900'
-                    } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-                >
-                  Swag Shop
-                </button>
-              )}
-            </Menu.Item>
-            <Menu.Item>
-              {({ active }) => (
-                <button
-                  className={`${active ? 'bg-violet-500 text-white' : 'text-gray-900'
-                    } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-                >
-                  Praise System
-                </button>
-              )}
-            </Menu.Item>
-            <Menu.Item>
-              {({ active }) => (
-                <button
-                  className={`${active ? 'bg-violet-500 text-white' : 'text-gray-900'
-                    } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-                >
-                  Commons Simulator
-                </button>
-              )}
-            </Menu.Item>
-          </Menu.Items>
+          <Popover.Panel className="absolute left-0 mt-[9px] w-56 origin-top-right focus:outline-none button-border flex flex-col justify-center items-center">
+            {({ close }) => (
+              <div className='my-[1px] w-[calc(100%_-_2px)] bg-neutral-900'>
+                {products.map((product) => {
+                  return (
+                    <div key={product.label}>
+                      <>
+                        {product.externalLink ? (
+                          <a href={product.url} target="_blank" rel="noreferrer">
+                            <div className='flex items-center'>
+                              <button
+                                disabled={product.comingSoon}
+                                className={`group flex items-center rounded-md px-2 py-2 text-sm text-white w-fit disabled:text-gray-400 hover:text-magicPurple-300`}
+                                onClick={() => { close() }}
+                              >
+                                {product.label}
+                              </button>
+                              {product.comingSoon && (
+                                <span className='text-[8px] text-pinkPotion-300'>Coming Soon</span>
+                              )}
+                            </div>
+                          </a>
+                        ) : (
+                          <Link href={product.url}>
+                            <div className='flex items-center'>
+                              <button
+                                disabled={product.comingSoon}
+                                className={`group flex items-center rounded-md px-2 py-2 text-sm text-white w-fit disabled:text-gray-400 hover:text-magicPurple-300`}
+                                onClick={() => { close() }}
+
+                              >
+                                {product.label}
+                              </button>
+                              {product.comingSoon && (
+                                <span className='text-[8px] text-pinkPotion-300'>Coming Soon</span>
+                              )}
+                            </div>
+                          </Link>
+                        )}
+                      </>
+                    </div>
+                  )
+                })}
+              </div>
+            )}
+          </Popover.Panel>
         </Transition>
-      </Menu>
+      </Popover >
     </div>
   )
 }
