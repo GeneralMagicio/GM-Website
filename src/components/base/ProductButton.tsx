@@ -51,11 +51,18 @@ export function ProductButtonMenu({ isFooter, isNavMobile, setOpenNavMobile }: I
                     } h-5 w-5 text-white absolute top-2 right-20`}
                 />
               </Disclosure.Button>
-              <div className='bg-neutral-500 bg-opacity-20 w-full'>
-                {products.map((product) => {
-                  return (
-                    <Disclosure.Panel key={product.label}>
-                      <>
+              <Transition
+                enter="transition duration-100 ease-out"
+                enterFrom="transform scale-95 opacity-0"
+                enterTo="transform scale-100 opacity-100"
+                leave="transition duration-75 ease-out"
+                leaveFrom="transform scale-100 opacity-100"
+                leaveTo="transform scale-95 opacity-0"
+              >
+                <div className='bg-neutral-500 bg-opacity-20 w-screen'>
+                  {products.map((product) => {
+                    return (
+                      <Disclosure.Panel key={product.label}>
                         {product.externalLink ? (
                           <a href={product.url} target="_blank" rel="noreferrer">
                             <div className='flex items-center justify-center'>
@@ -88,11 +95,11 @@ export function ProductButtonMenu({ isFooter, isNavMobile, setOpenNavMobile }: I
                             </div>
                           </Link>
                         )}
-                      </>
-                    </Disclosure.Panel>
-                  )
-                })}
-              </div>
+                      </Disclosure.Panel>
+                    )
+                  })}
+                </div>
+              </Transition>
             </>
           )}
         </Disclosure>
@@ -160,7 +167,8 @@ export function ProductButtonMenu({ isFooter, isNavMobile, setOpenNavMobile }: I
             </Popover.Panel>
           </Transition>
         </Popover >
-      )}
+      )
+      }
     </>
   )
 }
