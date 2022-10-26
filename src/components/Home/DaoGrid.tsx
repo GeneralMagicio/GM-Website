@@ -7,10 +7,26 @@ import EVMLogo from 'public/images/logo/EVMLogo.svg'
 import GivethLogo from 'public/images/logo/GivethLogo.svg'
 import CSLogo from 'public/images/logo/CSlogo.svg'
 import TSLogo from 'public/images/logo/TSLogo.svg'
+import ClrLogo from 'public/images/logo/ClrFundLogo.svg'
+import AragonLogo from 'public/images/logo/AragonLogo.svg'
+import ENSHomeLogo from 'public/images/logo/ENSHomeLogo.svg'
+import TEAcademyLogo from 'public/images/logo/TEAcademyLogo.svg'
 import aguila from 'public/images/aguila.png'
 
 export function DaoGrid() {
   const daos = {
+    zeroRow: [
+      {
+        name: 'Clr Fund',
+        image: ClrLogo,
+        url: 'https://clr.fund/#/',
+      },
+      {
+        name: 'Aragon',
+        image: AragonLogo,
+        url: 'https://blog.aragon.org/',
+      },
+    ],
     firstRow: [
       {
         name: 'Panvala',
@@ -47,6 +63,18 @@ export function DaoGrid() {
         url: 'https://trustedseed.org/',
       },
     ],
+    fourthRow: [
+      {
+        name: 'ENS',
+        image: ENSHomeLogo,
+        url: 'https://ens.domains/',
+      },
+      {
+        name: 'TE Academy',
+        image: TEAcademyLogo,
+        url: 'https://tokenengineering.net/',
+      },
+    ],
   }
   return (
     <div className="h-grid-line relative">
@@ -54,9 +82,21 @@ export function DaoGrid() {
         <Image src={aguila} alt="making magic happen" />
       </div>
       <div className="grid grid-col-3 md:grid-cols-5 gap-[1px] vignette">
-        <div className="hidden md:block bg-neutral-900 h-16 col-span-2"></div>
-        <div className="hidden md:block bg-neutral-900 h-16"></div>
-        <div className="hidden md:block bg-neutral-900 h-16"></div>
+        <div className="hidden md:block bg-neutral-900 h-full col-span-2"></div>
+        {daos.zeroRow.map((dao) => {
+          return (
+            <div className="hidden md:flex items-center justify-center bg-neutral-900 z-10 h-full" key={dao.name}>
+              <a
+                href={dao.url}
+                target="_blank"
+                rel="noreferrer"
+                className="p-3"
+              >
+                <Image src={dao.image} alt={dao.name} />
+              </a>
+            </div>
+          )
+        })}
         <div className="hidden md:block bg-neutral-900"></div>
         <div className="bg-neutral-900 pt-8 w-full col-span-2 row-span-3 z-10 pr-10">
           <Title>
@@ -75,6 +115,23 @@ export function DaoGrid() {
             </span>
           </Subtitle>
         </div>
+        {daos.zeroRow.map((dao) => {
+          return (
+            <div
+              key={dao.name}
+              className="md:hidden flex items-center justify-center bg-neutral-900 z-10 h-full"
+            >
+              <a
+                href={dao.url}
+                target="_blank"
+                rel="noreferrer"
+                className="p-3"
+              >
+                <Image src={dao.image} alt={dao.name} />
+              </a>
+            </div>
+          )
+        })}
         {daos.firstRow.map((dao) => {
           return (
             <div
@@ -129,9 +186,24 @@ export function DaoGrid() {
           )
         })}
         <div className="hidden md:block bg-neutral-900"></div>
-        <div className="hidden md:block bg-neutral-900 h-16 col-span-2"></div>
-        <div className="hidden md:block bg-neutral-900 h-16"></div>
-        <div className="hidden md:block bg-neutral-900 h-16"></div>
+        <div className="hidden md:block bg-neutral-900 h-full col-span-2"></div>
+        {daos.fourthRow.map((dao) => {
+          return (
+            <div
+              key={dao.name}
+              className="flex items-center justify-center bg-neutral-900 z-10 h-full"
+            >
+              <a
+                href={dao.url}
+                target="_blank"
+                rel="noreferrer"
+                className="p-3"
+              >
+                <Image src={dao.image} alt={dao.name} />
+              </a>
+            </div>
+          )
+        })}
         <div className="hidden md:block bg-neutral-900"></div>
       </div>
     </div>
