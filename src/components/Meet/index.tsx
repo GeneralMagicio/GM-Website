@@ -32,7 +32,7 @@ export function MeetConferences() {
   return (
     <div className="bg-black">
       <div className="h-grid-line h-[1px]"></div>
-      <div className="mx-12 lg:mx-32 my-16">
+      <div className="px-12  md:px-20 lg:px-44 xl:px-64 my-16">
         <div className="pb-1 flex flex-col w-fit text-xl md:text-[32px] font-akira bg-clip-text text-transparent bg-gradient-to-r from-[#A569FF] via-[#A569FF] to-[#71DDE4]">
           <span>Meet us at</span>
           <span>Conferences</span>

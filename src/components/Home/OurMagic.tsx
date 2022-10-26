@@ -75,7 +75,7 @@ export function Magic() {
   return (
     <>
       <div
-        className="mt-20 md:mt-44 mx-12 lg:ml-32 lg:mr-52 md:mx-16"
+        className="mt-20 md:mt-44 px-12 md:px-20 lg:px-44 xl:px-64"
         ref={serviceRef}
       >
         <div className="flex flex-col md:flex-row md:items-center">
@@ -121,7 +121,7 @@ export function Magic() {
           550: {
             slidesPerView: 1,
           },
-          700:{
+          700: {
             slidesPerView: 2,
           },
           1023: {

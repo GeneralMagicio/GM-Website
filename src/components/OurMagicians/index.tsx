@@ -33,7 +33,7 @@ export function OurMagicians({ page }: OurMagiciansProps) {
         <Image src={membersBg} alt="" />
       </div>
       <div className="mt-72 md:mt-0">
-        <div className="relative mt-44 mx-12 lg:mx-32 z-50">
+        <div className="relative mt-44  md:px-20 lg:px-44 xl:px-64 z-50">
           <div
             className={classNames(
               'flex flex-col',
@@ -73,25 +73,25 @@ export function OurMagicians({ page }: OurMagiciansProps) {
           >
             {page === 'Home'
               ? members.slice(0, 6).map((member) => {
-                  return (
-                    <OurMagiciansCard
-                      key={member.name}
-                      name={member.name}
-                      image={member.image}
-                      role={member.role}
-                    />
-                  )
-                })
+                return (
+                  <OurMagiciansCard
+                    key={member.name}
+                    name={member.name}
+                    image={member.image}
+                    role={member.role}
+                  />
+                )
+              })
               : members.map((member) => {
-                  return (
-                    <OurMagiciansCard
-                      key={member.name}
-                      name={member.name}
-                      image={member.image}
-                      role={member.role}
-                    />
-                  )
-                })}
+                return (
+                  <OurMagiciansCard
+                    key={member.name}
+                    name={member.name}
+                    image={member.image}
+                    role={member.role}
+                  />
+                )
+              })}
           </div>
           {page === 'Home' ? (
             <>
