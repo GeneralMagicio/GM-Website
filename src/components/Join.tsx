@@ -1,10 +1,15 @@
 import { Button } from '@/components/base/Button'
 import { Subtitle } from '@/components/base/Subtitle'
 import { Title } from '@/components/base/Title'
+import classNames from 'classnames'
 
-export function Join() {
+interface IJoin {
+  isHome: boolean
+}
+
+export function Join({ isHome }: IJoin) {
   return (
-    <div className="flex flex-col justify-center text-center items-center sm:px-8">
+    <div className={classNames("flex flex-col justify-center text-center items-center", isHome ? "sm:px-8" : "px-8")}>
       <Title>
         <span className="text-[32px]">Join our team</span>
       </Title>

@@ -88,7 +88,7 @@ export const ProjectsList = forwardRef<HTMLDivElement>((props, ref) => {
         )
       })}
       <div className="mt-10">
-        <Join />
+        <Join isHome={false} />
       </div>
     </div>
   )

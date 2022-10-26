@@ -15,7 +15,7 @@ export function MeetConference({
 }: MeetConferenceProps) {
   return (
     <div className="grid md:grid-cols-4">
-      <div className="col-span-2">
+      <div className="md:col-span-2">
         <h3 className="font-bold text-2xl md:text-[28px]">{title}</h3>
         <p className="text-sm md:text-base">{description}</p>
       </div>
@@ -40,7 +40,7 @@ export function MeetConference({
             {city}, {country}
           </p>
         </div>
-        <div className="ml-5 text-sm">
+        <div className="ml-5 text-sm text-end md:text-start">
           <h3 className="font-bold">When</h3>
           <p>{date}</p>
         </div>

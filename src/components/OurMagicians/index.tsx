@@ -134,7 +134,7 @@ export function OurMagicians({ page }: OurMagiciansProps) {
                   </button>
                 </div>
               </div>
-              <Join />
+              <Join isHome={true} />
             </>
           ) : (
             ''
