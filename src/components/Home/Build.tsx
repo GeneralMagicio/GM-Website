@@ -10,9 +10,9 @@ export function Build() {
       <div className="absolute right-0 top-5 z-20">
         <Image src={build} alt="" />
       </div>
-      <h1 className="text-3xl md:text-6xl font-bold text-neutral-900 relative z-50">
+      <h1 className="text-3xl md:text-6xl font-bold text-neutral-900 relative z-50 max-w-[1200px]">
         We build digital{' '}
-        <span className="underline">products, governance,</span> and economic
+        <span className="underline text-white">products, governance,</span> and economic
         systems utilizing the Web3 technology.
       </h1>
       <div className="grid lg:grid-cols-2 gap-x-12 mt-16 md:justify-center gap-y-4 md:w-fit">

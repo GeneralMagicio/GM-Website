@@ -3,12 +3,12 @@ import { MeetConference, MeetConferenceProps } from '@/components/Meet/Conferenc
 
 const conferences: MeetConferenceProps[] = [
   {
-    title: 'ETHCC 5',
+    title: 'DEVCON BOGOTA',
     description:
-      'The Ethereum Community Conference (EthCC) is the largest annual European Ethereum event focused on technology and community. Three intense days of conferences, networking and learning.',
-    city: 'Paris',
-    country: 'France',
-    date: 'Jul 19-21, 2022',
+      'Devcon is an intensive introduction for new Ethereum explorers, a global family reunion for those already a part of our ecosystem, and a source of energy and creativity for all.',
+    city: 'Bogota',
+    country: 'Colombia',
+    date: 'Oct 11-14, 2022',
   },
   {
     title: 'ETH Berlin',
@@ -19,12 +19,12 @@ const conferences: MeetConferenceProps[] = [
     date: 'Sep 16-18, 2022',
   },
   {
-    title: 'DEVCON BOGOTA',
+    title: 'ETHCC 5',
     description:
-      'Devcon is an intensive introduction for new Ethereum explorers, a global family reunion for those already a part of our ecosystem, and a source of energy and creativity for all.',
-    city: 'Bogota',
-    country: 'Colombia',
-    date: 'Oct 11-14, 2022',
+      'The Ethereum Community Conference (EthCC) is the largest annual European Ethereum event focused on technology and community. Three intense days of conferences, networking and learning.',
+    city: 'Paris',
+    country: 'France',
+    date: 'Jul 19-21, 2022',
   },
 ]
 
