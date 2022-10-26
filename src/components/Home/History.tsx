@@ -21,8 +21,8 @@ export function History() {
             />
           </div>
         </div>
-        <div className="relative flex justify-center px-12 lg:px-32">
-          <p className="pt-16 text-xl md:text-3xl xl:text-[40px]">
+        <div className="relative flex justify-center px-12 md:px-20 lg:px-44 xl:px-64">
+          <p className="pt-16 text-xl md:text-3xl xl:text-[40px] lg:leading-[52px]">
             Founded by a couple of folks from Giveth in 2020,
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#71DDE4] via-[#71DDE4] to-[#A569FF]">
               {' '}

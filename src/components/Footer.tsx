@@ -4,6 +4,8 @@ import { useRouter } from 'next/router'
 import { pages } from '@/components/pages'
 import useReferenceContext from '@/hooks/useReference'
 import GM from 'public/images/GM.svg'
+import { ProductButtonMenu } from './base/ProductButton'
+import { useState } from 'react'
 
 const socials = [
   {
@@ -29,6 +31,7 @@ const socials = [
 ]
 
 export function Footer() {
+  const [isOpen, setIsOpen] = useState<boolean>(false)
   const { setScrollToServices } = useReferenceContext()
   const router = useRouter()
   return (
@@ -50,6 +53,7 @@ export function Footer() {
         </div>
         <div className="grid gap-y-6 h-fit justify-center">
           <button
+            className='flex'
             onClick={() => {
               setScrollToServices(true)
             }}
@@ -66,7 +70,27 @@ export function Footer() {
               </Link>
             )}
           </button>
-          {pages.map((page) => {
+          {pages.slice(0, 3).map((page) => {
+            return (
+              <Link key={page.title} href={page.url}>
+                {page.external ? (
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
+                    className="hover:text-magicPurple-300 hover:cursor-pointer hover:underline"
+                  >
+                    {page.title}
+                  </a>
+                ) : (
+                  <a className="hover:text-magicPurple-300 hover:cursor-pointer hover:underline">
+                    {page.title}
+                  </a>
+                )}
+              </Link>
+            )
+          })}
+          <ProductButtonMenu isFooter={true} isNavMobile={false} setOpenNavMobile={setIsOpen} />
+          {pages.slice(3, 5).map((page) => {
             return (
               <Link key={page.title} href={page.url}>
                 {page.external ? (

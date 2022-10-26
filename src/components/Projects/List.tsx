@@ -41,7 +41,7 @@ const projects: ProjectsCardsProps[] = [
   {
     id: 3,
     bgColor: 'orange',
-    projectUrl: '',
+    projectUrl: 'https://ens.domains/',
     projectImg: ensProject,
     clientLogo: swagLogo,
     services: ['Development', 'Branding'],
@@ -88,7 +88,7 @@ export const ProjectsList = forwardRef<HTMLDivElement>((props, ref) => {
         )
       })}
       <div className="mt-10">
-        <Join />
+        <Join isHome={false} />
       </div>
     </div>
   )

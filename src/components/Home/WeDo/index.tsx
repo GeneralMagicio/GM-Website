@@ -21,18 +21,20 @@ export function HomeWhatWeDo() {
     },
   ]
   return (
-    <div className="mt-20 md:mt-44 mx-12 lg:mx-32 ">
+    <div className="mt-20 md:mt-44 px-12 md:px-20 lg:px-44 xl:px-64 ">
       <div className="flex flex-col md:flex-row items-center">
         <div className="grid md:grid-cols-2 md:gap-x-12 md:gap-y-[88px] gap-y-8">
           <Title>
             <span>What</span>
             <span>we do</span>
           </Title>
-          <Subtitle paddingBottom={false} paddingTop={false}>
-            General Magic is deploying resources to the most innovative
-            DAO&apos;s that are building social impact solutions throughout Web3
-            and Public Good space.
-          </Subtitle>
+          <div className='h-full flex items-center'>
+            <Subtitle paddingBottom={false} paddingTop={false}>
+              General Magic is deploying resources to the most innovative
+              DAO&apos;s that are building social impact solutions throughout Web3
+              and Public Good space.
+            </Subtitle>
+          </div>
           {cards.map((card) => {
             return (
               <WeDoCard
