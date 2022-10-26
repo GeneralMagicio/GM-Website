@@ -6,7 +6,7 @@ import { Join } from '@/components/Join'
 import { Title } from '@/components/base/Title'
 import { Subtitle } from '@/components/base/Subtitle'
 import { OurMagiciansCard } from '@/components/OurMagicians/Card'
-import { members } from '@/components/OurMagicians/members'
+import { alumniMembers, members } from '@/components/OurMagicians/members'
 import useReferenceContext from '@/hooks/useReference'
 import membersBg from 'public/images/members.png'
 
@@ -33,7 +33,7 @@ export function OurMagicians({ page }: OurMagiciansProps) {
         <Image src={membersBg} alt="" />
       </div>
       <div className="mt-72 md:mt-0">
-        <div className="relative mt-44  md:px-20 lg:px-44 xl:px-64 z-50">
+        <div className="relative mt-44 px-12 md:px-20 lg:px-44 xl:px-64 z-50">
           <div
             className={classNames(
               'flex flex-col',
@@ -66,11 +66,7 @@ export function OurMagicians({ page }: OurMagiciansProps) {
             </div>
           </div>
           <div
-            className={classNames(
-              'grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-16 mt-6 md:mt-28 pb-12',
-              page === 'Home' ? '' : 'md:pb-28'
-            )}
-          >
+            className='grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-16 mt-6 md:mt-28 pb-4 sm:pb-12'>
             {page === 'Home'
               ? members.slice(0, 6).map((member) => {
                 return (
@@ -82,7 +78,24 @@ export function OurMagicians({ page }: OurMagiciansProps) {
                   />
                 )
               })
-              : members.map((member) => {
+              :
+              members.map((member) => {
+                return (
+                  <OurMagiciansCard
+                    key={member.name}
+                    name={member.name}
+                    image={member.image}
+                    role={member.role}
+                  />
+                )
+              })
+            }
+          </div>
+          {page === 'Home' ? ('') : (
+            <div
+              className='grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-16 pb-12 md:pb-28'>
+              <h2 className='col-span-3 text-center uppercase text-magicSky-300 font-akira sm:text-[26px]'>some wizards who passed through here</h2>
+              {alumniMembers.map((member) => {
                 return (
                   <OurMagiciansCard
                     key={member.name}
@@ -92,7 +105,8 @@ export function OurMagicians({ page }: OurMagiciansProps) {
                   />
                 )
               })}
-          </div>
+            </div>
+          )}
           {page === 'Home' ? (
             <>
               <div className="flex justify-center">
