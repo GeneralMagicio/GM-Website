@@ -16,8 +16,8 @@ export const pages = [
   },
   {
     title: 'Shop',
-    url: '/shop',
-    external: false,
+    url: 'https://swag.generalmagic.io/',
+    external: true,
   },
   {
     title: 'Contact',
