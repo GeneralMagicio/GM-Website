@@ -42,7 +42,7 @@ class MyDocument extends Document {
           />
           <meta
             name="og:image"
-            content="https://generalmagic.vercel.app/api/og"
+            content="https://generalmagic.vercel.app/api/og_image"
           />
           <meta property="og:site_name" content="General Magic" />
           <meta name="twitter:card" content="summary_large_image" />
