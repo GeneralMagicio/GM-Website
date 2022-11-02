@@ -13,8 +13,6 @@ export default async function handler() {
                     fontSize: 40,
                     color: 'black',
                     background: '#161718',
-                    backgroundImage:
-                        "linear-gradient(20.02deg,#71dde4 -4.17%,#fa78b9 23.12%,#a569ff 66.92%)",
                     width: '100%',
                     height: '100%',
                     textAlign: 'center',
