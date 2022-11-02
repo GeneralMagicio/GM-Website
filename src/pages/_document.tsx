@@ -53,7 +53,7 @@ class MyDocument extends Document {
           />
           <meta
             name="twitter:image"
-            content="${require(`./public/images/Metadata-Image.png`)}"
+            content="https://generalmagic.vercel.app/api/og"
           />
         </Head>
         <body>
