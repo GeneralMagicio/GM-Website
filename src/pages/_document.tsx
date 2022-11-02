@@ -21,6 +21,15 @@ class MyDocument extends Document {
             name="description"
             content="General Magic solves the needs of Public Good projects by assigning top-notch Web3 professionals to assist them in their goals, either by integrating with existing teams, or creating resources from scratch."
           />
+          <link
+            rel="icon"
+            type="image/x-icon"
+            href="https://api.typedream.com/v0/document/public/b28e9122-5924-4381-8bae-b7b550dff543_GM_Dark_png.png?bucket=document"
+          />
+          <link
+            rel="apple-touch-icon"
+            href="https://api.typedream.com/v0/document/public/b28e9122-5924-4381-8bae-b7b550dff543_GM_Dark_png.png?bucket=document"
+          />
           <meta property="og:url" content="https://www.generalmagic.io/" />
           <meta property="og:type" content="website" />
           <meta
@@ -45,10 +54,6 @@ class MyDocument extends Document {
           <meta
             name="twitter:description"
             content="General Magic solves the needs of Public Good projects by assigning top-notch Web3 professionals to assist them in their goals, either by integrating with existing teams, or creating resources from scratch."
-          />
-          <meta
-            name="twitter:image"
-            content="https://generalmagic.vercel.app/api/og"
           />
         </Head>
         <body>
