@@ -54,7 +54,7 @@ class MyDocument extends Document {
           />
           <meta
             name="twitter:image"
-            content="https://api.typedream.com/v0/document/public/f7bba28f-d68b-4b06-9aef-3a5446d263f3_Screen_Shot_2022-02-21_at_12_14_14_AM_png.png"
+            content="${require(`./public/images/Metadata-Image.png`)}"
           />
         </Head>
         <body>
