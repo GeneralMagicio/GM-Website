@@ -40,6 +40,10 @@ class MyDocument extends Document {
             property="og:description"
             content="General Magic solves the needs of Public Good projects by assigning top-notch Web3 professionals to assist them in their goals, either by integrating with existing teams, or creating resources from scratch."
           />
+          <meta
+            name="og:image"
+            content="https://generalmagic.vercel.app/api/og"
+          />
           <meta property="og:site_name" content="General Magic" />
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:site" content="@generalmagicio" />
@@ -50,10 +54,6 @@ class MyDocument extends Document {
           <meta
             name="twitter:description"
             content="General Magic solves the needs of Public Good projects by assigning top-notch Web3 professionals to assist them in their goals, either by integrating with existing teams, or creating resources from scratch."
-          />
-          <meta
-            name="twitter:image"
-            content="https://generalmagic.vercel.app/api/og"
           />
         </Head>
         <body>
