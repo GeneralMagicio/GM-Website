@@ -11,7 +11,6 @@ class MyDocument extends Document {
     const initialProps = await Document.getInitialProps(ctx)
     return { ...initialProps }
   }
-
   render() {
     return (
       <Html>
@@ -54,7 +53,7 @@ class MyDocument extends Document {
           />
           <meta
             name="twitter:image"
-            content="${require(`./public/images/Metadata-Image.png`)}"
+            content="https://generalmagic.vercel.app/api/og"
           />
         </Head>
         <body>
