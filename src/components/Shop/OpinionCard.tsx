@@ -2,32 +2,45 @@ import Image from 'next/image'
 import { Subtitle } from '@/components/base/Subtitle'
 import { Title } from '@/components/base/Title'
 import apos from 'public/images/icons/apos.svg'
+import classNames from 'classnames'
 
-export interface ShopOpinionCardProps {
+export interface OpinionCardProps {
   clientOrg: string
   textFirst: string
   textSecond?: string
   clientName: string
+  shop: boolean
 }
 
-export function ShopOpinionCard({
+export function OpinionCard({
   clientOrg,
   textFirst,
   textSecond,
   clientName,
-}: ShopOpinionCardProps) {
+  shop
+}: OpinionCardProps) {
   return (
-    <div className="border border-misticOrange-300 p-10 max-w-[800px]">
+    <div className={
+      classNames("border border-misticOrange-300 p-10",
+        shop ? 'max-w-[800px]' : 'w-full'
+      )}>
       <Image src={apos} alt={''} />
-      <Title>
-        <span className="mt-2">{clientOrg}</span>
-      </Title>
-      <Subtitle paddingBottom={false} paddingTop={true}>
-        {textFirst}
+      {shop &&
+        <Title>
+          <span className="mt-2">{clientOrg}</span>
+        </Title>
+      }
+      <Subtitle paddingBottom={false} paddingTop={shop ? true : false}>
+        <span className={classNames(!shop ? 'py-6' : '')}>
+          {textFirst}
+        </span>
       </Subtitle>
-      <Subtitle paddingBottom={true} paddingTop={true}>
-        {textSecond}
-      </Subtitle>
+      {
+        textSecond &&
+        <Subtitle paddingBottom={true} paddingTop={true}>
+          {textSecond}
+        </Subtitle>
+      }
       <p className="font-bold text-2xl">{clientName}</p>
       <p>{clientOrg}</p>
     </div>
