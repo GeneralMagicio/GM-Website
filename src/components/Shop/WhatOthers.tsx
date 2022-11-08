@@ -5,7 +5,7 @@ import { Subtitle } from '@/components/base/Subtitle'
 import { Title } from '@/components/base/Title'
 import { SwiperButtonPrev } from '@/components/Home/SwipperPrevButton'
 import { SwiperButtonNext } from '@/components/Home/SwipperNextButton'
-import { ShopOpinionCard, ShopOpinionCardProps } from '@/components/Shop/OpinionCard'
+import { OpinionCard, OpinionCardProps } from '@/components/Shop/OpinionCard'
 
 export function ShopWhatOthers() {
   const [swiperIstance, setSwiperInstance] = useState({})
@@ -17,7 +17,7 @@ export function ShopWhatOthers() {
     swiper.isEnd ? setIsEnd(true) : setIsEnd(false)
   }
 
-  const clientsOpinions: ShopOpinionCardProps[] = [
+  const clientsOpinions: OpinionCardProps[] = [
     {
       clientOrg: 'Trusted Seed',
       textFirst:
@@ -25,12 +25,14 @@ export function ShopWhatOthers() {
       textSecond:
         'We look forward to work with them in the near future, and further develop our organization’s digital experience with new tools',
       clientName: 'Mafer',
+      shop: true
     },
     {
       clientOrg: 'Giveth',
       textFirst:
         'The Swag Shop designed by General Magic has been a perfect solution to expand our line of products and services we offer at Giveth. It was easy to add new designs, coordinate shipping prices and allow users to pay with different types of tokens, including custom exchange rates and across different Ethereum chains. The General Magic team was very responsive and took the time to find unique solutions and troubleshoot any problems that arised. I would recommend the swag shop to any DAO or protocol looking to offer more to their users and token holders!',
       clientName: 'Mitch',
+      shop: true
     },
   ]
 
@@ -61,11 +63,12 @@ export function ShopWhatOthers() {
             return (
               <SwiperSlide key={opinion.clientName}>
                 <div className="flex justify-center mt-5">
-                  <ShopOpinionCard
+                  <OpinionCard
                     clientName={opinion.clientName}
                     clientOrg={opinion.clientOrg}
                     textFirst={opinion.textFirst}
                     textSecond={opinion.textSecond}
+                    shop={opinion.shop}
                   />
                 </div>
               </SwiperSlide>
