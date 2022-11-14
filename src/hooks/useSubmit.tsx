@@ -126,7 +126,7 @@ export function SubmitProvider({ children }: SubmitProviderProps) {
     email: 'E-mail',
     projectName: 'Project name',
     projectDescription: 'Project Description',
-    services: 'Required services' ,
+    services: 'Required services',
     budget: 'Budget',
     deadline: 'Expected deadline'
   }
@@ -188,10 +188,13 @@ export function SubmitProvider({ children }: SubmitProviderProps) {
         missingFields.push(key)
       }
     }
-    for(const [key,value] of Object.entries(missingFieldsLabels)){
-      if(missingFields.includes(key)){
+    for (const [key, value] of Object.entries(missingFieldsLabels)) {
+      if (missingFields.includes(key)) {
         missingFieldsState.push(value)
         setMissingFieldMessage(missingFieldsState)
+      }
+      if (missingFields.length === 0) {
+        setMissingFieldMessage([])
       }
     }
     const { email } = contactForm
