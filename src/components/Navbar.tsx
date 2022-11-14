@@ -48,7 +48,7 @@ export function Navbar() {
                 </button>
               </Link>
             </div>
-            <div className="hidden md:grid grid-cols-7 h-full items-center md:gap-x-14 px-10">
+            <div className="hidden md:grid grid-cols-7 h-full items-center md:gap-x-14 px-10 justify-items-center">
               <button
                 onClick={() => {
                   setScrollToServices(true)
