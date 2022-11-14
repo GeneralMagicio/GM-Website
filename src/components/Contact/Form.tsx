@@ -6,6 +6,7 @@ import { Input } from '@/components/base/Input'
 import { FormHeader } from '@/components/Contact/FormHeader'
 import { SubmitModal } from '@/components/Contact/Modal/SubmitModal'
 import useSubmitContext from '@/hooks/useSubmit'
+import classNames from 'classnames'
 
 export const checkboxes = [
   'Token Economics',
@@ -41,6 +42,7 @@ export const ContactForm = forwardRef<HTMLDivElement>((props, ref) => {
     dialog,
     isLoading,
     setDialog,
+    missingFieldMessage,
     handleSubmit,
   } = useSubmitContext()
 
@@ -132,7 +134,7 @@ export const ContactForm = forwardRef<HTMLDivElement>((props, ref) => {
             />
           </div>
         </FormHeader>
-        <FormHeader title="Required Services">
+        <FormHeader title="Required Services *">
           <div className="flex justify-center">
             <div className="grid md:grid-cols-2 w-fit gap-y-6 gap-x-2 sm:gap-x-8 md:gap-x-16 justify-items-center md:justify-items-start">
               {checkboxes.map((checkbox) => {
@@ -151,7 +153,7 @@ export const ContactForm = forwardRef<HTMLDivElement>((props, ref) => {
             </div>
           </div>
         </FormHeader>
-        <FormHeader title="Budget & Timeline">
+        <FormHeader title="Budget & Timeline *">
           <div className="flex flex-col items-center">
             <RadioGroup
               value={budgetState}
@@ -226,6 +228,17 @@ export const ContactForm = forwardRef<HTMLDivElement>((props, ref) => {
             />
           </div>
         </FormHeader>
+        <div className='w-fit mx-auto mb-10'>
+          {(missingFieldMessage.length != 0 || !/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/g.test(email)) && (
+            <h3 className='text-center text-[#ec6f64] mb-2'>To submit your Request, please complete the following missing fields:</h3>
+          )}
+          <div className={classNames('grid justify-items-center', missingFieldMessage.length === 0 || missingFieldMessage.length === 1 ? 'grid-cols-1' : missingFieldMessage.length === 2 ? 'grid-cols-2' : 'grid-cols-3')}>
+            {missingFieldMessage.map((missingField) => {
+              return <p key={missingField}>{missingField}</p>
+            })}
+            {!/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/g.test(email) && !missingFieldMessage.includes('E-mail') ? <p>Invalid E-mail</p> : ''}
+          </div>
+        </div>
         <div className=" flex justify-center">
           <button
             disabled={disabled || isLoading}
