@@ -228,16 +228,17 @@ export const ContactForm = forwardRef<HTMLDivElement>((props, ref) => {
             />
           </div>
         </FormHeader>
-        {missingFieldMessage.length != 0 && (
-          <div className='w-fit mx-auto mb-10'>
+        <div className='w-fit mx-auto mb-10'>
+          {(missingFieldMessage.length != 0 || !/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/g.test(email)) && (
             <h3 className='text-center text-[#ec6f64] mb-2'>To submit your Request, please complete the following missing fields:</h3>
-            <div className={classNames('grid justify-items-center', missingFieldMessage.length === 1 ? 'grid-cols-1' : missingFieldMessage.length === 2 ? 'grid-cols-2' : 'grid-cols-3')}>
-              {missingFieldMessage.map((missingField) => {
-                return <p key={missingField}>{missingField}</p>
-              })}
-            </div>
+          )}
+          <div className={classNames('grid justify-items-center', missingFieldMessage.length === 0 || missingFieldMessage.length === 1 ? 'grid-cols-1' : missingFieldMessage.length === 2 ? 'grid-cols-2' : 'grid-cols-3')}>
+            {missingFieldMessage.map((missingField) => {
+              return <p key={missingField}>{missingField}</p>
+            })}
+            {!/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/g.test(email) && !missingFieldMessage.includes('E-mail') ? <p>Invalid E-mail</p> : ''}
           </div>
-        )}
+        </div>
         <div className=" flex justify-center">
           <button
             disabled={disabled || isLoading}
