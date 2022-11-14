@@ -57,8 +57,6 @@ export const ContactForm = forwardRef<HTMLDivElement>((props, ref) => {
     })
   }, [])
 
-  console.log(missingFieldMessage)
-
   return (
     <div ref={ref}>
       <form
@@ -230,14 +228,16 @@ export const ContactForm = forwardRef<HTMLDivElement>((props, ref) => {
             />
           </div>
         </FormHeader>
-        <div className='w-fit mx-auto mb-10'>
-          <h3 className='text-center text-[#ec6f64] mb-2'>To submit your Request, please complete the following missing fields:</h3>
-          <div className={classNames('grid justify-items-center', missingFieldMessage.length === 1 ? 'grid-cols-1' : missingFieldMessage.length === 2 ? 'grid-cols-2' : 'grid-cols-3')}>
-            {missingFieldMessage.map((missingField) => {
-              return <p key={missingField}>{missingField}</p>
-            })}
+        {missingFieldMessage.length != 0 && (
+          <div className='w-fit mx-auto mb-10'>
+            <h3 className='text-center text-[#ec6f64] mb-2'>To submit your Request, please complete the following missing fields:</h3>
+            <div className={classNames('grid justify-items-center', missingFieldMessage.length === 1 ? 'grid-cols-1' : missingFieldMessage.length === 2 ? 'grid-cols-2' : 'grid-cols-3')}>
+              {missingFieldMessage.map((missingField) => {
+                return <p key={missingField}>{missingField}</p>
+              })}
+            </div>
           </div>
-        </div>
+        )}
         <div className=" flex justify-center">
           <button
             disabled={disabled || isLoading}
