@@ -57,6 +57,8 @@ export const ContactForm = forwardRef<HTMLDivElement>((props, ref) => {
     })
   }, [])
 
+  console.log(missingFieldMessage)
+
   return (
     <div ref={ref}>
       <form
