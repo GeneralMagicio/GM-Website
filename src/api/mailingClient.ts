@@ -1,4 +1,3 @@
-import { google } from 'googleapis'
 import nodemailer from 'nodemailer'
 
 const { OAuth2 } = google.auth
