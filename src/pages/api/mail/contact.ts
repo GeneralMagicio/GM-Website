@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { mailingClient } from '@/api/mailingClient'
+import { appendSpreadsheet } from '@/api/gSheets'
 
 interface ContactFormNextApiRequest extends NextApiRequest {
   body: {
@@ -44,13 +45,12 @@ export default async function serverSideCall(
         ? 'Aditional information'
         : ''
     const discordHandle = discord ? `Discord handle: ${discord}` : ''
-    const telegramHandle = telegram ? `Telegram handle ${telegram}` : ''
+    const telegramHandle = telegram ? `Telegram handle: ${telegram}` : ''
     const githubHandle = github ? `Github Profile: ${github}` : ''
     const projectLinkText = projectLink ? `Project Link: ${projectLink}` : ''
     const aditionalInformationText = aditionalInformation
       ? `Additional Information given by the client: ${aditionalInformation}`
       : ''
-
     const mailData = {
       from: process.env.GMAIL_ACCOUNT as string,
       to: process.env.EMAIL_RECIPIENT as string,
@@ -72,6 +72,22 @@ export default async function serverSideCall(
       ${aditionalInformationText}
       `,
     }
+    const date = new Date()
+    const sheetsData = {
+      timeStamp: date.toUTCString(),
+      whoRequested: firstName,
+      emailContact: email,
+      projectName: projectName,
+      projectDescription: projectDescription,
+      typeOfServices: services.toString(),
+      budgetRange: budget,
+      deadline: deadline,
+      discordHandle: discord ? discord : '',
+      githubHandle: github ? github : '',
+      telegramHandle: telegram ? telegram : '',
+      projectLink: projectLink ? projectLink : '',
+      aditionalInformationText: aditionalInformation ? aditionalInformation : ''
+    }
     try {
       mailingClient.sendMail(mailData, (err) => {
         if (err) {
@@ -86,6 +102,7 @@ export default async function serverSideCall(
           })
         }
       })
+      appendSpreadsheet(sheetsData)
     } catch (err) {
       console.log(err)
       res.status(400).json({
