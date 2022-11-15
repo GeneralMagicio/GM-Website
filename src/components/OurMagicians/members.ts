@@ -142,6 +142,11 @@ export const members: OurMagiciansCardProps[] = [
     image: DEFAULT_03,
   },
   {
+    name: 'Zeptimus',
+    role: 'DAO Advocate',
+    image: DEFAULT_04,
+  },
+  {
     name: 'Kkechy',
     role: '',
     image: KRESIMIR,
@@ -149,7 +154,7 @@ export const members: OurMagiciansCardProps[] = [
   {
     name: 'Bends',
     role: '',
-    image: DEFAULT_04,
+    image: DEFAULT_02,
   },
 ]
 
