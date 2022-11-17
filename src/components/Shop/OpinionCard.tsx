@@ -22,7 +22,7 @@ export function OpinionCard({
   return (
     <div className={
       classNames("border border-misticOrange-300 p-10",
-        shop ? 'max-w-[800px]' : 'w-full'
+        shop ? 'max-w-[800px]' : 'w-full bg-[#121213] opacity-95'
       )}>
       <Image src={apos} alt={''} />
       {shop &&

@@ -2,9 +2,9 @@ import Image, { StaticImageData } from 'next/image'
 import { OpinionCard } from '../Shop/OpinionCard'
 
 export interface ProjectProps {
-  id: number
   projectUrl: string
-  projectImg: StaticImageData | string
+  projectImgDesktop: StaticImageData | string
+  projectImgMobile: StaticImageData | string
   clientLogo: StaticImageData | string
   description: string
   workWeDid: string[]
@@ -16,7 +16,8 @@ export interface ProjectProps {
 
 export function Project({
   projectUrl,
-  projectImg,
+  projectImgDesktop,
+  projectImgMobile,
   clientLogo,
   description,
   workWeDid,
@@ -29,51 +30,56 @@ export function Project({
   const projectUrlLabel = projectUrl.slice(8, projectUrl.length - 1)
 
   return (
-    <div className="relative flex-col lg:flex-row flex py-8 md:py-36 justify-center md:justify-start items-center sm:px-12 md:px-36">
-      <div className="grid gap-y-12 md:ml-[72px] mt-24 lg:mt-0 z-50">
-        <a
-          className="flex justify-center lg:justify-start hover:cursor-pointer lg:w-fit"
-          href={projectUrl}
-          target="_blank"
-          rel="noreferrer"
-        >
-          <Image src={clientLogo} alt="" />
-        </a>
-        <p className="px-10 sm:px-12 md:px-0 max-w-[650px] text-2xl leading-7 text-center lg:text-start tracking-[5%]">
-          {description}
-        </p>
-        <div>
-          <h3 className='uppercase tracking-[4px]'>Work we did</h3>
-          <ul className='list-disc ml-5 mt-4'>
-
-            {workWeDid.map((work) => {
-              return (
-                <li key={work}>{work}</li>
-              )
-            })}
-          </ul>
-        </div>
-        <div className='max-w-xs'>
-          <h3 className='uppercase tracking-[4px]'>About</h3>
-          <p className='my-4'>{clientDescription}</p>
+    <div className="py-8 md:py-20">
+      <div className="relative flex-col lg:flex-row flex justify-center md:justify-start items-center sm:px-12 md:px-36">
+        <div className="grid gap-y-12 ml-0 xl:ml-[72px] mt-12 md:mt-0 z-50 px-10 sm:px-12 md:px-0">
           <a
+            className="flex justify-center xl:justify-start hover:cursor-pointer xl:w-fit"
             href={projectUrl}
             target="_blank"
             rel="noreferrer"
-            className='text-magicSky-300'
           >
-            {projectUrlLabel}
+            <Image src={clientLogo} alt="" />
           </a>
+          <p className="xl:max-w-[650px] text-sm lg:text-2xl leading-7 text-center xl:text-start tracking-[5%]">
+            {description}
+          </p>
+          <div className='flex xl:hidden justify-center'>
+            <Image src={projectImgMobile} alt="" />
+          </div>
+          <div className='flex flex-col items-center xl:items-start'>
+            <h3 className='uppercase tracking-[4px]'>Work we did</h3>
+            <ul className='list-disc ml-5 mt-4 flex flex-col items-center'>
+
+              {workWeDid.map((work) => {
+                return (
+                  <li key={work} className="w-fit xl:w-full text-center xl:text-left">{work}</li>
+                )
+              })}
+            </ul>
+          </div>
+          <div className='xl:max-w-xs flex flex-col items-center xl:items-start'>
+            <h3 className='uppercase tracking-[4px]'>About</h3>
+            <p className='my-4 text-center xl:text-left'>{clientDescription}</p>
+            <a
+              href={projectUrl}
+              target="_blank"
+              rel="noreferrer"
+              className='text-magicSky-300'
+            >
+              {projectUrlLabel}
+            </a>
+          </div>
+          <OpinionCard
+            clientName={clientName}
+            clientOrg={clientOrg}
+            textFirst={textFirst}
+            shop={false}
+          />
         </div>
-        <OpinionCard
-          clientName={clientName}
-          clientOrg={clientOrg}
-          textFirst={textFirst}
-          shop={false}
-        />
-      </div>
-      <div className='absolute top-32 right-0'>
-        <Image src={projectImg} alt={projectUrlLabel} />
+        <div className='hidden xl:block absolute top-0 right-0'>
+          <Image src={projectImgDesktop} alt={projectUrlLabel} />
+        </div>
       </div>
     </div>
   )
