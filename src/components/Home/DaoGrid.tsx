@@ -81,7 +81,7 @@ export function DaoGrid() {
       <div className="absolute top-5 right-5 z-50 block w-32 sm:hidden">
         <Image src={aguila} alt="making magic happen" />
       </div>
-      <div className="grid-col-3 vignette grid gap-[1px] md:grid-cols-5">
+      <div className="vignette grid gap-[1px] md:grid-cols-5">
         <div className="col-span-2 hidden h-full bg-neutral-900 md:block"></div>
         {daos.zeroRow.map((dao) => {
           return (

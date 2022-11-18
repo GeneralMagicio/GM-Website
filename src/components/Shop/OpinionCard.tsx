@@ -43,6 +43,6 @@ export function OpinionCard({
       }
       <p className="text-2xl font-bold">{clientName}</p>
       <p>{clientOrg}</p>
-    </div>
+    </div >
   )
 }
