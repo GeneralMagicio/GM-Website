@@ -85,7 +85,7 @@ export function Navbar() {
                   </Link>
                 )
               })}
-              <ProductButtonMenu isFooter={false} isNavMobile={false} setOpenNavMobile={setIsOpen} />
+              <ProductButtonMenu isFooter={false} isNavMobile={false} isOpen={isOpen} setOpenNavMobile={setIsOpen} />
               {pages.slice(3, 5).map((page) => {
                 return (
                   <Link key={page.title} href={page.url}>
@@ -107,7 +107,7 @@ export function Navbar() {
               })}
             </div>
             <Link href="/contact">
-              <button className="hidden h-full items-center justify-center bg-magicPurple-300 uppercase hover:bg-opacity-70 md:flex">
+              <button className="hidden h-full items-center justify-center bg-magicPurple-300 uppercase hover:bg-magicPurple-300/70 md:flex">
                 <h1 className="font-akira text-[8px] text-white md:px-5 xl:px-8 xl:text-base 2xl:px-11">
                   work with us
                 </h1>
@@ -176,7 +176,7 @@ export function Navbar() {
                     </Link>
                   )
                 })}
-                <ProductButtonMenu isFooter={false} isNavMobile={true} setOpenNavMobile={setIsOpen} />
+                <ProductButtonMenu isFooter={false} isNavMobile={true} isOpen={isOpen} setOpenNavMobile={setIsOpen} />
                 {pages.slice(3, 5).map((page) => {
                   return (
                     <Link href={page.url} key={page.title}>

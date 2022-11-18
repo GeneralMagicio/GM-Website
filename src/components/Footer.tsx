@@ -89,7 +89,7 @@ export function Footer() {
               </Link>
             )
           })}
-          <ProductButtonMenu isFooter={true} isNavMobile={false} setOpenNavMobile={setIsOpen} />
+          <ProductButtonMenu isFooter={true} isNavMobile={false} isOpen={isOpen} setOpenNavMobile={setIsOpen} />
           {pages.slice(3, 5).map((page) => {
             return (
               <Link key={page.title} href={page.url}>
