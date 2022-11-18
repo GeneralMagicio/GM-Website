@@ -11,7 +11,7 @@ import ClrLogo from 'public/images/logo/ClrFundLogo.svg'
 import AragonLogo from 'public/images/logo/AragonLogo.svg'
 import ENSHomeLogo from 'public/images/logo/ENSHomeLogo.svg'
 import TEAcademyLogo from 'public/images/logo/TEAcademyLogo.svg'
-import aguila from 'public/images/aguila.png'
+import aguila from 'public/images/assets/aguila.png'
 
 export function DaoGrid() {
   const daos = {

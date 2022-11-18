@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { Button } from '@/components/base/Button'
-import build from 'public/images/build.png'
+import build from 'public/images/assets/build.png'
 import useReferenceContext from '@/hooks/useReference'
 
 export function Build() {

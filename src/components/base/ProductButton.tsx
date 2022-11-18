@@ -12,6 +12,7 @@ interface product {
 }
 
 interface IProductButtonMenu {
+  isOpen: boolean
   isFooter: boolean
   isNavMobile: boolean
   setOpenNavMobile: Dispatch<boolean>
@@ -59,7 +60,7 @@ export function ProductButtonMenu({ isFooter, isNavMobile, setOpenNavMobile }: I
                 leaveFrom="transform scale-100 opacity-100"
                 leaveTo="transform scale-95 opacity-0"
               >
-                <div className='w-screen bg-neutral-500 bg-opacity-20'>
+                <div className='w-screen bg-neutral-500/20'>
                   {products.map((product) => {
                     return (
                       <Disclosure.Panel key={product.label}>

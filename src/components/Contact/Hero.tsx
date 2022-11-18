@@ -2,9 +2,9 @@ import Image from 'next/image'
 import { Subtitle } from '@/components/base/Subtitle'
 import { Title } from '@/components/base/Title'
 import { LayoutHero } from '@/components/base/LayoutHero'
-import plantR from 'public/images/homePlantR.svg'
+import plantR from 'public/images/assets/homePlantR.svg'
 import down from 'public/images/icons/down.svg'
-import contactBanner from 'public/images/contactBanner.png'
+import contactBanner from 'public/images/assets/contactBanner.png'
 
 interface ContactHeroProps {
   handleScroll: () => void

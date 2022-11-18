@@ -1,11 +1,11 @@
 import Image from 'next/image'
 import { AboutValue, AboutValueProps } from '@/components/About/Value'
-import membersBg from 'public/images/members.png'
-import shopWallet from 'public/images/shopWallet.svg'
-import shopApparel from 'public/images/shopApparel.png'
-import shopElipse from 'public/images/shopElipse.png'
-import stars from 'public/images/stars.png'
-import plantL from 'public/images/homePlantL.svg'
+import membersBg from 'public/images/assets/members.png'
+import shopWallet from 'public/images/assets/shopWallet.svg'
+import shopApparel from 'public/images/assets/shopApparel.png'
+import shopElipse from 'public/images/assets/shopElipse.png'
+import stars from 'public/images/assets/stars.png'
+import plantL from 'public/images/assets/homePlantL.svg'
 
 export function ShopFeatures() {
   const values: AboutValueProps[] = [

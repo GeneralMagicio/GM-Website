@@ -8,7 +8,7 @@ import { Subtitle } from '@/components/base/Subtitle'
 import { OurMagiciansCard } from '@/components/OurMagicians/Card'
 import { alumniMembers, members } from '@/components/OurMagicians/members'
 import useReferenceContext from '@/hooks/useReference'
-import membersBg from 'public/images/members.png'
+import membersBg from 'public/images/assets/members.png'
 
 interface OurMagiciansProps {
   page: string
