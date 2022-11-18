@@ -6,10 +6,10 @@ import { Subtitle } from '@/components/base/Subtitle'
 import { LayoutHero } from '@/components/base/LayoutHero'
 import { NextPageWithLayout } from '@/pages/_app'
 import { AppLayout } from '@/layouts/AppLayout'
-import Cloud from 'public/images/assets/404Clouds.png'
-import plantL from 'public/images/assets/homePlantL.svg'
-import fire from 'public/images/assets/404fire.png'
-import wind from 'public/images/assets/404Wind.png'
+import Cloud from 'public/images/404Clouds.png'
+import plantL from 'public/images/homePlantL.svg'
+import fire from 'public/images/404fire.png'
+import wind from 'public/images/404Wind.png'
 
 const error404: NextPageWithLayout = () => {
   return (
