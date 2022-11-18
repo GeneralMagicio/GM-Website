@@ -37,7 +37,7 @@ export const AboutValues = forwardRef<HTMLDivElement>((props, ref) => {
   ]
 
   return (
-    <div className="md:pb-24 pb-16" ref={ref}>
+    <div className="pb-16 md:pb-24" ref={ref}>
       {values.map((value) => {
         return (
           <AboutValue

@@ -27,29 +27,29 @@ export function ShopLaunch() {
     },
   ]
   return (
-    <div className="bg-neutral-900 relative ">
-      <div className="hidden md:block absolute left-0 top-0">
+    <div className="relative bg-neutral-900 ">
+      <div className="absolute left-0 top-0 hidden md:block">
         <Image src={bird} alt="bird" />
       </div>
       <div className="h-grid-line h-[1px]"></div>
-      <div className="relative z-40 flex flex-col items-center mx-12 lg:mx-32 my-12 md:my-32">
+      <div className="relative z-40 m-12 flex flex-col items-center md:my-32 lg:mx-32">
         <Title>
           <span className="text-center md:text-[32px]">
             Launch your own Swag Shop
           </span>
         </Title>
         <Subtitle paddingTop={true} paddingBottom={false}>
-          <span className="text-center md:text-xl max-w-2xl">
+          <span className="max-w-2xl text-center md:text-xl">
             Having a swag shop is a great way to build loyalty in your
             community. Our job is to make that process as easy as can be.
           </span>
         </Subtitle>
       </div>
-      <div className="grid dao-md:grid-cols-2 w-full my-10 relative gap-y-12">
-        <div className="hidden dao-md:block absolute right-0 top-[-100px]">
+      <div className="relative my-10 grid w-full gap-y-12 dao-md:grid-cols-2">
+        <div className="absolute right-0 top-[-100px] hidden dao-md:block">
           <Image src={ring} alt="ring" />
         </div>
-        <div className="sm:hidden block z-50 absolute top-[-50px] left-0 w-32">
+        <div className="absolute top-[-50px] left-0 z-50 block w-32 sm:hidden">
           <Image src={aguila} alt="making magic happen" />
         </div>
         {cards.map((card) => {

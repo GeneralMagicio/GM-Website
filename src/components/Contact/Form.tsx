@@ -60,13 +60,13 @@ export const ContactForm = forwardRef<HTMLDivElement>((props, ref) => {
   return (
     <div ref={ref}>
       <form
-        className="pt-12 pb-12 md:pt-32 md:pb-16 px-8 sm:px-16 md:px-36"
+        className="px-8 py-12 sm:px-16 md:px-36 md:pt-32 md:pb-16"
         onSubmit={(e: FormEvent<HTMLElement>) => {
           handleSubmit(e)
         }}
       >
         <FormHeader title="Personal Information">
-          <div className="grid md:grid-cols-2 gap-x-7">
+          <div className="grid gap-x-7 md:grid-cols-2">
             <Input
               placeholder="First Name *"
               onChange={handleChange}
@@ -118,7 +118,7 @@ export const ContactForm = forwardRef<HTMLDivElement>((props, ref) => {
             />
             <div className="h-72">
               <textarea
-                className="resize-none bg-neutral-900 h-full w-full border border-magicPurple-300 px-7 py-3 focus:outline-none focus:border-pinkPotion-300"
+                className="h-full w-full resize-none border border-magicPurple-300 bg-neutral-900 px-7 py-3 focus:border-pinkPotion-300 focus:outline-none"
                 placeholder="Description *"
                 name="projectDescription"
                 onChange={handleChange}
@@ -136,12 +136,12 @@ export const ContactForm = forwardRef<HTMLDivElement>((props, ref) => {
         </FormHeader>
         <FormHeader title="Required Services *">
           <div className="flex justify-center">
-            <div className="grid md:grid-cols-2 w-fit gap-y-6 gap-x-2 sm:gap-x-8 md:gap-x-16 justify-items-center md:justify-items-start">
+            <div className="grid w-fit justify-items-center gap-y-6 gap-x-2 sm:gap-x-8 md:grid-cols-2 md:justify-items-start md:gap-x-16">
               {checkboxes.map((checkbox) => {
                 return (
                   <div key={checkbox} className="w-fit">
                     <input
-                      className="appearance-none h-4 w-4 border border-pinkPotion-300 rounded bg-neutral-900 checked:bg-pinkPotion-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                      className="float-left mt-1 mr-2 h-4 w-4 cursor-pointer appearance-none rounded border border-pinkPotion-300 bg-neutral-900 bg-contain bg-center bg-no-repeat align-top transition duration-200 checked:bg-pinkPotion-300 focus:outline-none"
                       type="checkbox"
                       name={checkbox}
                       onChange={handleCheck}
@@ -160,7 +160,7 @@ export const ContactForm = forwardRef<HTMLDivElement>((props, ref) => {
               onChange={(budgetValue: string) => {
                 handleButton(budgetValue)
               }}
-              className="grid grid-cols-2 w-fit gap-8 mb-7"
+              className="mb-7 grid w-fit grid-cols-2 gap-8"
             >
               <RadioGroup.Option value="<  $5k">
                 {({ checked }) => (
@@ -203,13 +203,13 @@ export const ContactForm = forwardRef<HTMLDivElement>((props, ref) => {
                 )}
               </RadioGroup.Option>
             </RadioGroup>
-            <h1 className="font-akira text-[26px] w-fit mb-6">
+            <h1 className="mb-6 w-fit font-akira text-[26px]">
               Expected Deadline
             </h1>
-            <div className="button-border w-full sm:w-[369px] relative z-50">
+            <div className="button-border relative z-50 w-full sm:w-[369px]">
               <input
                 type="date"
-                className="w-[calc(100%_-_2px)] sm:w-[367px] p-5 hover:bg-opacity-70 m-[1px] bg-neutral-900 font-akira text-center sm:text-xl md:text-[26px]"
+                className="m-[1px] w-[calc(100%_-_2px)] bg-neutral-900 p-5 text-center font-akira hover:bg-opacity-70 sm:w-[367px] sm:text-xl md:text-[26px]"
                 onChange={handleChange}
                 name="deadline"
                 value={deadline}
@@ -220,7 +220,7 @@ export const ContactForm = forwardRef<HTMLDivElement>((props, ref) => {
         <FormHeader title="Additional Information">
           <div className="h-72">
             <textarea
-              className="resize-none bg-neutral-900 h-full w-full border border-magicPurple-300 px-7 py-3 focus:outline-none focus:border-pinkPotion-300"
+              className="h-full w-full resize-none border border-magicPurple-300 bg-neutral-900 px-7 py-3 focus:border-pinkPotion-300 focus:outline-none"
               placeholder="Tell us!"
               name="aditionalInformation"
               onChange={handleChange}
@@ -228,9 +228,9 @@ export const ContactForm = forwardRef<HTMLDivElement>((props, ref) => {
             />
           </div>
         </FormHeader>
-        <div className='w-fit mx-auto mb-10'>
+        <div className='mx-auto mb-10 w-fit'>
           {(missingFieldMessage.length != 0 || !/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/g.test(email)) && (
-            <h3 className='text-center text-[#ec6f64] mb-2'>To submit your Request, please complete the following missing fields:</h3>
+            <h3 className='mb-2 text-center text-[#ec6f64]'>To submit your Request, please complete the following missing fields:</h3>
           )}
           <div className={classNames('grid justify-items-center', missingFieldMessage.length === 0 || missingFieldMessage.length === 1 ? 'grid-cols-1' : missingFieldMessage.length === 2 ? 'grid-cols-2' : 'grid-cols-3')}>
             {missingFieldMessage.map((missingField) => {
@@ -242,9 +242,9 @@ export const ContactForm = forwardRef<HTMLDivElement>((props, ref) => {
         <div className=" flex justify-center">
           <button
             disabled={disabled || isLoading}
-            className="w-[calc(100%_-_2px)] sm:w-[367px] p-5 hover:bg-opacity-70 m-[1px] bg-magicPurple-300 disabled:bg-opacity-50 disabled:cursor-not-allowed"
+            className="m-[1px] w-[calc(100%_-_2px)] bg-magicPurple-300 p-5 hover:bg-opacity-70 disabled:cursor-not-allowed disabled:bg-opacity-50 sm:w-[367px]"
           >
-            <div className="uppercase font-akira text-2xl text-left flex items-center justify-between">
+            <div className="flex items-center justify-between text-left font-akira text-2xl uppercase">
               submit
               <span>
                 {isLoading ? (

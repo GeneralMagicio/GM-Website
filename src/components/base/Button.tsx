@@ -40,18 +40,18 @@ export function Button({
           <div
             className={classnames(
               border
-                ? 'button-border w-full sm:w-[369px] relative z-50'
-                : 'bg-neutral-900 w-full sm:w-[369px]'
+                ? 'button-border relative z-50 w-full sm:w-[369px]'
+                : 'w-full bg-neutral-900 sm:w-[369px]'
             )}
           >
             <button
               className={classnames(
-                'w-[calc(100%_-_2px)] sm:w-[367px] p-5 hover:bg-opacity-70 m-[1px]',
+                'm-[1px] w-[calc(100%_-_2px)] p-5 hover:bg-opacity-70 sm:w-[367px]',
                 bgColors[bgColor]
               )}
               disabled={disabled}
             >
-              <div className="uppercase font-akira md:text-2xl text-left">
+              <div className="text-left font-akira uppercase md:text-2xl">
                 {breakText && <p>{firstWord}</p>}
                 <div className="flex items-center justify-between">
                   {breakText && <p>{rest}</p>}
@@ -79,18 +79,18 @@ export function Button({
           <div
             className={classnames(
               border
-                ? 'button-border w-full sm:w-[369px] relative z-50'
-                : 'bg-neutral-900 w-full sm:w-[369px]'
+                ? 'button-border relative z-50 w-full sm:w-[369px]'
+                : 'w-full bg-neutral-900 sm:w-[369px]'
             )}
           >
             <button
               className={classnames(
-                'w-[calc(100%_-_2px)] sm:w-[367px] p-5 hover:bg-opacity-70 m-[1px]',
+                'm-[1px] w-[calc(100%_-_2px)] p-5 hover:bg-opacity-70 sm:w-[367px]',
                 bgColors[bgColor]
               )}
               disabled={disabled}
             >
-              <div className="uppercase font-akira md:text-2xl text-left">
+              <div className="text-left font-akira uppercase md:text-2xl">
                 {breakText && <p>{firstWord}</p>}
                 <div className="flex items-center justify-between">
                   {breakText && <p>{rest}</p>}

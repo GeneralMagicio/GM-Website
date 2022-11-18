@@ -19,25 +19,25 @@ export function AboutHero({ handleScroll }: AboutHeroProps) {
   return (
     <>
       <LayoutHero>
-        <div className="flex justify-between h-full items-center py-8">
-          <div className="absolute inset-0 bg-about bg-cover bg-center bg-no-repeat bg-neutral-900 mix-blend-overlay" />
+        <div className="flex h-full items-center justify-between py-8">
+          <div className="absolute inset-0 bg-neutral-900 bg-about bg-cover bg-center bg-no-repeat mix-blend-overlay" />
           <div className="z-40 pl-10 sm:pl-16 md:pl-24 lg:pl-32">
             <Title>
               <span>Wizards</span>
               <span>of web3</span>
             </Title>
             <div className="flex flex-col items-center lg:flex-row 2xl:my-6">
-              <p className="text-xl md:text-2xl lg:text-4xl xl:text-[40px] max-w-[320px] md:max-w-[660px] md:leading-[53px] my-2 lg:my-4 2xl:my-8 self-start">
+              <p className="my-2 max-w-[320px] self-start text-xl md:max-w-[660px] md:text-2xl md:leading-[53px] lg:my-4 lg:text-4xl xl:text-[40px] 2xl:my-8">
                 Who we are
               </p>
-              <div className="block md:hidden w-2/3 self-start">
+              <div className="block w-2/3 self-start md:hidden">
                 <Subtitle paddingBottom={false} paddingTop={false}>
                   {projectsTextFirst}
                 </Subtitle>
               </div>
               <button
                 onClick={handleScroll}
-                className="block md:hidden hover:opacity-70 lg:mx-8 my-4 w-8 h-8 lg:h-12 lg:w-12 self-start lg:self-center"
+                className="my-4 block h-8 w-8 self-start hover:opacity-70 md:hidden lg:mx-8 lg:h-12 lg:w-12 lg:self-center"
               >
                 <Image src={down} alt="Down" />
               </button>
@@ -61,7 +61,7 @@ export function AboutHero({ handleScroll }: AboutHeroProps) {
               </div>
             </div>
           </div>
-          <div className="hidden md:block w-[600px] h-fit">
+          <div className="hidden h-fit w-[600px] md:block">
             <Image
               src={aboutAguila}
               alt=""
@@ -71,15 +71,15 @@ export function AboutHero({ handleScroll }: AboutHeroProps) {
               objectFit="contain"
             />
           </div>
-          <div className="block md:hidden absolute top-32 xs:top-64 right-0 brightness-50">
+          <div className="absolute top-32 right-0 block brightness-50 xs:top-64 md:hidden">
             <Image src={aboutAguila} alt="" width={350} height={350} />
           </div>
         </div>
       </LayoutHero>
       <div className="block md:hidden">
         <div className="py-10">
-          <p className="text-center px-12 sm:py-10">{projectsTextSecond}</p>
-          <div className=" pt-8 px-12 flex justify-center">
+          <p className="px-12 text-center sm:py-10">{projectsTextSecond}</p>
+          <div className=" flex justify-center px-12 pt-8">
             <Button
               url="/contact"
               arrowColor="#ffff"

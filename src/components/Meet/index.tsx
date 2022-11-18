@@ -32,8 +32,8 @@ export function MeetConferences() {
   return (
     <div className="bg-black">
       <div className="h-grid-line h-[1px]"></div>
-      <div className="px-12  md:px-20 lg:px-44 xl:px-64 my-16">
-        <div className="pb-1 flex flex-col w-fit text-xl md:text-[32px] font-akira bg-clip-text text-transparent bg-gradient-to-r from-[#A569FF] via-[#A569FF] to-[#71DDE4]">
+      <div className="my-16  px-12 md:px-20 lg:px-44 xl:px-64">
+        <div className="flex w-fit flex-col bg-gradient-to-r from-[#A569FF] via-[#A569FF] to-[#71DDE4] bg-clip-text pb-1 font-akira text-xl text-transparent md:text-[32px]">
           <span>Meet us at</span>
           <span>Conferences</span>
         </div>
@@ -41,7 +41,7 @@ export function MeetConferences() {
           We frequent the conference circuit and would love to meet up if
           you&apos;re attending any of the events below.
         </Subtitle>
-        <div className="grid gap-y-8 md:gap-y-[72px] md:mb-16">
+        <div className="grid gap-y-8 md:mb-16 md:gap-y-[72px]">
           {conferences.map((conference) => {
             return (
               <MeetConference

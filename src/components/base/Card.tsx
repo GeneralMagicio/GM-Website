@@ -35,20 +35,20 @@ export function ProjectCard({
     <div className='w-[294px] lg:w-fit'>
       <div
         className={classnames(
-          'relative lg:min-w-[535px] lg:h-[595px] min-w-[274px] max-w-[274px] h-[306px] flex items-center justify-center',
+          'relative flex h-[306px] min-w-[274px] max-w-[274px] items-center justify-center lg:h-[595px] lg:min-w-[535px]',
           bgColors[bgColor]
         )}
       >
-        <div className="absolute card top-[-20px] left-5 lg:w-[535px] lg:h-[595px] w-[274px] h-[306px] flex justify-center items-center">
+        <div className="card absolute top-[-20px] left-5 flex h-[306px] w-[274px] items-center justify-center lg:h-[595px] lg:w-[535px]">
           <div
             className={classnames(
-              'flex flex-col bg-neutral-900 lg:h-[593px] lg:w-[532px] w-[272px] h-[304px]',
+              'flex h-[304px] w-[272px] flex-col bg-neutral-900 lg:h-[593px] lg:w-[532px]',
               page === 'Home' ? 'justify-between' : 'justify-end'
             )}
           >
             {page === 'Home' && (
-              <div className="justify-between flex flex-col h-full">
-                <div className="flex m-7 self-end">
+              <div className="flex h-full flex-col justify-between">
+                <div className="m-7 flex self-end">
                   {/* <p className="uppercase text-magicSky-300 mr-2 text-xs lg:text-base">
                 Learn more
               </p>
@@ -68,7 +68,7 @@ export function ProjectCard({
                   <h2 className="font-akira text-xl lg:text-[40px] lg:leading-[48px]">
                     {title}
                   </h2>
-                  <p className="text-sm lg:text-2xl mt-3 mb-5">{description}</p>
+                  <p className="mt-3 mb-5 text-sm lg:text-2xl">{description}</p>
                   <ShopButton bgColor={buttonBg} text={buttonText} url={url} />
                 </div>
               </div>

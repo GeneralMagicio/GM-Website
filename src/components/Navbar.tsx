@@ -15,11 +15,11 @@ export function Navbar() {
   const router = useRouter()
 
   return (
-    <nav className="bg-neutral-900 z-50 relative">
+    <nav className="relative z-50 bg-neutral-900">
       <>
-        <div className="flex items-center h-[108px] justify-between z-50 relative mx-5 md:mx-0">
+        <div className="relative z-50 mx-5 flex h-[108px] items-center justify-between md:mx-0">
           <div className="absolute inset-y-0 right-0 flex items-center md:hidden">
-            <button className="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-magicPurple-300 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-magicPurple-300" onClick={() => { setIsOpen(!isOpen) }}>
+            <button className="inline-flex items-center justify-center rounded-md p-2 text-white hover:text-magicPurple-300 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-magicPurple-300" onClick={() => { setIsOpen(!isOpen) }}>
               <span className="sr-only">Open main menu</span>
               {isOpen ? (
                 <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
@@ -28,10 +28,10 @@ export function Navbar() {
               )}
             </button>
           </div>
-          <div className="h-full flex-1 flex items-center sm:items-stretch justify-between">
-            <div className="hidden md:flex divide-x divide-neutral-800 h-full">
+          <div className="flex h-full flex-1 items-center justify-between sm:items-stretch">
+            <div className="hidden h-full divide-x divide-neutral-800 md:flex">
               <Link href="/">
-                <button className="xl:mx-24 md:mx-10 mx-5">
+                <button className="mx-5 md:mx-10 xl:mx-24">
                   <div className="hover:drop-shadow-[0_0_35px_rgba(165,105,255,1)]">
                     <Image src={gmLogo} alt="General Magic" />
                   </div>
@@ -41,26 +41,26 @@ export function Navbar() {
             </div>
             <div className="flex md:hidden">
               <Link href="/">
-                <button className="xl:mx-24 md:mx-10">
+                <button className="md:mx-10 xl:mx-24">
                   <div className="hover:drop-shadow-[0_0_35px_rgba(165,105,255,1)]">
                     <Image src={gmLogo} alt="General Magic" />
                   </div>
                 </button>
               </Link>
             </div>
-            <div className="hidden md:grid grid-cols-7 h-full items-center md:gap-x-14 px-10 justify-items-center">
+            <div className="hidden h-full grid-cols-7 items-center justify-items-center px-10 md:grid md:gap-x-14">
               <button
                 onClick={() => {
                   setScrollToServices(true)
                 }}
               >
                 {router.asPath === '/' ? (
-                  <a className="text-white hover:text-magicPurple-300 text-center text-xs xl:text-base max-w-fit hover:cursor-pointer">
+                  <a className="max-w-fit text-center text-xs text-white hover:cursor-pointer hover:text-magicPurple-300 xl:text-base">
                     Services
                   </a>
                 ) : (
                   <Link href="/">
-                    <a className="text-white hover:text-magicPurple-300 text-center text-xs xl:text-base max-w-fit hover:cursor-pointer">
+                    <a className="max-w-fit text-center text-xs text-white hover:cursor-pointer hover:text-magicPurple-300 xl:text-base">
                       Services
                     </a>
                   </Link>
@@ -73,12 +73,12 @@ export function Navbar() {
                       <a
                         target="_blank"
                         rel="noreferrer"
-                        className="text-white hover:text-magicPurple-300 text-center text-xs xl:text-base max-w-fit hover:cursor-pointer"
+                        className="max-w-fit text-center text-xs text-white hover:cursor-pointer hover:text-magicPurple-300 xl:text-base"
                       >
                         {page.title}
                       </a>
                     ) : (
-                      <a className="text-white hover:text-magicPurple-300 text-center text-xs xl:text-base max-w-fit hover:cursor-pointer">
+                      <a className="max-w-fit text-center text-xs text-white hover:cursor-pointer hover:text-magicPurple-300 xl:text-base">
                         {page.title}
                       </a>
                     )}
@@ -93,12 +93,12 @@ export function Navbar() {
                       <a
                         target="_blank"
                         rel="noreferrer"
-                        className="text-white hover:text-magicPurple-300 text-center text-xs xl:text-base max-w-fit hover:cursor-pointer"
+                        className="max-w-fit text-center text-xs text-white hover:cursor-pointer hover:text-magicPurple-300 xl:text-base"
                       >
                         {page.title}
                       </a>
                     ) : (
-                      <a className="text-white hover:text-magicPurple-300 text-center text-xs xl:text-base max-w-fit hover:cursor-pointer">
+                      <a className="max-w-fit text-center text-xs text-white hover:cursor-pointer hover:text-magicPurple-300 xl:text-base">
                         {page.title}
                       </a>
                     )}
@@ -107,8 +107,8 @@ export function Navbar() {
               })}
             </div>
             <Link href="/contact">
-              <button className="hidden uppercase bg-magicPurple-300 h-full md:flex items-center hover:bg-opacity-70 justify-center">
-                <h1 className="text-white font-akira 2xl:px-11 xl:px-8 md:px-5 xl:text-base text-[8px]">
+              <button className="hidden h-full items-center justify-center bg-magicPurple-300 uppercase hover:bg-opacity-70 md:flex">
+                <h1 className="font-akira text-[8px] text-white md:px-5 xl:px-8 xl:text-base 2xl:px-11">
                   work with us
                 </h1>
               </button>
@@ -126,10 +126,10 @@ export function Navbar() {
             leaveTo="transform scale-95 opacity-0"
           >
             <div className="md:hidden">
-              <div className="pt-2 pb-8 space-y-1 uppercase flex flex-col items-center">
+              <div className="flex flex-col items-center space-y-1 pt-2 pb-8 uppercase">
                 <Link href="/">
                   <a
-                    className="border-transparent text-white block pl-3 pr-4 py-2 text-base font-medium"
+                    className="block border-transparent py-2 pl-3 pr-4 text-base font-medium text-white"
                     onClick={() => setIsOpen(false)}
                   >
                     Home
@@ -142,12 +142,12 @@ export function Navbar() {
                   }}
                 >
                   {router.asPath === '/' ? (
-                    <a className="uppercase border-transparent text-white block pl-3 pr-4 py-2 text-base font-medium">
+                    <a className="block border-transparent py-2 pl-3 pr-4 text-base font-medium uppercase text-white">
                       Services
                     </a>
                   ) : (
                     <Link href="/">
-                      <a className="uppercase border-transparent text-white block pl-3 pr-4 py-2 text-base font-medium">
+                      <a className="block border-transparent py-2 pl-3 pr-4 text-base font-medium uppercase text-white">
                         Services
                       </a>
                     </Link>
@@ -160,14 +160,14 @@ export function Navbar() {
                         <a
                           target="_blank"
                           rel="noreferrer"
-                          className="border-transparent text-white block pl-3 pr-4 py-2 text-base font-medium"
+                          className="block border-transparent py-2 pl-3 pr-4 text-base font-medium text-white"
                           onClick={() => setIsOpen(false)}
                         >
                           {page.title}
                         </a>
                       ) : (
                         <a
-                          className="border-transparent text-white block pl-3 pr-4 py-2 text-base font-medium"
+                          className="block border-transparent py-2 pl-3 pr-4 text-base font-medium text-white"
                           onClick={() => setIsOpen(false)}
                         >
                           {page.title}
@@ -184,14 +184,14 @@ export function Navbar() {
                         <a
                           target="_blank"
                           rel="noreferrer"
-                          className="border-transparent text-white block pl-3 pr-4 py-2 text-base font-medium"
+                          className="block border-transparent py-2 pl-3 pr-4 text-base font-medium text-white"
                           onClick={() => setIsOpen(false)}
                         >
                           {page.title}
                         </a>
                       ) : (
                         <a
-                          className="border-transparent text-white block pl-3 pr-4 py-2 text-base font-medium"
+                          className="block border-transparent py-2 pl-3 pr-4 text-base font-medium text-white"
                           onClick={() => setIsOpen(false)}
                         >
                           {page.title}
@@ -201,9 +201,9 @@ export function Navbar() {
                   )
                 })}
                 <Link href="/contact">
-                  <div className="px-8 w-full" onClick={() => setIsOpen(false)}>
-                    <div className="text-white border-transparent bg-magicPurple-300 w-full">
-                      <span className="font-akira block pl-3 pr-4 py-3 text-base text-center">
+                  <div className="w-full px-8" onClick={() => setIsOpen(false)}>
+                    <div className="w-full border-transparent bg-magicPurple-300 text-white">
+                      <span className="block py-3 pl-3 pr-4 text-center font-akira text-base">
                         Work with us
                       </span>
                     </div>

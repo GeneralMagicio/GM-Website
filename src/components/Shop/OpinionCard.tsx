@@ -17,7 +17,7 @@ export function ShopOpinionCard({
   clientName,
 }: ShopOpinionCardProps) {
   return (
-    <div className="border border-misticOrange-300 p-10 max-w-[800px]">
+    <div className="max-w-[800px] border border-misticOrange-300 p-10">
       <Image src={apos} alt={''} />
       <Title>
         <span className="mt-2">{clientOrg}</span>
@@ -28,7 +28,7 @@ export function ShopOpinionCard({
       <Subtitle paddingBottom={true} paddingTop={true}>
         {textSecond}
       </Subtitle>
-      <p className="font-bold text-2xl">{clientName}</p>
+      <p className="text-2xl font-bold">{clientName}</p>
       <p>{clientOrg}</p>
     </div>
   )

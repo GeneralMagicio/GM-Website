@@ -17,8 +17,8 @@ export function ProjectsHero({ handleScroll }: ProjectHeroProps) {
   return (
     <>
       <LayoutHero>
-        <div className="flex justify-center h-full items-center px-10 sm:px-16 md:px-24 lg:px-32 py-8">
-          <div className="absolute inset-0 bg-projects bg-cover bg-center bg-no-repeat bg-neutral-900" />
+        <div className="flex h-full items-center justify-center px-10 py-8 sm:px-16 md:px-24 lg:px-32">
+          <div className="absolute inset-0 bg-neutral-900 bg-projects bg-cover bg-center bg-no-repeat" />
           <div className="z-40">
             <Title>
               <span>Projects</span>
@@ -26,17 +26,17 @@ export function ProjectsHero({ handleScroll }: ProjectHeroProps) {
               <span>Support</span>
             </Title>
             <div className="flex flex-col items-center lg:flex-row 2xl:my-6">
-              <p className="text-xl md:text-2xl lg:text-4xl xl:text-[40px] max-w-[320px] md:max-w-[660px] md:leading-[53px] my-2 lg:my-4 2xl:my-8">
+              <p className="my-2 max-w-[320px] text-xl md:max-w-[660px] md:text-2xl md:leading-[53px] lg:my-4 lg:text-4xl xl:text-[40px] 2xl:my-8">
                 We work alongside core teams to grow their impact
               </p>
               <button
                 onClick={handleScroll}
-                className="block md:hidden hover:opacity-70 lg:mx-8 my-4 w-8 h-8 lg:h-12 lg:w-12 self-start lg:self-center"
+                className="my-4 block h-8 w-8 self-start hover:opacity-70 md:hidden lg:mx-8 lg:h-12 lg:w-12 lg:self-center"
               >
                 <Image src={down} alt="Down" />
               </button>
             </div>
-            <div className=" lg:mb-8 hidden md:block">
+            <div className=" hidden md:block lg:mb-8">
               <Subtitle paddingBottom={false} paddingTop={false}>
                 <span className="max-w-[700px]">{projectsText}</span>
               </Subtitle>
@@ -45,14 +45,14 @@ export function ProjectsHero({ handleScroll }: ProjectHeroProps) {
           <div className="hidden md:block">
             <Image src={projectsHero} alt="" height={625} width={500} />
           </div>
-          <div className="block md:hidden absolute top-32 right-0 brightness-50">
+          <div className="absolute top-32 right-0 block brightness-50 md:hidden">
             <Image src={projectsHeroMobile} alt="" />
           </div>
         </div>
       </LayoutHero>
       <div className="block md:hidden">
         <div className="h-grid-line h-[1px]"></div>
-        <p className="text-center px-12 py-6 sm:py-10">{projectsText}</p>
+        <p className="px-12 py-6 text-center sm:py-10">{projectsText}</p>
         <div className="h-grid-line h-[1px]"></div>
       </div>
     </>

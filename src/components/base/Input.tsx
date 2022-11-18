@@ -20,7 +20,7 @@ export function Input({
   return (
     <div className="flex flex-col">
       <input
-        className="bg-neutral-900 border border-magicPurple-300 px-7 py-3 focus:outline-none focus:border-pinkPotion-300 invalid:border-[#F05548] w-full h-full peer"
+        className="peer h-full w-full border border-magicPurple-300 bg-neutral-900 px-7 py-3 invalid:border-[#F05548] focus:border-pinkPotion-300 focus:outline-none"
         placeholder={placeholder}
         pattern={pattern}
         onChange={onChange}
@@ -28,7 +28,7 @@ export function Input({
         value={value}
       ></input>
       {isOnPersonalInfomation && (
-        <p className="py-1 invisible peer-invalid:visible text-[#F05548] text-sm">
+        <p className="invisible py-1 text-sm text-[#F05548] peer-invalid:visible">
           Please provide a valid email address.
         </p>
       )}

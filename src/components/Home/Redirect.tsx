@@ -9,11 +9,11 @@ export const HomeRedirect = forwardRef<HTMLDivElement>((props, ref) => {
 
   return (
     <div className="flex items-center justify-center" ref={ref}>
-      <div className="grid lg:grid-cols-2 justify-center items-center py-14 max-w-fit gap-x-16 px-10">
+      <div className="grid max-w-fit items-center justify-center gap-x-16 py-14 px-10 lg:grid-cols-2">
         {buttons.map((button) => {
           return (
             <Link key={button.title} href={button.url}>
-              <button className="px-[52px] py-3 md:py-7 uppercase bg-magicPurple-300 mb-4 md:w-[367px] font-bold md:text-xl text-white hover:bg-opacity-70">
+              <button className="mb-4 bg-magicPurple-300 px-[52px] py-3 font-bold uppercase text-white hover:bg-opacity-70 md:w-[367px] md:py-7 md:text-xl">
                 {button.title}
               </button>
             </Link>

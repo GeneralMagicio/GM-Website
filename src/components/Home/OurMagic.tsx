@@ -75,7 +75,7 @@ export function Magic() {
   return (
     <>
       <div
-        className="mt-20 md:mt-44 px-12 md:px-20 lg:px-44 xl:px-64"
+        className="mt-20 px-12 md:mt-44 md:px-20 lg:px-44 xl:px-64"
         ref={serviceRef}
       >
         <div className="flex flex-col md:flex-row md:items-center">
@@ -87,7 +87,7 @@ export function Magic() {
             <Subtitle paddingBottom={false} paddingTop={true}>
               Services
             </Subtitle>
-            <div className="hidden md:block mt-4">
+            <div className="mt-4 hidden md:block">
               <SwiperButtonPrev
                 swiper={swiperIstance}
                 isBeginning={isBeginning}
@@ -96,7 +96,7 @@ export function Magic() {
             </div>
           </div>
           <div>
-            <p className="text-sm md:text-2xl mt-2">
+            <p className="mt-2 text-sm md:text-2xl">
               General Magic solves the needs of Public Good projects by
               assigning top-notch Web3 professionals to assist them in their
               goals, either by integrating with existing teams, or creating
@@ -104,7 +104,7 @@ export function Magic() {
               talents that can handle virtually any task.
             </p>
           </div>
-          <div className="md:hidden block mt-4">
+          <div className="mt-4 block md:hidden">
             <SwiperButtonPrev
               swiper={swiperIstance}
               isBeginning={isBeginning}
@@ -138,7 +138,7 @@ export function Magic() {
         {projects.map((project) => {
           return (
             <SwiperSlide key={project.title}>
-              <div className="flex justify-center mt-20">
+              <div className="mt-20 flex justify-center">
                 <ProjectCard
                   page="Home"
                   title={project.title}

@@ -18,9 +18,9 @@ const error404: NextPageWithLayout = () => {
         <title>Page not found | General Magic</title>
       </Head>
       <LayoutHero>
-        <div className="flex justify-center h-full items-center px-10 sm:px-16 md:px-24 lg:px-32 py-8">
-          <div className="absolute inset-0 bg-about bg-cover bg-center bg-no-repeat bg-neutral-900 mix-blend-multiply" />
-          <div className="z-40 flex flex-col justify-center items-center">
+        <div className="flex h-full items-center justify-center px-10 py-8 sm:px-16 md:px-24 lg:px-32">
+          <div className="absolute inset-0 bg-neutral-900 bg-about bg-cover bg-center bg-no-repeat mix-blend-multiply" />
+          <div className="z-40 flex flex-col items-center justify-center">
             <Title>
               <span>404</span>
             </Title>
@@ -32,16 +32,16 @@ const error404: NextPageWithLayout = () => {
               </Subtitle>
             </div>
           </div>
-          <div className="absolute left-0 md:left-10 top-28">
+          <div className="absolute left-0 top-28 md:left-10">
             <Image src={Cloud} alt=""></Image>
           </div>
           <div className="absolute left-0 bottom-0 flex">
             <Image src={plantL} alt="plant" />
           </div>
-          <div className="hidden absolute right-0 bottom-0 md:flex">
+          <div className="absolute right-0 bottom-0 hidden md:flex">
             <Image src={wind} alt="wind" />
           </div>
-          <div className="hidden absolute right-0 bottom-0 md:flex md:w-full md:justify-center">
+          <div className="absolute right-0 bottom-0 hidden md:flex md:w-full md:justify-center">
             <Image src={fire} alt="wind" />
           </div>
         </div>
