@@ -76,6 +76,7 @@ export function Navbar() {
                         className="max-w-fit text-center text-xs text-white hover:cursor-pointer hover:text-magicPurple-300 xl:text-base"
                       >
                         {page.title}
+                        <span className='ml-1'>↗</span>
                       </a>
                     ) : (
                       <a className="max-w-fit text-center text-xs text-white hover:cursor-pointer hover:text-magicPurple-300 xl:text-base">
@@ -96,6 +97,7 @@ export function Navbar() {
                         className="max-w-fit text-center text-xs text-white hover:cursor-pointer hover:text-magicPurple-300 xl:text-base"
                       >
                         {page.title}
+                        <span className='ml-1'>↗</span>
                       </a>
                     ) : (
                       <a className="max-w-fit text-center text-xs text-white hover:cursor-pointer hover:text-magicPurple-300 xl:text-base">

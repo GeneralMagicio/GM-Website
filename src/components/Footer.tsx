@@ -80,6 +80,7 @@ export function Footer() {
                     className="hover:cursor-pointer hover:text-magicPurple-300 hover:underline"
                   >
                     {page.title}
+                    <span className='ml-1'>↗</span>
                   </a>
                 ) : (
                   <a className="hover:cursor-pointer hover:text-magicPurple-300 hover:underline">
@@ -100,6 +101,7 @@ export function Footer() {
                     className="hover:cursor-pointer hover:text-magicPurple-300 hover:underline"
                   >
                     {page.title}
+                    <span className='ml-1'>↗</span>
                   </a>
                 ) : (
                   <a className="hover:cursor-pointer hover:text-magicPurple-300 hover:underline">
@@ -121,6 +123,7 @@ export function Footer() {
                 className="hover:text-magicPurple-300 hover:underline"
               >
                 {social.label}
+                <span className='ml-1'>↗</span>
               </a>
             )
           })}
