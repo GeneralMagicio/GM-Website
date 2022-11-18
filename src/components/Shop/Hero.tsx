@@ -4,7 +4,7 @@ import { Subtitle } from '@/components/base/Subtitle'
 import { ShopButton } from '@/components/base/ShopButton'
 import { LayoutHero } from '@/components/base/LayoutHero'
 import { LatestWork } from '@/components/Shop/LatestWork'
-import shopHero from 'public/images/shopHero.png'
+import shopHero from 'public/images/assets/shopHero.png'
 
 export function ShopHero() {
   return (
@@ -25,9 +25,9 @@ export function ShopHero() {
             </Subtitle>
             <ShopButton bgColor="purple" text="get quote" url="/contact" />
           </div>
-          {/* <div className="absolute top-3 inset-x-0 md:left-28 z-40">
+          <div className="absolute inset-x-0 top-3 z-40 md:left-28">
             <LatestWork />
-          </div> */}
+          </div>
           <div className="absolute right-0 bottom-0 flex mix-blend-overlay lg:mix-blend-normal">
             <Image src={shopHero} alt="" />
           </div>
