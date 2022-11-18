@@ -2,9 +2,9 @@ import Image from 'next/image'
 import { ProjectCard } from '@/components/base/Card'
 import { Subtitle } from '@/components/base/Subtitle'
 import { Title } from '@/components/base/Title'
-import bird from 'public/images/assets/bird.svg'
-import ring from 'public/images/assets/ring.svg'
-import aguila from 'public/images/assets/aguila.png'
+import bird from 'public/images/bird.svg'
+import ring from 'public/images/ring.svg'
+import aguila from 'public/images/aguila.png'
 
 export function ShopLaunch() {
   const cards = [

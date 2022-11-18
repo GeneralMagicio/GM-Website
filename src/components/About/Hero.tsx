@@ -4,7 +4,7 @@ import { Subtitle } from '@/components/base/Subtitle'
 import { Button } from '@/components/base/Button'
 import { LayoutHero } from '@/components/base/LayoutHero'
 import down from 'public/images/icons/down.svg'
-import aboutAguila from 'public/images/assets/aboutAguila.png'
+import aboutAguila from 'public/images/aboutAguila.png'
 
 interface AboutHeroProps {
   handleScroll: () => void

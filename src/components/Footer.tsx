@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { pages } from '@/components/pages'
 import useReferenceContext from '@/hooks/useReference'
-import GM from 'public/images/assets/GM.svg'
+import GM from 'public/images/GM.svg'
 import { ProductButtonMenu } from './base/ProductButton'
 import { useState } from 'react'
 
@@ -90,7 +90,7 @@ export function Footer() {
               </Link>
             )
           })}
-          <ProductButtonMenu isFooter={true} isNavMobile={false} isOpen={isOpen} setOpenNavMobile={setIsOpen} />
+          <ProductButtonMenu isFooter={true} isNavMobile={false} setOpenNavMobile={setIsOpen} />
           {pages.slice(3, 5).map((page) => {
             return (
               <Link key={page.title} href={page.url}>
