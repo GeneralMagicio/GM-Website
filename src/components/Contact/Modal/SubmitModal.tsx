@@ -20,15 +20,15 @@ export function SubmitModal({ status, dialog, setDialog }: SubmitModalProps) {
     >
       <div className="fixed inset-0 bg-black/30" aria-hidden="true" />
       <div className="fixed inset-0 flex items-center justify-center">
-        <div className="h-1/2 w-3/4 md:w-1/2 button-border flex items-center">
-          <Dialog.Panel className="mx-auto bg-neutral-900 w-[calc(100%_-_2px)] h-[calc(100%_-_2px)]">
+        <div className="button-border flex h-1/2 w-3/4 items-center md:w-1/2">
+          <Dialog.Panel className="mx-auto h-[calc(100%_-_2px)] w-[calc(100%_-_2px)] bg-neutral-900">
             {status === 'success' ? (
-              <div className="flex flex-col items-center justify-center h-full w-full">
+              <div className="flex h-full w-full flex-col items-center justify-center">
                 <Image src={succeessSubmit} alt="Success" />
-                <h2 className="font-akira text-3xl text-center pt-6 pb-4">
+                <h2 className="pt-6 pb-4 text-center font-akira text-3xl">
                   Well done
                 </h2>
-                <div className="text-center px-4">
+                <div className="px-4 text-center">
                   The form was sent successfully, one of our wizards will
                   contact you.
                 </div>
@@ -37,27 +37,27 @@ export function SubmitModal({ status, dialog, setDialog }: SubmitModalProps) {
                     onClick={() => {
                       setDialog(false)
                     }}
-                    className="border border-white px-16 py-3 font-akira mt-6 hover:border-[#00BF76] hover:text-[#00BF76] transition duration-200 outline-none"
+                    className="mt-6 border border-white px-16 py-3 font-akira outline-none transition duration-200 hover:border-[#00BF76] hover:text-[#00BF76]"
                     >
                     ok
                   </button>
                   </Link>
               </div>
             ) : (
-              <div className="flex flex-col items-center justify-center h-full w-full">
+              <div className="flex h-full w-full flex-col items-center justify-center">
                 <Image src={failSubmit} alt="Fail" />
-                <h2 className="font-akira text-3xl text-center pt-6 pb-4">
+                <h2 className="pt-6 pb-4 text-center font-akira text-3xl">
                   OPS
-                  <span className="tracking-[5px] ml-1">...</span>
+                  <span className="ml-1 tracking-[5px]">...</span>
                 </h2>
-                <div className="text-center px-4">
+                <div className="px-4 text-center">
                   Something is not working right, sorry, try again later.
                 </div>
                 <button
                   onClick={() => {
                     setDialog(false)
                   }}
-                  className="border border-white px-16 py-3 font-akira mt-6 hover:border-[#F05548] hover:text-[#F05548] transition duration-200 outline-none"
+                  className="mt-6 border border-white px-16 py-3 font-akira outline-none transition duration-200 hover:border-[#F05548] hover:text-[#F05548]"
                 >
                   ok
                 </button>

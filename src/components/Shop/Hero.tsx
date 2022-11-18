@@ -10,9 +10,9 @@ export function ShopHero() {
   return (
     <>
       <LayoutHero>
-        <div className="flex justify-between h-full">
-          <div className="absolute inset-0 bg-shop bg-auto bg-center bg-no-repeat bg-neutral-900" />
-          <div className="z-40 self-center md:mt-0 mx-6 md:mx-0 md:ml-28">
+        <div className="flex h-full justify-between">
+          <div className="absolute inset-0 bg-neutral-900 bg-shop bg-auto bg-center bg-no-repeat" />
+          <div className="z-40 mx-6 self-center md:mx-0 md:mt-0 md:ml-28">
             <Title>
               <span className="max-w-3xl leading-[66.3px]">
                 get your Web3 native swag shop

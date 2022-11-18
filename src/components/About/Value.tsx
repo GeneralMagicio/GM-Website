@@ -29,11 +29,11 @@ export function AboutValue({
   return (
     <div
       className={classnames(
-        'flex flex-col-reverse items-center justify-center md:px-28 px-12 mt-16 relative z-40',
+        'relative z-40 mt-16 flex flex-col-reverse items-center justify-center px-12 md:px-28',
         side['position']
       )}
     >
-      <div className="max-w-[650px] mt-5 md:mt-0">
+      <div className="mt-5 max-w-[650px] md:mt-0">
         <div className="flex justify-center md:justify-start">
           <Title>
             <span className="text-center md:text-start">{titleFirst}</span>
@@ -49,7 +49,7 @@ export function AboutValue({
       </div>
       <div
         className={classnames(
-          'md:w-fit md:min-w-[350px] max-w-[250px] min-w-[200px]',
+          'min-w-[200px] max-w-[250px] md:w-fit md:min-w-[350px]',
           side['margin']
         )}
       >

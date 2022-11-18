@@ -35,23 +35,23 @@ export function Footer() {
   const { setScrollToServices } = useReferenceContext()
   const router = useRouter()
   return (
-    <div className="h-[680px] bg-footer bg-no-repeat bg-cover md:bg-[center_bottom_-70px] md:px-32 px-12 md:py-32 py-10">
-      <div className="flex sm:hidden justify-center mt-8">
+    <div className="h-[680px] bg-footer bg-cover bg-no-repeat px-12 py-10 md:bg-[center_bottom_-70px] md:p-32">
+      <div className="mt-8 flex justify-center sm:hidden">
         <Link href="/">
           <div className="hover:cursor-pointer">
             <Image src={GM} alt="General Magic" width={72} height={44} />
           </div>
         </Link>
       </div>
-      <div className="grid md:grid-cols-3 grid-cols-2 mt-8 md:mt-0">
-        <div className="sm:flex justify-center hidden col-span-2 md:col-span-1">
+      <div className="mt-8 grid grid-cols-2 md:mt-0 md:grid-cols-3">
+        <div className="col-span-2 hidden justify-center sm:flex md:col-span-1">
           <Link href="/">
             <div className="hover:cursor-pointer">
               <Image src={GM} alt="General Magic" width={72} height={44} />
             </div>
           </Link>
         </div>
-        <div className="grid gap-y-6 h-fit justify-center">
+        <div className="grid h-fit justify-center gap-y-6">
           <button
             className='flex'
             onClick={() => {
@@ -59,12 +59,12 @@ export function Footer() {
             }}
           >
             {router.asPath === '/' ? (
-              <a className="hover:text-magicPurple-300 hover:cursor-pointer hover:underline">
+              <a className="hover:cursor-pointer hover:text-magicPurple-300 hover:underline">
                 Services
               </a>
             ) : (
               <Link href="/">
-                <a className="hover:text-magicPurple-300 hover:cursor-pointer hover:underline">
+                <a className="hover:cursor-pointer hover:text-magicPurple-300 hover:underline">
                   Services
                 </a>
               </Link>
@@ -77,12 +77,12 @@ export function Footer() {
                   <a
                     target="_blank"
                     rel="noreferrer"
-                    className="hover:text-magicPurple-300 hover:cursor-pointer hover:underline"
+                    className="hover:cursor-pointer hover:text-magicPurple-300 hover:underline"
                   >
                     {page.title}
                   </a>
                 ) : (
-                  <a className="hover:text-magicPurple-300 hover:cursor-pointer hover:underline">
+                  <a className="hover:cursor-pointer hover:text-magicPurple-300 hover:underline">
                     {page.title}
                   </a>
                 )}
@@ -97,12 +97,12 @@ export function Footer() {
                   <a
                     target="_blank"
                     rel="noreferrer"
-                    className="hover:text-magicPurple-300 hover:cursor-pointer hover:underline"
+                    className="hover:cursor-pointer hover:text-magicPurple-300 hover:underline"
                   >
                     {page.title}
                   </a>
                 ) : (
-                  <a className="hover:text-magicPurple-300 hover:cursor-pointer hover:underline">
+                  <a className="hover:cursor-pointer hover:text-magicPurple-300 hover:underline">
                     {page.title}
                   </a>
                 )}
@@ -110,7 +110,7 @@ export function Footer() {
             )
           })}
         </div>
-        <div className="grid gap-y-6 h-fit justify-center">
+        <div className="grid h-fit justify-center gap-y-6">
           {socials.map((social) => {
             return (
               <a

@@ -14,7 +14,7 @@ export function Subtitle({
   return (
     <p
       className={classnames(
-        'text-white flex flex-col text-sm sm:text-base xl:text-2xl md:leading-8 w-fit',
+        'flex w-fit flex-col text-sm text-white sm:text-base md:leading-8 xl:text-2xl',
         paddingBottom === true ? 'pb-8' : 'pb-0',
         paddingTop === true ? 'pt-3' : 'pt-0'
       )}

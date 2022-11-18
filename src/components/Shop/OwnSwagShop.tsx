@@ -8,20 +8,20 @@ import plantL90 from 'public/images/plantL90.svg'
 
 export function OwnSwagShop() {
   return (
-    <div className="relative bg-homeBg bg-cover bg-center bg-no-repeat bg-blend-darken bg-neutral-900 py-24">
-      <div className="hidden md:block absolute right-0 top-0 z-40">
+    <div className="relative bg-neutral-900 bg-homeBg bg-cover bg-center bg-no-repeat py-24 bg-blend-darken">
+      <div className="absolute right-0 top-0 z-40 hidden md:block">
         <Image src={plantR} alt="plant" height={641} width={240} />
       </div>
-      <div className="block absolute left-0 bottom-0">
+      <div className="absolute left-0 bottom-0 block">
         <Image src={plantL90} alt="plant" />
       </div>
-      <div className="flex flex-col md:flex-row justify-between items-center md:mb-24">
-        <div className="px-8 md:px-0 md:pl-24 relative z-50">
-          <p className="uppercase text-magicSky-300 tracking-[4px]">
+      <div className="flex flex-col items-center justify-between md:mb-24 md:flex-row">
+        <div className="relative z-50 px-8 md:px-0 md:pl-24">
+          <p className="uppercase tracking-[4px] text-magicSky-300">
             Launch your own Swag Shop
           </p>
           <Title>
-            <span className="text-[26px] md:text-[40px] leading-[40px] max-w-[450px]">
+            <span className="max-w-[450px] text-[26px] leading-[40px] md:text-[40px]">
               White label web3 swag shop for DAOs
             </span>
           </Title>
@@ -37,14 +37,14 @@ export function OwnSwagShop() {
         </div>
         <Image src={shopHat} alt="" />
       </div>
-      <div className="flex flex-col-reverse md:flex-row justify-center items-center relative z-50 mt-10 md:mt-0">
+      <div className="relative z-50 mt-10 flex flex-col-reverse items-center justify-center md:mt-0 md:flex-row">
         <Image src={shopMockup} alt="" />
-        <div className="px-8 md:px-0 md:ml-24 mb-10 md:mb-0">
-          <p className="uppercase text-magicSky-300 tracking-[4px]">
+        <div className="mb-10 px-8 md:ml-24 md:mb-0 md:px-0">
+          <p className="uppercase tracking-[4px] text-magicSky-300">
             Launch your own Swag Shop
           </p>
           <Title>
-            <span className="text-[26px] md:text-[40px] leading-[40px] max-w-[450px]">
+            <span className="max-w-[450px] text-[26px] leading-[40px] md:text-[40px]">
               Crafted for web3
             </span>
           </Title>

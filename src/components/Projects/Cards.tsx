@@ -35,32 +35,32 @@ export function ProjectsCards({
   }
   return (
     <div className="sm:px-12 md:px-36">
-      <div className="flex-col lg:flex-row flex py-8 md:py-36 justify-center items-center">
+      <div className="flex flex-col items-center justify-center py-8 md:py-36 lg:flex-row">
         <div className="relative">
           <div
             className={classnames(
-              'min-w-[285px] min-h-[170px] md:min-w-[500px] md:min-h-[273px]',
+              'min-h-[170px] min-w-[285px] md:min-h-[273px] md:min-w-[500px]',
               bgColors[bgColor]
             )}
           ></div>
           <div
             className={classnames(
-              'absolute min-w-[285px] min-h-[170px] md:min-w-[500px] md:min-h-[273px] max-h-[273px] bg-neutral-900 top-2 left-2 md:top-6 md:left-6 border border-pinkPotion-300'
+              'absolute top-2 left-2 max-h-[273px] min-h-[170px] min-w-[285px] border border-pinkPotion-300 bg-neutral-900 md:top-6 md:left-6 md:min-h-[273px] md:min-w-[500px]'
             )}
           >
-            <div className="relative z-10 h-4 md:h-7 bg-neutral-900 border-b border-pinkPotion-300 flex items-center">
-              <div className="h-2 w-2 md:h-[10px] md:w-[10px] bg-[#C91912] rounded-full ml-2"></div>
-              <div className="h-2 w-2 md:h-[10px] md:w-[10px] bg-misticOrange-300 rounded-full ml-2"></div>
-              <div className="h-2 w-2 md:h-[10px] md:w-[10px] bg-[#00BF76] rounded-full ml-2"></div>
+            <div className="relative z-10 flex h-4 items-center border-b border-pinkPotion-300 bg-neutral-900 md:h-7">
+              <div className="ml-2 h-2 w-2 rounded-full bg-[#C91912] md:h-[10px] md:w-[10px]"></div>
+              <div className="ml-2 h-2 w-2 rounded-full bg-misticOrange-300 md:h-[10px] md:w-[10px]"></div>
+              <div className="ml-2 h-2 w-2 rounded-full bg-[#00BF76] md:h-[10px] md:w-[10px]"></div>
             </div>
-            <div className="min-w-[285px] min-h-[170px] md:min-w-[500px] md:min-h-[273px]">
+            <div className="min-h-[170px] min-w-[285px] md:min-h-[273px] md:min-w-[500px]">
               <Image src={projectImg} alt="" layout="fill" />
             </div>
           </div>
         </div>
-        <div className="grid gap-y-5 md:ml-[72px] mt-24 lg:mt-0">
+        <div className="mt-24 grid gap-y-5 md:ml-[72px] lg:mt-0">
           <a
-            className="flex justify-center lg:justify-start hover:cursor-pointer lg:w-fit"
+            className="flex justify-center hover:cursor-pointer lg:w-fit lg:justify-start"
             href={projectUrl}
             target="_blank"
             rel="noreferrer"
@@ -73,7 +73,7 @@ export function ProjectsCards({
                 return (
                   <p
                     key={service}
-                    className="px-2 uppercase font-akira text-xs sm:text-[18px] md:text-2xl"
+                    className="px-2 font-akira text-xs uppercase sm:text-[18px] md:text-2xl"
                   >
                     {service}
                   </p>
@@ -81,7 +81,7 @@ export function ProjectsCards({
               } else {
                 return (
                   <div className="flex" key={service}>
-                    <p className="px-2 uppercase font-akira text-xs sm:text-[18px] md:text-2xl">
+                    <p className="px-2 font-akira text-xs uppercase sm:text-[18px] md:text-2xl">
                       {service}
                     </p>
                     <p className="font-akira text-xs sm:text-[18px] md:text-2xl">
@@ -96,14 +96,14 @@ export function ProjectsCards({
             {tools.map((tool, i, toolSubArr) => {
               if (toolSubArr.length - 1 === i) {
                 return (
-                  <p key={tool} className="px-2 uppercase text-xs sm:text-base">
+                  <p key={tool} className="px-2 text-xs uppercase sm:text-base">
                     {tool}
                   </p>
                 )
               } else {
                 return (
                   <div className="flex flex-row" key={tool}>
-                    <p className="px-2 uppercase text-xs sm:text-base whitespace-nowrap">
+                    <p className="whitespace-nowrap px-2 text-xs uppercase sm:text-base">
                       {tool}
                     </p>
                     <p className="text-xs sm:text-base">|</p>
@@ -119,7 +119,7 @@ export function ProjectsCards({
                   return (
                     <p
                       key={tool2row}
-                      className="px-2 uppercase text-xs sm:text-base"
+                      className="px-2 text-xs uppercase sm:text-base"
                     >
                       {tool2row}
                     </p>
@@ -127,7 +127,7 @@ export function ProjectsCards({
                 } else {
                   return (
                     <div className="flex flex-row" key={tool2row}>
-                      <p className="px-2 uppercase text-xs sm:text-base whitespace-nowrap">
+                      <p className="whitespace-nowrap px-2 text-xs uppercase sm:text-base">
                         {tool2row}
                       </p>
                       <p className="text-xs sm:text-base">|</p>
@@ -136,11 +136,11 @@ export function ProjectsCards({
                 }
               })}
           </div>
-          <p className="px-10 sm:px-12 md:px-0 max-w-[650px] text-[20px] leading-7 text-center lg:text-start">
+          <p className="max-w-[650px] px-10 text-center text-[20px] leading-7 sm:px-12 md:px-0 lg:text-start">
             {mainDescription}
           </p>
           {secoundDescription && (
-            <p className="px-10 sm:px-12 md:px-0 max-w-[650px] text-[20px] leading-7 text-center lg:text-start">
+            <p className="max-w-[650px] px-10 text-center text-[20px] leading-7 sm:px-12 md:px-0 lg:text-start">
               {secoundDescription}
             </p>
           )}

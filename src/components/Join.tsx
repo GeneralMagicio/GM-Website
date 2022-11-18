@@ -14,7 +14,7 @@ export function Join({ isHome }: IJoin) {
         <span className="text-[32px]">Join our team</span>
       </Title>
       <Subtitle paddingBottom={true} paddingTop={true}>
-        <span className="lg:px-56 sm:px-20 py-8">
+        <span className="py-8 sm:px-20 lg:px-56">
           If you are different; If you have Web3 magical talent; And if you are
           restlessly passionate about public goods and effecting positive
           change. then you are a fit at General Magic!

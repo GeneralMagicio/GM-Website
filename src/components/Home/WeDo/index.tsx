@@ -21,14 +21,14 @@ export function HomeWhatWeDo() {
     },
   ]
   return (
-    <div className="mt-20 md:mt-44 px-12 md:px-20 lg:px-44 xl:px-64 ">
-      <div className="flex flex-col md:flex-row items-center">
-        <div className="grid md:grid-cols-2 md:gap-x-12 md:gap-y-[88px] gap-y-8">
+    <div className="mt-20 px-12 md:mt-44 md:px-20 lg:px-44 xl:px-64 ">
+      <div className="flex flex-col items-center md:flex-row">
+        <div className="grid gap-y-8 md:grid-cols-2 md:gap-x-12 md:gap-y-[88px]">
           <Title>
             <span>What</span>
             <span>we do</span>
           </Title>
-          <div className='h-full flex items-center'>
+          <div className='flex h-full items-center'>
             <Subtitle paddingBottom={false} paddingTop={false}>
               General Magic is deploying resources to the most innovative
               DAO&apos;s that are building social impact solutions throughout Web3

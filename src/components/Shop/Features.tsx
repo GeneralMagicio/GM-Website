@@ -47,7 +47,7 @@ export function ShopFeatures() {
     },
   ]
   return (
-    <div className="bg-homeBg bg-cover bg-center bg-no-repeat bg-blend-darken bg-neutral-900 md:pb-24 pb-16 relative pt-16 md:pt-0">
+    <div className="relative bg-neutral-900 bg-homeBg bg-cover bg-center bg-no-repeat py-16 bg-blend-darken md:pb-24 md:pt-0">
       {values.map((value) => {
         return (
           <AboutValue
@@ -64,7 +64,7 @@ export function ShopFeatures() {
       <div className="absolute left-0 top-0 z-20">
         <Image src={stars} alt="" width={163} height={163} />
       </div>
-      <div className="hidden md:flex absolute bottom-[-63px] right-[64px] -rotate-90">
+      <div className="absolute bottom-[-63px] right-[64px] hidden -rotate-90 md:flex">
         <Image src={plantL} alt="plant" />
       </div>
     </div>

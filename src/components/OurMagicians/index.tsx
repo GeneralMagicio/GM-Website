@@ -29,11 +29,11 @@ export function OurMagicians({ page }: OurMagiciansProps) {
 
   return (
     <div className="relative" ref={memberRef}>
-      <div className="top-[-300px] md:hidden block absolute mx-auto text-center inset-x-0 w-[250px]">
+      <div className="absolute inset-x-0 top-[-300px] mx-auto block w-[250px] text-center md:hidden">
         <Image src={membersBg} alt="" />
       </div>
       <div className="mt-72 md:mt-0">
-        <div className="relative mt-44 px-12 md:px-20 lg:px-44 xl:px-64 z-50">
+        <div className="relative z-50 mt-44 px-12 md:px-20 lg:px-44 xl:px-64">
           <div
             className={classNames(
               'flex flex-col',
@@ -56,7 +56,7 @@ export function OurMagicians({ page }: OurMagiciansProps) {
                 )}
               </Title>
               <Subtitle paddingBottom={false} paddingTop={true}>
-                <span className="xl:max-w-[790px] max-w-[500px]">
+                <span className="max-w-[500px] xl:max-w-[790px]">
                   We are a mix of noble designers, developers, system
                   architects, researchers, writers and seasoned Web3
                   professionals, catering to all commons-based organisations
@@ -66,7 +66,7 @@ export function OurMagicians({ page }: OurMagiciansProps) {
             </div>
           </div>
           <div
-            className='grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-16 mt-6 md:mt-28 pb-4 sm:pb-12'>
+            className='mt-6 grid grid-cols-2 gap-4 pb-4 sm:pb-12 md:mt-28 md:grid-cols-3 md:gap-16'>
             {page === 'Home'
               ? members.slice(0, 6).map((member) => {
                 return (
@@ -93,8 +93,8 @@ export function OurMagicians({ page }: OurMagiciansProps) {
           </div>
           {page === 'Home' ? ('') : (
             <div
-              className='grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-16 pb-12 md:pb-28'>
-              <h2 className='col-span-3 text-center uppercase text-magicSky-300 font-akira sm:text-[26px]'>some wizards who passed through here</h2>
+              className='grid grid-cols-2 gap-4 pb-12 md:grid-cols-3 md:gap-16 md:pb-28'>
+              <h2 className='col-span-3 text-center font-akira uppercase text-magicSky-300 sm:text-[26px]'>some wizards who passed through here</h2>
               {alumniMembers.map((member) => {
                 return (
                   <OurMagiciansCard
@@ -110,11 +110,11 @@ export function OurMagicians({ page }: OurMagiciansProps) {
           {page === 'Home' ? (
             <>
               <div className="flex justify-center">
-                <div className="my-6 flex items-center w-fit  hover:underline text-magicPurple-300 hover:cursor-pointer">
+                <div className="my-6 flex w-fit items-center  text-magicPurple-300 hover:cursor-pointer hover:underline">
                   <button onClick={() => setScrollToMembers(true)}>
                     <Link href="/about">
                       <div className="flex items-center">
-                        <p className="uppercase mr-2">See all</p>
+                        <p className="mr-2 uppercase">See all</p>
                         <div className="">
                           <svg
                             width="16"

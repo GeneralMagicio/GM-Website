@@ -78,14 +78,14 @@ export function DaoGrid() {
   }
   return (
     <div className="h-grid-line relative">
-      <div className="sm:hidden block z-50 absolute top-5 right-5 w-32">
+      <div className="absolute top-5 right-5 z-50 block w-32 sm:hidden">
         <Image src={aguila} alt="making magic happen" />
       </div>
-      <div className="grid grid-col-3 md:grid-cols-5 gap-[1px] vignette">
-        <div className="hidden md:block bg-neutral-900 h-full col-span-2"></div>
+      <div className="vignette grid gap-[1px] md:grid-cols-5">
+        <div className="col-span-2 hidden h-full bg-neutral-900 md:block"></div>
         {daos.zeroRow.map((dao) => {
           return (
-            <div className="hidden md:flex items-center justify-center bg-neutral-900 z-10 h-full" key={dao.name}>
+            <div className="z-10 hidden h-full items-center justify-center bg-neutral-900 md:flex" key={dao.name}>
               <a
                 href={dao.url}
                 target="_blank"
@@ -97,8 +97,8 @@ export function DaoGrid() {
             </div>
           )
         })}
-        <div className="hidden md:block bg-neutral-900"></div>
-        <div className="bg-neutral-900 pt-8 w-full col-span-2 row-span-3 z-10 pr-10">
+        <div className="hidden bg-neutral-900 md:block"></div>
+        <div className="z-10 col-span-2 row-span-3 w-full bg-neutral-900 pt-8 pr-10">
           <Title>
             <span className="md:text-4xl dao-md:text-6xl xl:text-7xl">We</span>
             <span className="md:text-4xl  dao-md:text-6xl xl:text-7xl">
@@ -119,7 +119,7 @@ export function DaoGrid() {
           return (
             <div
               key={dao.name}
-              className="md:hidden flex items-center justify-center bg-neutral-900 z-10 h-full"
+              className="z-10 flex h-full items-center justify-center bg-neutral-900 md:hidden"
             >
               <a
                 href={dao.url}
@@ -136,7 +136,7 @@ export function DaoGrid() {
           return (
             <div
               key={dao.name}
-              className="flex items-center justify-center bg-neutral-900 z-10 h-full"
+              className="z-10 flex h-full items-center justify-center bg-neutral-900"
             >
               <a
                 href={dao.url}
@@ -149,12 +149,12 @@ export function DaoGrid() {
             </div>
           )
         })}
-        <div className="hidden md:block bg-neutral-900"></div>
+        <div className="hidden bg-neutral-900 md:block"></div>
         {daos.secoundRow.map((dao) => {
           return (
             <div
               key={dao.name}
-              className="flex items-center justify-center bg-neutral-900 z-10 h-full"
+              className="z-10 flex h-full items-center justify-center bg-neutral-900"
             >
               <a
                 href={dao.url}
@@ -167,12 +167,12 @@ export function DaoGrid() {
             </div>
           )
         })}
-        <div className="hidden md:block bg-neutral-900"></div>
+        <div className="hidden bg-neutral-900 md:block"></div>
         {daos.thirdRow.map((dao) => {
           return (
             <div
               key={dao.name}
-              className="flex items-center justify-center bg-neutral-900 z-10 h-full"
+              className="z-10 flex h-full items-center justify-center bg-neutral-900"
             >
               <a
                 href={dao.url}
@@ -185,13 +185,13 @@ export function DaoGrid() {
             </div>
           )
         })}
-        <div className="hidden md:block bg-neutral-900"></div>
-        <div className="hidden md:block bg-neutral-900 h-full col-span-2"></div>
+        <div className="hidden bg-neutral-900 md:block"></div>
+        <div className="col-span-2 hidden h-full bg-neutral-900 md:block"></div>
         {daos.fourthRow.map((dao) => {
           return (
             <div
               key={dao.name}
-              className="flex items-center justify-center bg-neutral-900 z-10 h-full"
+              className="z-10 flex h-full items-center justify-center bg-neutral-900"
             >
               <a
                 href={dao.url}
@@ -204,7 +204,7 @@ export function DaoGrid() {
             </div>
           )
         })}
-        <div className="hidden md:block bg-neutral-900"></div>
+        <div className="hidden bg-neutral-900 md:block"></div>
       </div>
     </div>
   )

@@ -68,7 +68,7 @@ export const ProjectsList = forwardRef<HTMLDivElement>((props, ref) => {
   return (
     <div
       ref={ref}
-      className="min-h-screen bg-homeBg bg-cover bg-center bg-no-repeat bg-blend-darken bg-neutral-900 md:first-letter:pb-24 pb-16"
+      className="min-h-screen bg-neutral-900 bg-homeBg bg-cover bg-center bg-no-repeat pb-16 bg-blend-darken md:first-letter:pb-24"
     >
       {projects.map((project) => {
         return (
