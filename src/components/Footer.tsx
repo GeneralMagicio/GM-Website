@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { pages } from '@/components/pages'
 import useReferenceContext from '@/hooks/useReference'
-import GM from 'public/images/GM.svg'
+import GM from 'public/images/assets/GM.svg'
 import { ProductButtonMenu } from './base/ProductButton'
 import { useState } from 'react'
 

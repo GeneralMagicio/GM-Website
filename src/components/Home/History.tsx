@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 import { Button } from '@/components/base/Button'
 import { DaoGrid } from '@/components/Home/DaoGrid'
-import stars from 'public/images/stars.png'
+import stars from 'public/images/assets/stars.png'
 
 export function History() {
   return (
