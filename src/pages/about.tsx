@@ -21,7 +21,7 @@ const About: NextPageWithLayout = () => {
         <title>About | General Magic</title>
       </Head>
       <AboutHero handleScroll={handleScroll} />
-      <div className="bg-homeBg bg-cover bg-center bg-no-repeat bg-blend-darken bg-neutral-900">
+      <div className="bg-neutral-900 bg-homeBg bg-cover bg-center bg-no-repeat bg-blend-darken">
         <AboutValues ref={aboutRef} />
         <OurMagicians page="About" />
       </div>

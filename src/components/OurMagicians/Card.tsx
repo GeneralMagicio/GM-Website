@@ -12,7 +12,7 @@ export function OurMagiciansCard({ name, role, image }: OurMagiciansCardProps) {
     <div className="max-w-[345px]">
       <Image src={image ? image : defaultUser} alt={name} />
       <h2 className="font-akira text-[10px] md:text-[26px]">{name}</h2>
-      <p className="uppercase text-[7px] md:text-base">{role}</p>
+      <p className="text-[7px] uppercase md:text-base">{role}</p>
     </div>
   )
 }

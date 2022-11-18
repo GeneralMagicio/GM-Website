@@ -7,7 +7,7 @@ export const ProjectsList = forwardRef<HTMLDivElement>((props, ref) => {
   return (
     <div
       ref={ref}
-      className="min-h-screen bg-homeBg bg-cover bg-center bg-no-repeat bg-blend-darken bg-neutral-900 md:py-24 py-16"
+      className="min-h-screen bg-neutral-900 bg-homeBg bg-cover bg-center bg-no-repeat py-16 bg-blend-darken md:py-24"
     >
       {projectsList.map((project) => {
         return (

@@ -31,34 +31,34 @@ export function Project({
 
   return (
     <div className="py-8 md:py-20">
-      <div className="relative flex-col lg:flex-row flex justify-center md:justify-start items-center sm:px-12 md:px-36">
-        <div className="grid gap-y-12 ml-0 xl:ml-[72px] mt-12 md:mt-0 z-50 px-10 sm:px-12 md:px-0">
+      <div className="relative flex flex-col items-center justify-center sm:px-12 md:justify-start md:px-36 lg:flex-row">
+        <div className="z-50 ml-0 mt-12 grid gap-y-12 px-10 sm:px-12 md:mt-0 md:px-0 xl:ml-[72px]">
           <a
-            className="flex justify-center xl:justify-start hover:cursor-pointer xl:w-fit"
+            className="flex justify-center hover:cursor-pointer xl:w-fit xl:justify-start"
             href={projectUrl}
             target="_blank"
             rel="noreferrer"
           >
             <Image src={clientLogo} alt="" />
           </a>
-          <p className="xl:max-w-[650px] text-sm lg:text-2xl leading-7 text-center xl:text-start tracking-[5%]">
+          <p className="text-center text-sm leading-7 tracking-[5%] lg:text-2xl xl:max-w-[650px] xl:text-start">
             {description}
           </p>
-          <div className='flex xl:hidden justify-center'>
+          <div className='flex justify-center xl:hidden'>
             <Image src={projectImgMobile} alt="" />
           </div>
           <div className='flex flex-col items-center xl:items-start'>
             <h3 className='uppercase tracking-[4px]'>Work we did</h3>
-            <ul className='list-disc ml-5 mt-4 flex flex-col items-center'>
+            <ul className='ml-5 mt-4 flex list-disc flex-col items-center'>
 
               {workWeDid.map((work) => {
                 return (
-                  <li key={work} className="w-fit xl:w-full text-center xl:text-left">{work}</li>
+                  <li key={work} className="w-fit text-center xl:w-full xl:text-left">{work}</li>
                 )
               })}
             </ul>
           </div>
-          <div className='xl:max-w-xs flex flex-col items-center xl:items-start'>
+          <div className='flex flex-col items-center xl:max-w-xs xl:items-start'>
             <h3 className='uppercase tracking-[4px]'>About</h3>
             <p className='my-4 text-center xl:text-left'>{clientDescription}</p>
             <a
@@ -77,7 +77,7 @@ export function Project({
             shop={false}
           />
         </div>
-        <div className='hidden xl:block absolute top-0 right-0'>
+        <div className='absolute top-0 right-0 hidden xl:block'>
           <Image src={projectImgDesktop} alt={projectUrlLabel} />
         </div>
       </div>

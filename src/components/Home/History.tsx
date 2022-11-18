@@ -8,7 +8,7 @@ export function History() {
   return (
     <div className="pb-16 sm:pt-20">
       <div className="divide-y divide-neutral-800">
-        <div className="flex flex-col md:pl-32 px-12 pb-8">
+        <div className="flex flex-col px-12 pb-8 md:pl-32">
           <DaoGrid />
           <div className="py-8">
             <Button
@@ -22,9 +22,9 @@ export function History() {
           </div>
         </div>
         <div className="relative flex justify-center px-12 md:px-20 lg:px-44 xl:px-64">
-          <p className="pt-16 text-xl md:text-3xl xl:text-[40px] lg:leading-[52px]">
+          <p className="pt-16 text-xl md:text-3xl lg:leading-[52px] xl:text-[40px]">
             Founded by a couple of folks from Giveth in 2020,
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#71DDE4] via-[#71DDE4] to-[#A569FF]">
+            <span className="bg-gradient-to-r from-[#71DDE4] via-[#71DDE4] to-[#A569FF] bg-clip-text text-transparent">
               {' '}
               General Magic{' '}
             </span>

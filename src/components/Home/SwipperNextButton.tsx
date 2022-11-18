@@ -17,7 +17,7 @@ export const SwiperButtonNext = ({ swiper, isEnd }: SwipperNextProps) => {
         isEnd === true ? 'bg-magicPurple-500' : 'bg-magicPurple-300'
       )}
     >
-      <div className="flex items-center rotate-180 w-3 h-6 md:w-4 md:h-8">
+      <div className="flex h-6 w-3 rotate-180 items-center md:h-8 md:w-4">
         <Image src={swiperLogo} alt="" />
       </div>
     </button>

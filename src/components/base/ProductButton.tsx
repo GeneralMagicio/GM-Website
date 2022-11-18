@@ -44,11 +44,11 @@ export function ProductButtonMenu({ isFooter, isNavMobile, setOpenNavMobile }: I
         <Disclosure>
           {({ open, close }) => (
             <>
-              <Disclosure.Button className="text-white pl-3 pr-4 py-2 text-base font-medium uppercase w-full block relative">
+              <Disclosure.Button className="relative block w-full py-2 pl-3 pr-4 text-base font-medium uppercase text-white">
                 <span>Products</span>
                 <ChevronDownIcon
-                  className={`${open ? 'rotate-180 transform' : ''
-                    } h-5 w-5 text-white absolute top-2 right-20`}
+                  className={`${open ? 'rotate-180' : ''
+                    } absolute top-2 right-20 h-5 w-5 text-white`}
                 />
               </Disclosure.Button>
               <Transition
@@ -59,7 +59,7 @@ export function ProductButtonMenu({ isFooter, isNavMobile, setOpenNavMobile }: I
                 leaveFrom="transform scale-100 opacity-100"
                 leaveTo="transform scale-95 opacity-0"
               >
-                <div className='bg-neutral-500 bg-opacity-20 w-screen'>
+                <div className='w-screen bg-neutral-500 bg-opacity-20'>
                   {products.map((product) => {
                     return (
                       <Disclosure.Panel key={product.label}>
@@ -68,7 +68,7 @@ export function ProductButtonMenu({ isFooter, isNavMobile, setOpenNavMobile }: I
                             <div className='flex items-center justify-center'>
                               <button
                                 disabled={product.comingSoon}
-                                className={`group flex items-center rounded-md px-2 py-2 text-sm text-white w-fit disabled:text-gray-400 hover:text-magicPurple-300`}
+                                className={`group flex w-fit items-center rounded-md p-2 text-sm text-white hover:text-magicPurple-300 disabled:text-gray-400`}
                                 onClick={() => { close() }}
                               >
                                 {product.label}
@@ -83,7 +83,7 @@ export function ProductButtonMenu({ isFooter, isNavMobile, setOpenNavMobile }: I
                             <div className='flex items-center justify-center'>
                               <button
                                 disabled={product.comingSoon}
-                                className={`group flex items-center rounded-md px-2 py-2 text-sm text-white w-fit disabled:text-gray-400 hover:text-magicPurple-300`}
+                                className={`group flex w-fit items-center rounded-md p-2 text-sm text-white hover:text-magicPurple-300 disabled:text-gray-400`}
                                 onClick={() => { close(), setOpenNavMobile(false) }}
 
                               >
@@ -106,7 +106,7 @@ export function ProductButtonMenu({ isFooter, isNavMobile, setOpenNavMobile }: I
       ) : (
         <Popover as="div" className="relative inline-block text-left">
           <div>
-            <Popover.Button className={classnames("text-white hover:text-magicPurple-300 text-center max-w-fit hover:cursor-pointer", isFooter ? "hover:underline" : "text-xs xl:text-base")}>
+            <Popover.Button className={classnames("max-w-fit text-center text-white hover:cursor-pointer hover:text-magicPurple-300", isFooter ? "hover:underline" : "text-xs xl:text-base")}>
               Products
             </Popover.Button>
           </div>
@@ -119,7 +119,7 @@ export function ProductButtonMenu({ isFooter, isNavMobile, setOpenNavMobile }: I
             leaveFrom="transform opacity-100 scale-100"
             leaveTo="transform opacity-0 scale-95"
           >
-            <Popover.Panel className={classnames("absolute w-56 origin-top-right focus:outline-none button-border flex flex-col justify-center items-center", isFooter ? "left-0 sm:left-24 mt-2 sm:top-0" : "left-0 mt-[9px]")}>
+            <Popover.Panel className={classnames("button-border absolute flex w-56 origin-top-right flex-col items-center justify-center focus:outline-none", isFooter ? "left-0 mt-2 sm:left-24 sm:top-0" : "left-0 mt-[9px]")}>
               {({ close }) => (
                 <div className='my-[1px] w-[calc(100%_-_2px)] bg-neutral-900'>
                   {products.map((product) => {
@@ -131,7 +131,7 @@ export function ProductButtonMenu({ isFooter, isNavMobile, setOpenNavMobile }: I
                               <div className='flex items-center'>
                                 <button
                                   disabled={product.comingSoon}
-                                  className={`group flex items-center rounded-md px-2 py-2 text-sm text-white w-fit disabled:text-gray-400 hover:text-magicPurple-300`}
+                                  className={`group flex w-fit items-center rounded-md p-2 text-sm text-white hover:text-magicPurple-300 disabled:text-gray-400`}
                                   onClick={() => { close() }}
                                 >
                                   {product.label}
@@ -146,7 +146,7 @@ export function ProductButtonMenu({ isFooter, isNavMobile, setOpenNavMobile }: I
                               <div className='flex items-center'>
                                 <button
                                   disabled={product.comingSoon}
-                                  className={`group flex items-center rounded-md px-2 py-2 text-sm text-white w-fit disabled:text-gray-400 hover:text-magicPurple-300`}
+                                  className={`group flex w-fit items-center rounded-md p-2 text-sm text-white hover:text-magicPurple-300 disabled:text-gray-400`}
                                   onClick={() => { close() }}
 
                                 >

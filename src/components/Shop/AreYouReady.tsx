@@ -7,26 +7,26 @@ import readyR from 'public/images/readyR.svg'
 
 export function ShopAreYouReady() {
   return (
-    <div className="bg-neutral-900 relative ">
-      <div className="hidden md:flex absolute bottom-0 left-0">
+    <div className="relative bg-neutral-900 ">
+      <div className="absolute bottom-0 left-0 hidden md:flex">
         <Image src={readyL} alt="" />
       </div>
-      <div className="hidden md:flex absolute bottom-0 right-0">
+      <div className="absolute bottom-0 right-0 hidden md:flex">
         <Image src={readyR} alt="" />
       </div>
-      <div className="md:hidden flex absolute bottom-0 left-0 justify-start">
+      <div className="absolute bottom-0 left-0 flex justify-start md:hidden">
         <Image src={readyL} alt="" height={150} width={150} />
       </div>
-      <div className="md:hidden flex absolute bottom-0 right-0">
+      <div className="absolute bottom-0 right-0 flex md:hidden">
         <Image src={readyR} alt="" height={150} width={150} />
       </div>
       <div className="h-grid-line h-[1px]"></div>
-      <div className="relative z-40 flex flex-col items-center mx-12 lg:mx-32 my-32">
+      <div className="relative z-40 mx-12 my-32 flex flex-col items-center lg:mx-32">
         <Title>
           <span className="text-center md:text-[32px]">Are you ready?</span>
         </Title>
         <Subtitle paddingTop={true} paddingBottom={true}>
-          <span className="text-center md:text-xl max-w-2xl">
+          <span className="max-w-2xl text-center md:text-xl">
             Get an out of the box Swag Shop or let us help you customize it to
             your specific needs, and start distributing your DAO Merch.
           </span>

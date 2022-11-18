@@ -41,7 +41,7 @@ export function OpinionCard({
           {textSecond}
         </Subtitle>
       }
-      <p className="font-bold text-2xl">{clientName}</p>
+      <p className="text-2xl font-bold">{clientName}</p>
       <p>{clientOrg}</p>
     </div>
   )
