@@ -16,6 +16,7 @@ const Home: NextPageWithLayout = () => {
       redirectRef.current.scrollIntoView({ behavior: 'smooth' })
     }
   }
+
   return (
     <>
       <Head>
