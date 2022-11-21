@@ -19,7 +19,7 @@ export function ContactButton({ bgColor, text, border, checked }: ButtonProps) {
     <div
       className={classnames(
         border
-          ? 'button-border w-fullrelative z-50 flex'
+          ? 'button-border relative z-50 flex w-full'
           : 'w-full bg-neutral-900'
       )}
     >

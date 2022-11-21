@@ -13,7 +13,7 @@ export const HomeRedirect = forwardRef<HTMLDivElement>((props, ref) => {
         {buttons.map((button) => {
           return (
             <Link key={button.title} href={button.url}>
-              <button className="mb-4 bg-magicPurple-300 px-[52px] py-3 font-bold uppercase text-white hover:bg-opacity-70 md:w-[367px] md:py-7 md:text-xl">
+              <button className="mb-4 bg-magicPurple-300 px-[52px] py-3 font-bold uppercase text-white hover:bg-magicPurple-300/70 md:w-[367px] md:py-7 md:text-xl">
                 {button.title}
               </button>
             </Link>
