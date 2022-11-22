@@ -21,8 +21,8 @@ const socials = [
     label: 'Github',
   },
   {
-    url: 'https://medium.com/@generalmagic',
-    label: 'Medium',
+    url: 'https://www.getrevue.co/profile/generalmagic',
+    label: 'Revue',
   },
   {
     url: 'https://www.linkedin.com/company/generalmagicio/',
@@ -53,7 +53,7 @@ export function Footer() {
         </div>
         <div className="grid h-fit justify-center gap-y-6">
           <button
-            className='flex'
+            className="flex"
             onClick={() => {
               setScrollToServices(true)
             }}
@@ -80,7 +80,7 @@ export function Footer() {
                     className="hover:cursor-pointer hover:text-magicPurple-300 hover:underline"
                   >
                     {page.title}
-                    <span className='ml-1'>↗</span>
+                    <span className="ml-1">↗</span>
                   </a>
                 ) : (
                   <a className="hover:cursor-pointer hover:text-magicPurple-300 hover:underline">
@@ -90,7 +90,11 @@ export function Footer() {
               </Link>
             )
           })}
-          <ProductButtonMenu isFooter={true} isNavMobile={false} setOpenNavMobile={setIsOpen} />
+          <ProductButtonMenu
+            isFooter={true}
+            isNavMobile={false}
+            setOpenNavMobile={setIsOpen}
+          />
           {pages.slice(3, 5).map((page) => {
             return (
               <Link key={page.title} href={page.url}>
@@ -101,7 +105,7 @@ export function Footer() {
                     className="hover:cursor-pointer hover:text-magicPurple-300 hover:underline"
                   >
                     {page.title}
-                    <span className='ml-1'>↗</span>
+                    <span className="ml-1">↗</span>
                   </a>
                 ) : (
                   <a className="hover:cursor-pointer hover:text-magicPurple-300 hover:underline">
@@ -123,7 +127,7 @@ export function Footer() {
                 className="hover:text-magicPurple-300 hover:underline"
               >
                 {social.label}
-                <span className='ml-1'>↗</span>
+                <span className="ml-1">↗</span>
               </a>
             )
           })}
