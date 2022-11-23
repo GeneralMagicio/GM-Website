@@ -37,8 +37,10 @@ export function OwnSwagShop() {
         </div>
         <Image src={shopHat} alt="" />
       </div>
-      <div className="relative z-50 mt-10 flex flex-col-reverse items-center justify-center md:mt-0 md:flex-row">
-        <Image src={shopMockup} alt="" />
+      <div className="relative z-50 mt-10 flex flex-col-reverse items-center justify-center sm:pr-0 md:mt-0 md:flex-row md:pr-24 lg:pr-0">
+        <div className="px-5 sm:pl-0 md:px-0 md:pl-24 lg:pl-0">
+          <Image src={shopMockup} alt="" />
+        </div>
         <div className="mb-10 px-8 md:ml-24 md:mb-0 md:px-0">
           <p className="uppercase tracking-[4px] text-magicSky-300">
             Launch your own Swag Shop
