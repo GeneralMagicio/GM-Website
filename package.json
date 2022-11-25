@@ -22,7 +22,8 @@
     "react-dom": "18.2.0",
     "react-gtm-module": "^2.0.11",
     "react-loader-spinner": "^5.3.4",
-    "swiper": "^8.3.2"
+    "swiper": "^8.3.2",
+    "zod": "^3.19.1"
   },
   "devDependencies": {
     "@types/google-spreadsheet": "^3.3.0",
