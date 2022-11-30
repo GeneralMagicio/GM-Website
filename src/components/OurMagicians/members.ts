@@ -21,6 +21,7 @@ import TOSIN from 'public/images/members/TOSIN.png'
 import VALERIE from 'public/images/members/VALERIE.png'
 import VYVY from 'public/images/members/VYVY.png'
 import RB from 'public/images/members/RB.png'
+import LUIZA from 'public/images/members/LUIZA.png'
 import DEFAULT_02 from 'public/images/members/DEFAULT_02.png'
 import DEFAULT_03 from 'public/images/members/DEFAULT_03.png'
 import DEFAULT_04 from 'public/images/members/DEFAULT_04.png'
@@ -134,7 +135,7 @@ export const members: OurMagiciansCardProps[] = [
   {
     name: 'Luizakp',
     role: 'Frontend Developer',
-    image: DEFAULT_02,
+    image: LUIZA,
   },
   {
     name: 'Vitor',
@@ -147,6 +148,11 @@ export const members: OurMagiciansCardProps[] = [
     image: DEFAULT_04,
   },
   {
+    name: 'Anamarija',
+    role: 'Marketing',
+    image: DEFAULT_02,
+  },
+  {
     name: 'Kkechy',
     role: '',
     image: KRESIMIR,
@@ -154,7 +160,7 @@ export const members: OurMagiciansCardProps[] = [
   {
     name: 'Bends',
     role: '',
-    image: DEFAULT_02,
+    image: DEFAULT_03,
   },
 ]
 
