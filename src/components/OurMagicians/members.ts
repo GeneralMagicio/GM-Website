@@ -22,6 +22,7 @@ import VALERIE from 'public/images/members/VALERIE.png'
 import VYVY from 'public/images/members/VYVY.png'
 import RB from 'public/images/members/RB.png'
 import LUIZA from 'public/images/members/LUIZA.png'
+import ANAMARIJA from 'public/images/members/ANAMARIJA.png'
 import DEFAULT_02 from 'public/images/members/DEFAULT_02.png'
 import DEFAULT_03 from 'public/images/members/DEFAULT_03.png'
 import DEFAULT_04 from 'public/images/members/DEFAULT_04.png'
@@ -108,21 +109,6 @@ export const members: OurMagiciansCardProps[] = [
     image: VYVY,
   },
   {
-    name: 'Fabio',
-    role: 'Frontend Developer',
-    image: DEFAULT_02,
-  },
-  {
-    name: 'Yassaman',
-    role: 'Fundraiser',
-    image: DEFAULT_03,
-  },
-  {
-    name: 'Kristofer',
-    role: 'Product Manager',
-    image: DEFAULT_04,
-  },
-  {
     name: 'Nuggan',
     role: 'Backend Developer',
     image: NUGGAN,
@@ -138,6 +124,31 @@ export const members: OurMagiciansCardProps[] = [
     image: LUIZA,
   },
   {
+    name: 'Fabio',
+    role: 'Frontend Developer',
+    image: DEFAULT_02,
+  },
+  {
+    name: 'Anamarija',
+    role: 'Marketing Coordinator',
+    image: ANAMARIJA,
+  },
+  {
+    name: 'Kkechy',
+    role: '',
+    image: KRESIMIR,
+  },
+  {
+    name: 'Yassaman',
+    role: 'Fundraiser',
+    image: DEFAULT_03,
+  },
+  {
+    name: 'Kristofer',
+    role: 'Product Manager',
+    image: DEFAULT_04,
+  },
+  {
     name: 'Vitor',
     role: 'Full Stack Developer',
     image: DEFAULT_03,
@@ -148,19 +159,9 @@ export const members: OurMagiciansCardProps[] = [
     image: DEFAULT_04,
   },
   {
-    name: 'Anamarija',
-    role: 'Marketing',
-    image: DEFAULT_02,
-  },
-  {
-    name: 'Kkechy',
-    role: '',
-    image: KRESIMIR,
-  },
-  {
     name: 'Bends',
     role: '',
-    image: DEFAULT_03,
+    image: DEFAULT_02,
   },
 ]
 
