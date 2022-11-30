@@ -124,11 +124,6 @@ export const members: OurMagiciansCardProps[] = [
     image: LUIZA,
   },
   {
-    name: 'Fabio',
-    role: 'Frontend Developer',
-    image: DEFAULT_02,
-  },
-  {
     name: 'Anamarija',
     role: 'Marketing Coordinator',
     image: ANAMARIJA,
@@ -137,6 +132,11 @@ export const members: OurMagiciansCardProps[] = [
     name: 'Kkechy',
     role: '',
     image: KRESIMIR,
+  },
+  {
+    name: 'Fabio',
+    role: 'Frontend Developer',
+    image: DEFAULT_02,
   },
   {
     name: 'Yassaman',
