@@ -51,12 +51,14 @@ export default async function serverSideCall(
     const aditionalInformationText = aditionalInformation
       ? `Additional Information given by the client: ${aditionalInformation}`
       : ''
-    const emailRecipient = process.env.EMAIL_RECIPIENT as string
-    const emailRecipient2 = process.env.EMAIL_RECIPIENT2 as string
+    const emailRecipients = process.env.EMAIL_RECIPIENTS as string
+    const emailRecipientsList = emailRecipients.split(' ')
 
     const mailData = {
       from: process.env.GMAIL_ACCOUNT as string,
-      to: emailRecipient + ';' + emailRecipient2,
+      to: emailRecipientsList.reduce(
+        (prevEmail, nextEmail) => prevEmail + ';' + nextEmail
+      ),
       subject: `Project Request from: ${firstName} | ${projectName}`,
       text: `Who requested: 
       First Name: ${firstName} 
