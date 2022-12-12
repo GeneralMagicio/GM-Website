@@ -46,8 +46,9 @@ export function Button({
           >
             <button
               className={classnames(
-                'm-[1px] w-[calc(100%_-_2px)] p-5 hover:bg-opacity-70 sm:w-[367px]',
-                bgColors[bgColor]
+                'm-[1px] w-[calc(100%_-_2px)] p-5 sm:w-[367px]',
+                bgColors[bgColor],
+                `hover: ${bgColors[bgColor]}/70`
               )}
               disabled={disabled}
             >
