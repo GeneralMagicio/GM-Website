@@ -16,10 +16,10 @@ class MyDocument extends Document {
       <Html>
         <Head>
           <meta name="title" content="General Magic" />
-          <meta name="title" content="Solution services for Impact DAOs" />
+          <meta name="title" content="We build Web3 products, governance, and economic systems" />
           <meta
             name="description"
-            content="General Magic solves the needs of Public Good projects by assigning top-notch Web3 professionals to assist them in their goals, either by integrating with existing teams, or creating resources from scratch."
+            content="Web3 professionals building social impact solutions throughout Web3 and Public Good space."
           />
           <link
             rel="icon"
@@ -34,11 +34,11 @@ class MyDocument extends Document {
           <meta property="og:type" content="website" />
           <meta
             property="og:title"
-            content="Solution services for Impact DAOs"
+            content="We build Web3 products, governance, and economic systems"
           />
           <meta
             property="og:description"
-            content="General Magic solves the needs of Public Good projects by assigning top-notch Web3 professionals to assist them in their goals, either by integrating with existing teams, or creating resources from scratch."
+            content="Web3 professionals building social impact solutions throughout Web3 and Public Good space."
           />
           <meta
             name="og:image"
@@ -49,11 +49,11 @@ class MyDocument extends Document {
           <meta name="twitter:site" content="@generalmagicio" />
           <meta
             name="twitter:title"
-            content="Solution services for Impact DAOs"
+            content="We build Web3 products, governance, and economic systems"
           />
           <meta
             name="twitter:description"
-            content="General Magic solves the needs of Public Good projects by assigning top-notch Web3 professionals to assist them in their goals, either by integrating with existing teams, or creating resources from scratch."
+            content="Web3 professionals building social impact solutions throughout Web3 and Public Good space."
           />
         </Head>
         <body>
