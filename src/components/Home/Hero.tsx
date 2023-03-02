@@ -25,17 +25,15 @@ export function HomeHero({ handleScroll }: HomeHeroProps) {
           </div>
           <div className="z-40 self-center">
             <Title>
-              <span>Solution</span>
-              <span>services</span>
-              <span>for Impact</span>
-              <span>DAO&apos;S</span>
+              <span>We build</span>
+              <span>Web3 products,</span>
+              <span>governance,</span>
+              <span>and economic systems</span>
             </Title>
             <div className="flex flex-col items-center lg:mb-8 lg:flex-row">
               <Subtitle paddingBottom={false} paddingTop={true}>
                 <span className="max-w-[700px]">
-                  We are a group of Web3 professionals with deep roots/ embedded
-                  in the Ethereum ecosystem devoted to supporting commons-based
-                  organizations and public good projects.
+                  Web3 professionals building social impact solutions throughout Web3 and Public Good space.
                 </span>
               </Subtitle>
               <button
