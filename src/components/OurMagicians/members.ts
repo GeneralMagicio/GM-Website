@@ -79,11 +79,6 @@ export const members: OurMagiciansCardProps[] = [
     image: LULU,
   },
   {
-    name: 'Peter',
-    role: 'UI/UX Designer',
-    image: PETER,
-  },
-  {
     name: 'Jes',
     role: 'Graphic designer',
     image: JESICA,
@@ -117,11 +112,6 @@ export const members: OurMagiciansCardProps[] = [
     name: 'Moe',
     role: 'Devops Specialist',
     image: MOE,
-  },
-  {
-    name: 'Luizakp',
-    role: 'Frontend Developer',
-    image: LUIZA,
   },
   {
     name: 'Anamarija',
@@ -175,5 +165,15 @@ export const alumniMembers: OurMagiciansCardProps[] = [
     name: 'RB',
     role: 'Project Manager',
     image: RB,
+  },
+  {
+    name: 'Peter',
+    role: 'UI/UX Designer',
+    image: PETER,
+  },
+  {
+    name: 'Luizakp',
+    role: 'Frontend Developer',
+    image: LUIZA,
   },
 ]
