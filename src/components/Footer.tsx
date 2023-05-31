@@ -21,8 +21,8 @@ const socials = [
     label: 'Github',
   },
   {
-    url: 'https://www.getrevue.co/profile/generalmagic',
-    label: 'Revue',
+    url: 'https://paragraph.xyz/@generalmagic',
+    label: 'Blog',
   },
   {
     url: 'https://www.linkedin.com/company/generalmagicio/',
