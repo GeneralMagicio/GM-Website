@@ -21,7 +21,7 @@ export function ContactHero({ handleScroll }: ContactHeroProps) {
           <div className="z-40 self-center px-10 md:px-20">
             <Title>
               <span className="lg:max-w-[700px] xl:max-w-[1000px]">
-                Tell us what you need and we will get it done
+                Express your vision, we'll make it a reality
               </span>
             </Title>
             <div className="flex-col md:flex lg:mb-8 lg:flex-row lg:items-center">
