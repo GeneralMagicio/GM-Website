@@ -32,7 +32,7 @@ export function HomeHero({ handleScroll }: HomeHeroProps) {
           <div className="flex flex-col items-center lg:mb-8 lg:flex-row">
             <Subtitle paddingBottom={false} paddingTop={true}>
               <span className="max-w-[700px]">
-                Web3 professionals building social impact solutions throughout Web3 and Public Good space.
+                Web3 professionals building social impact solutions throughout Web3 and Public Goods space.
               </span>
             </Subtitle>
             <button
