@@ -32,7 +32,7 @@ export function HomeWhatWeDo() {
             <Subtitle paddingBottom={false} paddingTop={false}>
               General Magic is deploying resources to the most innovative
               DAO&apos;s that are building social impact solutions throughout Web3
-              and Public Good space.
+              and Public Goods space.
             </Subtitle>
           </div>
           {cards.map((card) => {

@@ -19,7 +19,7 @@ class MyDocument extends Document {
           <meta name="title" content="We build Web3 products, governance, and economic systems" />
           <meta
             name="description"
-            content="Web3 professionals building social impact solutions throughout Web3 and Public Good space."
+            content="Web3 professionals building social impact solutions throughout Web3 and Public Goods space."
           />
           <link
             rel="icon"
@@ -38,7 +38,7 @@ class MyDocument extends Document {
           />
           <meta
             property="og:description"
-            content="Web3 professionals building social impact solutions throughout Web3 and Public Good space."
+            content="Web3 professionals building social impact solutions throughout Web3 and Public Goods space."
           />
           <meta
             name="og:image"
@@ -53,7 +53,7 @@ class MyDocument extends Document {
           />
           <meta
             name="twitter:description"
-            content="Web3 professionals building social impact solutions throughout Web3 and Public Good space."
+            content="Web3 professionals building social impact solutions throughout Web3 and Public Goods space."
           />
         </Head>
         <body>
